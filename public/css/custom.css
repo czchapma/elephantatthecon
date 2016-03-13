@@ -1,5 +1,6 @@
 #content {
 	padding-top: 51px;
+	background-color: rgb(207,209,210);
 }
 
 .header {
@@ -9,4 +10,61 @@
 
 .home_text {
 	font-size: 20px;
+}
+
+#stats > img {
+	margin: auto;
+}
+
+#mission {
+	margin-top: 50px;
+}
+
+#definitions .thumbnail {
+	background-color: rgb(73,177,197);
+	color: rgb(41,99,108);
+	text-align: center;
+}
+
+
+#projects iframe {
+	margin: auto;
+	display: block;
+}
+
+.navbar-right img {
+	margin-top: 8px;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+.section_page {
+	padding: 50px;
+	height: 100%;
+}
+
+#logo {
+	margin-top: 50px;
+}
+
+#donate button {
+	display: block;
+	margin: auto;
+}
+
+#donate img {
+	display: block;
+	margin: auto;
+	margin-top: 15px;
 }
