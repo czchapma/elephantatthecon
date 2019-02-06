@@ -12,6 +12,9 @@
 	font-size: 20px;
 }
 
+form {
+	font-size: 24px;
+}
 #stats > img {
 	margin: auto;
 }
@@ -26,6 +29,9 @@
 	text-align: center;
 }
 
+input[type="radio"] {
+	margin: 10px 8px 0px;
+}
 
 #projects iframe {
 	margin: auto;
@@ -67,4 +73,86 @@
 	display: block;
 	margin: auto;
 	margin-top: 15px;
+}
+
+footer{
+	display:block;
+	color: white;
+	text-align: center;
+	background-color:#212121;
+	box-shadow: 0 -1px 2px #111;
+	position:fixed;
+	width:100%;
+	height:70px;
+	bottom:0;
+	left:0;
+	z-index: 100000;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+footer h2{
+	font-size:20px;
+	font-weight:normal;
+	left:50%;
+	margin-left:-400px;
+	padding:22px 0;
+	position:absolute;
+	width:400px;
+	color:#eee;
+}
+
+footer a.tzine,a.tzine:visited{
+	background:url("images/newspapers/tzine.png") no-repeat right top;
+	border:none;
+	text-decoration:none;
+	color:#FCFCFC;
+	font-size:12px;
+	height:70px;
+	left:50%;
+	line-height:31px;
+	margin:23px 0 0 110px;
+	position:absolute;
+	top:0;
+	width:290px;
+}
+
+#background {
+	width: 100%;
+	height: 200px;
+}
+
+textarea.form-control{
+	text-align: left;
+	font-size: 24px;
+}
+
+nav {
+	font-size: 20px;
+}
+
+#active {
+	color: black;
+}
+form {
+	margin: 5px;
+}
+
+#active a {
+	text-decoration: none;
+	background-color: rgb(238, 238, 238);
+	color: black;
+}
+
+#last-iframe {
+	margin-bottom: 100px;
+}
+
+#submit_div {
+	margin: 10px;
+}
+
+
+.img-responsive {
+	margin: 0 auto;
 }

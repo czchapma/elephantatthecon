@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html><head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    <title>Elephant At the Con</title>
+
+	    <!-- Bootstrap -->
+	    <link rel="icon" href="images/icon.png">
+	    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+			<link href="css/newspaper.css" rel="stylesheet">
+	    <link href="css/bootstrap.css" rel="stylesheet">
+	    <link href="css/custom.css" rel="stylesheet">
+	    <link href="css/donations.css" rel="stylesheet">
+			<link rel="shortcut icon" href="images/favicon.ico">
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js" integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI=" crossorigin="anonymous"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+			<script src="js/newspaper.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/custom.js"></script>
+	    <script src="js/christine.js"></script>
+	</head>
+	<body>
+		<div class="container" id="content">
+			<!-- <h1 id="main_title">Elephant at the Con</h1>
+ <img id="fullscreen" src="images/booth.jpg"/><br/>
+			<h3>Let's Talk About It</h3>
+	<p> This con season, Uplift is traveling to GeekyCon to dig deeper into issues of safety and harassment.<br/>You can help us by the following questions about your experience at past / present LeakyCons and GeekyCons.</p> -->
+
+	<nav class="navbar navbar-fixed-top top-nav-collapse">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header navbar-default">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+<!-- 	      <span class="navbar-brand">UpliftTogether</a>
+ -->	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+          <li><a href="index.html" class="page-scroll">Home</a></li>
+          <li><a href="nerdcon.html" class="page-scroll">NerdCon Results</a></li>
+	        <li><a href="results-vidcon.html" class="page-scroll">VidCon Results</a></li>
+	        <li><a href="results-geekycon.html" class="page-scroll">GeekyCon Result</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+
+
+<!-- 	<section id="story" class="section_page">
+		<div class="panel panel-default">
+		  <div class="panel-heading"><h3>Share Your Story</h3></div>
+		  <form id="story_form">
+		  	<ul class="no-bullets">
+		  		<li></li>
+		  	</ul>
+		  	<p>
+			<input type="submit"/>
+		</form>
+		 </div>
+	</section> -->
+
+	<section id="survey" class="section_page">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3>Tell us about your experience at Tekko this weekend</h3></div>
+			<script type="text/javascript">var submitted=false;</script>
+		    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thanks.html';}"></iframe>
+        <form id="myform" action="https://docs.google.com/a/uplifttogether.org/forms/d/1iNQpZZT0iAIEcOg1aOvrFBxuq2Jiq01gvm7N9-CMJy4/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+	      <!-- <form id="myform" action="https://docs.google.com/a/uplifttogether.org/forms/d/1mkKX4T9W85of5SVJzWPrcyPU27txVGBmU7WHCtO_7rA/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;"> -->
+				<div class="question">
+					I felt safe:<br>
+					<label><input type="radio" name="entry.351585626" value="always">always</label>
+					<label><input type="radio" name="entry.351585626" value="usually">usually</label>
+					<label><input type="radio" name="entry.351585626" value="sometimes">sometimes</label>
+					<label><input type="radio" name="entry.351585626" value="rarely">rarely</label>
+					<label><input type="radio" name="entry.351585626" value="never">never</label><br>
+				</div>
+				<div class="question">
+					I felt safe sharing my sexuality:<br>
+					<label><input type="radio" name="entry.1831618221" value="always">always</label>
+					<label><input type="radio" name="entry.1831618221" value="usually">usually</label>
+					<label><input type="radio" name="entry.1831618221" value="sometimes">sometimes</label>
+					<label><input type="radio" name="entry.1831618221" value="rarely">rarely</label>
+					<label><input type="radio" name="entry.1831618221" value="never">never</label>
+				</div>
+				<div class="question">
+					I felt safe sharing my gender identity:<br>
+					<label><input type="radio" name="entry.797900605" value="always">always</label>
+					<label><input type="radio" name="entry.797900605" value="usually">usually</label>
+					<label><input type="radio" name="entry.797900605" value="sometimes">sometimes</label>
+					<label><input type="radio" name="entry.797900605" value="rarely">rarely</label>
+					<label><input type="radio" name="entry.797900605" value="never">never</label><br>
+				</div>
+				<div class="question">
+					Someone verbally harassed me:<br>
+					<label><input type="radio" name="entry.556186155" value="yes">yes</label>
+					<label><input type="radio" name="entry.556186155" value="no">no</label><br>
+				</div>
+				<div class="question">
+					Someone touched me without my consent:<br>
+					<label><input type="radio" name="entry.1792789459" value="yes">yes</label>
+					<label><input type="radio" name="entry.1792789459" value="no">no</label><br>
+				</div>
+				<div class="question">
+					Someone sexually harassed or assaulted me:<br>
+					<label><input type="radio" name="entry.939669801" value="yes">yes</label>
+					<label><input type="radio" name="entry.939669801" value="no">no</label><br>
+				</div>
+        (OPTIONAL)
+        The following question may be anonymously shared with Tekko staff and future Uplift work promoting safe conventions, please specify if you do not want this to be shared.
+				<textarea class="freeform form-control" id="background" name="entry.872631186" placeholder="At any point in the weekend did you feel uncomfortable at Tekko or see others in a difficult situation? Tell us about it."></textarea><br>
+
+        <p>The following demographic questions are optional but will help us analyze data by demographics to discover safety trends that may correlate with specific identities.</p>
+        <textarea class="freeform form-control" name="entry.722266204" placeholder="What is your gender?"></textarea><br>
+        <textarea class="freeform form-control" name="entry.1326263156" placeholder="What is your race?"></textarea><br>
+        <textarea class="freeform form-control" name="entry.1560441134" placeholder="What is your sexuality?"></textarea><br>
+
+
+				<div id="submit_div">
+					<input type="submit">
+				</div>
+			</form>
+
+		</div>
+	</section>
+<!-- 		<section  id="bias" class="section_page">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3>Test Your Bias</h3></div>
+			<p>Who are your favorite LeakyCon or GeekyCon attendees? Do you think you're watching and supporting a diverse set of creators? Select your favorite LeakyCon or GeekyCon attendees to find out.</p>
+			<div id="speaker_stats">
+				<input type="text" id="vidcon_speaker"/><br id="newline"/>
+				<h3 id="gender_stats"></h3>
+				<h3 id="race_stats"></h3>
+			</div>
+		</div>
+	</section>
+ -->		</div>
+
+
+		<footer> Elephant at the Con is a project by
+			<a href="http://www.uplifttogether.org">Uplift: Online Communities Against Sexual Violence</a><br/>Questions or Comments?  <a href="mailto:conventions@uplifttogether.org?subject=[Elephant at the Con]">Email us</a>
+		</footer>
+
+
+</body></html>
