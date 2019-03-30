@@ -1,25 +1,31 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Crimson+Text:400,400i,700");
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
 /* main blue colors used for general website */
-$main-blue: ;
-$lighter-blue: ;
-$lightest-blue: ;
-$darker-blue: ;
-$darkest-blue: ;
+$main-blue: #67AEC1;
+$lighter-blue: #9AD2DF;
+$lightest-blue: #DFF9FF;
+$darker-blue: #37859A;
+$darkest-blue: #39626A;
+
+
+$light-red: #ED7D7D;
+$dark-red: #C21919;
 
 /* accent colors used for data visualization */
-$accent-red: ;
-$accent-orange: ;
-$accent-yellow: ;
-$accent-green: ;
-$accent-aqua: ;
-$accent-blue: ;
-$accent-purple: ;
-$accent-pink: ;
+$accent-red: #EB5757;
+$accent-orange: #F2994A;
+$accent-yellow: #F2C94C;
+$accent-green: #219653;
+$accent-blue: #2F80ED;
+$accent-purple: #9B51E0;
+$accent-pink: #D8269B;
 
 /* font */
-$sans-serif-font: "Noto Sans", sans-serif;
-$serif-font: "Crimson Text", serif;
+$sans-serif-font: "Roboto", sans-serif;
+$serif-font: "Noto Serif", serif;
 $nav-bar-font-size: 12px;
 $body-font-size: 12px;
 $data-label-font-size: 8px;
