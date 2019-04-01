@@ -7,11 +7,11 @@ class Header extends Component {
   // No CSS to make it horizontal yet
   render() {
     return (
-      <div className="App-header">
+      <div className="app-header">
       <ul>
-        <li><a href="#">Report 1</a></li>
-        <li><a href="#">Report 2</a></li>
-        <li><a href="#">Report 3</a></li>
+        <li className="menu-item"><a href="#">Report 1</a></li>
+        <li className="menu-item"><a href="#">Report 2</a></li>
+        <li className="menu-item"><a href="#">Report 3</a></li>
       </ul>
 
       </div>
@@ -23,12 +23,39 @@ class Header extends Component {
 class Report extends Component {
   constructor(props){
     super(props);
+    this.handleNewContent = this.handleNewContent.bind(this);
+    this.state = {
+      contentData: 'Default Content',
+      scrollData: 'Scroll Content'
+    }
   }
+  // This function will handling switching between different report contents,
+  // eg from main to statistics to stories
+  handleNewContent(e){
+    if(e.target.getAttribute("value") == "main"){
+      this.setState(prevState => ({
+        contentData :'Main Content'
+      }));
+    }
+    else if(e.target.getAttribute("value") == "stats"){
+      this.setState(prevState => ({
+        contentData :'Stats Content'
+      }));
+    }
+    else if(e.target.getAttribute("value") == "stories"){
+      this.setState(prevState => ({
+        contentData :'Story Content'
+      }));
+    }
+  }
+
   render() {
+    // We pass the handle new content function into ReportScroll, 
+    // this will handle the changing of ReportContent's data
     return (
       <div className="report-wrapper">
-        <ReportScroll />
-        <ReportContent data ={this.props.data}/>
+        <ReportScroll onClickFunc = {this.handleNewContent}/>
+        <ReportContent data ={this.state.contentData}/>
       </div>
     );
   }
@@ -54,9 +81,9 @@ class ReportScroll extends Component {
     return (
       <div className="scroll-wrapper">
       <ul>
-        <li><a href="#">Option 1</a></li>
-        <li><a href="#">Option 2</a></li>
-        <li><a href="#">Option 3</a></li>
+        <li className="scroll-item" ><a href="#" value="main" onClick= {this.props.onClickFunc}>Main</a></li>
+        <li className="scroll-item"><a href="#" value="stats" onClick= {this.props.onClickFunc}>Stats</a></li>
+        <li className="scroll-item"><a href="#" value="stories" onClick= {this.props.onClickFunc}>Stories</a></li>
       </ul>
 
       </div>
