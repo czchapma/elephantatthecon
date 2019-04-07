@@ -3,6 +3,7 @@
 html, body, #root {
     margin: 0;
     height: 100%;
+    font-family: 'Roboto';
 }
 
 .app-wrapper {
@@ -34,33 +35,44 @@ html, body, #root {
   display: flex;
   flex-direction:row;
   height:90vh;
-
 }
 
 .scroll-wrapper {
-  background-color: #DFF9FF;
-  flex: 20vw,100vh;
-  margin: 5%;
+  
+  flex: 5vw;
+  border-right: 6px solid lightgrey;
 }
 
+
 .content-wrapper {
-  background-color: #37859A;
-  flex: 80vw;
+  /*background-color: #37859A;*/
+  flex: 92vw;
   margin: 5%;
 }
 
 .menu-item {
   display: inline;
-  padding: 5px;
+  padding: 5vh;
 }
 
 .scroll-item{
   display: block;
+  margin-top: 20vh;
+  margin-bottom: 0vh;
+  transform-origin: center;
+  transform: rotate(-90deg);
+
+  
 }
 
-.App-link {
-  color: #61dafb;
+img{
+  height: 400px;
+  width: auto;
 }
+
+/*.App-link {
+  color: #61dafb;
+}*/
 
 @keyframes App-logo-spin {
   from {
