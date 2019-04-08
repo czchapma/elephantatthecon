@@ -3,14 +3,13 @@
 html, body, #root {
     margin: 0;
     height: 100%;
-    font-family: 'Roboto';
 }
 
 .app-wrapper {
   text-align: center;
   margin: 0;
   height: 100%;
-  background-color: $main-blue;
+  background-color: white;
 }
 
 /*.App-logo {
@@ -20,27 +19,44 @@ html, body, #root {
 }*/
 
 .app-header {
-  background-color: #9AD2DF;
-  /*min-height: 100vh;*/
+  background-color: $main-blue;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-  height: 10vh;
+  height: 5%;
+}
+
+.app-header a {
+  text-transform: uppercase;
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  font-weight: lighter;
+  font-family: $sans-serif-font;
+  letter-spacing: 1px;
 }
 
 .report-wrapper{
   display: flex;
   flex-direction:row;
-  height:90vh;
+  height: 95%;
+  font-family: $serif-font;
 }
 
 .scroll-wrapper {
-
   flex: 5vw;
-  border-right: 6px solid lightgrey;
+  border-right: 3px solid lightgrey;
+}
+
+.scroll-wrapper a {
+  text-transform: uppercase;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+  font-family: $sans-serif-font;
+  letter-spacing: 1px;
 }
 
 
