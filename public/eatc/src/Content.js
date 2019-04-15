@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import img from './images/stat.png'; // Tell Webpack this JS file uses this image
-// import add_d3 from './demographics.js'
+import FilteredList from './FilteredList';
+import stories from './stories.json';
 
+// import add_d3 from './demographics.js'
 import * as d3pie from "d3pie"
 
 export class MainContent extends Component {
@@ -14,8 +16,7 @@ export class MainContent extends Component {
     return (
       <div className="main-wrapper">
         <h>{this.props.data.name}</h> <br/>
-        
-        {this.props.data.intro}   
+        {this.props.data.intro}
       </div>
     );
   }
@@ -161,8 +162,8 @@ export class StoryContent extends Component {
   render() {
     return (
       <div className="main-wrapper">
-        <h>STORIES</h> <br/>
-         {this.props.data.story}<br />
+        <h>STORIES</h> 
+          <FilteredList items = {stories.magfest2018} />
       </div>
     );
   }
