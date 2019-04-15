@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
-import {MainContent,StatContent,StoryContent} from './Content.js';
+import {TestContent,MainContent,StatContent,StoryContent} from './Content.js';
 
 // We can put this in a different file and export it later
 class Header extends Component {
@@ -11,12 +11,12 @@ class Header extends Component {
     return (
       <div className="app-header">
       <ul>
-        <li className="menu-item"><a href="#">Report 1</a></li>
-        <li className="menu-item"><a href="#">Report 2</a></li>
-        <li className="menu-item"><a href="#">Report 3</a></li>
-        <li className="menu-item"><a href="#">Report 1</a></li>
-        <li className="menu-item"><a href="#">Report 2</a></li>
-        <li className="menu-item"><a href="#">Report 3</a></li>
+        <li className="menu-item"><a href="#">magfest 18</a></li>
+        <li className="menu-item"><a href="#">tekko 17</a></li>
+        <li className="menu-item"><a href="#">nerdcon 17</a></li>
+        <li className="menu-item"><a href="#">geekycon 17</a></li>
+        <li className="menu-item"><a href="#">vidcon 17</a></li>
+        <li className="menu-item"><a href="#">vidcon 16</a></li>
       </ul>
 
       </div>
@@ -30,10 +30,13 @@ class Report extends Component {
     super(props);
     this.handleNewContent = this.handleNewContent.bind(this);
     this.state = {
+      // reportData: this.props.reportData,
+      data: this.props.data,
       mode: 'main',
       contentData: 'Main Content',
       scrollData: 'Scroll Content'
     }
+    console.log(this.props.data)
   }
   // This function will handling switching between different report contents,
   // eg from main to statistics to stories
@@ -64,7 +67,7 @@ class Report extends Component {
     return (
       <div className="report-wrapper">
         <ReportScroll onClickFunc = {this.handleNewContent}/>
-        <ReportContent data ={this.state.contentData} mode ={this.state.mode}/>
+        <ReportContent data={this.state.data} mode ={this.state.mode}/>
       </div>
     );
   }
@@ -89,7 +92,7 @@ class ReportContent extends Component {
       content = <MainContent data ={this.props.data}/>
     }
     else if(this.props.mode == "stat"){
-      content = <StatContent data ={this.props.data} />
+      content = <TestContent data ={this.props.data} />
     }
     else if(this.props.mode == "story"){
       content = <StoryContent data ={this.props.data} />
@@ -130,8 +133,17 @@ class App extends Component {
 
       Maybe have some js function to parse json file representing a report? 
     */
+
+
     this.state = {
-      reportData: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      data: {
+        name: 'MAGFEST',
+        intro: `MAGFest (Music and Gaming Festival) is a four day-long event dedicated to the appreciation of video game music, gaming of all types, and the gaming community that took place in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video games at 4 in the morning. A lot of people come with their friends every year. Some have moved away and still travel back every year for the festival.
+
+        Clearly MAGFest is a special event and an important community for many. At Uplift we understand the power of communities and work with organizers like MAGFest to ensure that these important communities are safe for everyone. With this in mind, we conducted a survey of MAGFest 2018 attendees on safety and inclusion.`,
+        stat: './images/stat.png',
+        story: 'test'
+      }
     }
   }
   render() {
@@ -139,7 +151,7 @@ class App extends Component {
     return (
       <div className="app-wrapper">
         <Header />
-        <Report data={this.state.reportData}/>
+        <Report data={this.state.data}/>
       </div>
     );
   }
