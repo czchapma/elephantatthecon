@@ -47,7 +47,7 @@ export class TestContent extends Component {
 
   drawChart() {
     console.log(d3pie)
-    var pie = new d3pie("pieChart", {
+    var genderPie = new d3pie("genderChart", {
   "header": {
     "title": {
       "text": "GENDER",
@@ -148,9 +148,7 @@ export class TestContent extends Component {
   render() {
     return (
       <div className="main-wrapper">
-        <h>STATISTICS</h> <br/>
-         <br/>
-        <div id="pieChart"></div>
+        <div id="genderChart"></div>
       </div>
     );
   }
