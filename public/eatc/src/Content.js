@@ -15,7 +15,6 @@ export class MainContent extends Component {
   render() {
     return (
       <div className="main-wrapper">
-        <h>MAGFEST</h> <br/>
         <h>{this.props.data.name}</h> <br/>
         {this.props.data.intro}
       </div>
