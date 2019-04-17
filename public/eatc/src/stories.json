@@ -6,9 +6,6 @@
     "quote": "I was blown away by how respectful and awesome everyone was."},
     {"id": 3, "header": "The Positive",
     "quote": "I really enjoyed MAGFest and truly appreciated the inclusion of the pronoun tags to go on badges. People were kind and friendly."},
-
-    {"id": 4, "header": "Accessibility",
-    "quote": "People press the Deaf/HOH doorbell on accessible rooms which can wake people up. A PSA about what those buttons do might help! (They screech like a fire alarm and flash flights)"},
     {"id": 5, "header": "The Positive",
     "quote": "When I first got there, on Friday, I was overwhelmed. There were so many people bustling and, no matter how hard I tried, it seemed like I was always in someone’s way or someone was brushing past me. Maybe some dedicated quiet / resting spaces would take a little of the edge off, though that might be more like a band-aid than a true solution to an atmosphere that may be making a lot of people uncomfortable."},
     {"id": 6, "header": "The Positive",
@@ -26,6 +23,9 @@
     {"id": 12, "header": "The Positive",
     "quote": "I waited with one attendee, who used a wheelchair, for an elevator we waited for 15 minutes before an elevator came at all. When it did come the elevator did not have room for the attendee in the wheelchair, and I continued to wait with them for another 20 minutes before an elevator came that could accommodate us both."},
 
+    {"id": 4, "header": "Accessibility",
+    "quote": "People press the Deaf/HOH doorbell on accessible rooms which can wake people up. A PSA about what those buttons do might help! (They screech like a fire alarm and flash flights)"},
+    
     {"id": 13, "header": "Trans + Nonbinary Inclusion",
     "quote": "I LOVED the gender identity ribbons!!"},
     {"id": 14, "header": "Trans + Nonbinary Inclusion",

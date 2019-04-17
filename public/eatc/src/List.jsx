@@ -24,7 +24,7 @@ class List extends Component {
     return (
       <div className = "storiesContainer">
         {renderList(this.props.items)}
-        </div>
+      </div>
     );
   }
 }

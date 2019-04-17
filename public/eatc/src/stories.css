@@ -1,31 +1,53 @@
+.filterContainer {
+  display: grid;
+  grid-template-columns: 10fr 300px;
+}
+
 .storiesContainer {
+  grid-column: 1 / 2;
   display: flex;
   flex-direction: row wrap;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
   /* display:inline; */
-
 }
 
 .card {
   /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
   outline: 4px solid lightgray;
   text-align: left;
-  width: 325px;
-  height: 225px;
+  width: 400px;
+  height: 250px;
   margin: 20px;
+  flex-grow: 2;
 
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 5px;
+  padding-top: 1px;
   padding-bottom: 10px;
 }
 
 .content {
-  font-size: 12px;
+  font-size: 11px;
   font-style: oblique;
   line-height: 1.6;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: -10px;
+}
+
+.btn-group {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 20px;
+}
+
+label {
+  text-align: left;
+}
+
+.checkmark {
+  margin-right: 20px;
 }

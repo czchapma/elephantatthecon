@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import img from './images/stat.png'; // Tell Webpack this JS file uses this image
 import FilteredList from './FilteredList';
 import stories from './stories.json';
+import './stories.css';
 
 // import add_d3 from './demographics.js'
 import * as d3pie from "d3pie"
@@ -16,7 +17,6 @@ export class MainContent extends Component {
     return (
       <div className="main-wrapper">
         <h>MAGFEST</h> <br/>
-        {this.props.data}
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a leo eget ligula rhoncus finibus. Donec ornare elit sed sem fermentum, eget consectetur magna vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus at pellentesque diam. Cras placerat ex felis, feugiat rhoncus turpis interdum sit amet. Donec in arcu vitae massa imperdiet auctor. Aliquam venenatis iaculis metus. Nunc et faucibus libero, placerat fringilla velit. Nullam condimentum, lectus vitae vestibulum porttitor, neque sapien fringilla mauris, sed condimentum purus sem ut leo. Nunc tellus turpis, sagittis et tincidunt vitae, convallis quis neque. Aenean sed cursus nisi. Praesent at posuere urna. Nullam eget ultricies est.</p>
 
         <h>{this.props.data.name}</h> <br/>
@@ -169,8 +169,12 @@ export class StoryContent extends Component {
   render() {
     return (
       <div className="main-wrapper">
-        <h>STORIES</h> 
+        <h>STORIES</h>
+        <div className = "cardWrapper">
           <FilteredList items = {stories.magfest2018} />
+        </div>
+        <div className = "selectWrapper">
+        </div>
       </div>
     );
   }
