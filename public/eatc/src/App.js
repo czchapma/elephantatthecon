@@ -11,6 +11,7 @@ class Header extends Component {
     return (
       <div className="app-header">
       <ul>
+        <li className="menu-item"><a href="#">home</a></li>
         <li className="menu-item"><a href="#">magfest 18</a></li>
         <li className="menu-item"><a href="#">tekko 17</a></li>
         <li className="menu-item"><a href="#">nerdcon 17</a></li>
@@ -84,7 +85,6 @@ class ReportContent extends Component {
     //     <p>{this.props.data}</p>
     //   </div>
     // );
-
 
     let content;
 
