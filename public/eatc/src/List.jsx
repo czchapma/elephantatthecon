@@ -21,6 +21,8 @@ function renderList(it) {
 
 class List extends Component {
   render() {
+    console.log(this.props.items);
+
     return (
       <div className = "storiesContainer">
         {renderList(this.props.items)}

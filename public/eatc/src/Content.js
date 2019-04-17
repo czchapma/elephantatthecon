@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import img from './images/stat.png'; // Tell Webpack this JS file uses this image
 import FilteredList from './FilteredList';
 import stories from './stories.json';
-import './stories.css';
 
-// import add_d3 from './demographics.js'
+import {drawPie} from './demographics.js'
 import * as d3pie from "d3pie"
 
 export class MainContent extends Component {
@@ -16,12 +15,12 @@ export class MainContent extends Component {
   render() {
     return (
       <div className="main-wrapper">
-        <h>MAGFEST</h> <br/>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a leo eget ligula rhoncus finibus. Donec ornare elit sed sem fermentum, eget consectetur magna vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus at pellentesque diam. Cras placerat ex felis, feugiat rhoncus turpis interdum sit amet. Donec in arcu vitae massa imperdiet auctor. Aliquam venenatis iaculis metus. Nunc et faucibus libero, placerat fringilla velit. Nullam condimentum, lectus vitae vestibulum porttitor, neque sapien fringilla mauris, sed condimentum purus sem ut leo. Nunc tellus turpis, sagittis et tincidunt vitae, convallis quis neque. Aenean sed cursus nisi. Praesent at posuere urna. Nullam eget ultricies est.</p>
 
-        <h>{this.props.data.name}</h> <br/>
+        <div className="main-title">{this.props.data.name}</div>
+        <div className="main-date"><strong>- 2018 -</strong></div>
+        <div className="main-text">MAGFest (Music and Gaming Festival) is a four day-long event dedicated to the appreciation of video game music, gaming of all types, and the gaming community that took place in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video games at 4 in the morning. A lot of people come with their friends every year. Some have moved away and still travel back every year for the festival.</div>
+        <div className="main-text">Clearly MAGFest is a special event and an important community for many. At Uplift we understand the power of communities and work with organizers like MAGFest to ensure that these important communities are safe for everyone. With this in mind, we conducted a survey of MAGFest 2018 attendees on safety and inclusion.</div>
 
-        {this.props.data.intro}
       </div>
     );
   }
@@ -52,111 +51,26 @@ export class TestContent extends Component {
   }
 
   drawChart() {
-    console.log(d3pie)
-    var pie = new d3pie("pieChart", {
-  "header": {
-    "title": {
-      "text": "GENDER",
-      "fontSize": 16
-    },
-    "subtitle": {
-      "color": "#999999",
-      "fontSize": 10,
-      "font": "courier"
-    },
-    "location": "pie-center",
-    "titleSubtitlePadding": 10
-  },
-  "footer": {
-    "color": "#999999",
-    "fontSize": 10,
-    "font": "open sans",
-    "location": "bottom-left"
-  },
-  "size": {
-    "canvasHeight": 400,
-    "canvasWidth": 450,
-    "pieInnerRadius": "69%",
-    "pieOuterRadius": "48%"
-  },
-  "data": {
-    "sortOrder": "label-desc",
-    "content": [
-      {
-        "label": "male",
-        "value": 50,
-        "color": "#EB5757"
-      },
-      {
-        "label": "female",
-        "value": 44,
-        "color": "#2F80ED"
-      },
-      {
-        "label": "nonbinary/genderqueer",
-        "value": 4,
-        "color": "#D8269B"
-      },
-      {
-        "label": "agender",
-        "value": 2,
-        "color": "#9B51E0"
-      }
-    ]
-  },
-  "labels": {
-    "outer": {
-      "format": "label-value1",
-      "pieDistance": 20
-    },
-    "inner": {
-      "format": "none"
-    },
-    "mainLabel": {
-      "fontSize": 11
-    },
-    "percentage": {
-      "color": "#999999",
-      "fontSize": 11,
-      "decimalPlaces": 0
-    },
-    "value": {
-      "color": "#37859a",
-      "fontSize": 11
-    },
-    "lines": {
-      "enabled": true,
-      "style": "straight",
-      "color": "#1d1d1d"
-    },
-    "truncation": {
-      "enabled": true
-    }
-  },
-  "tooltips": {
-    "enabled": true,
-    "type": "placeholder",
-    "string": "{label}: {value}, {percentage}%",
-    "styles": {
-      "backgroundColor": "#363636",
-      "padding": 6
-    }
-  },
-  "effects": {
-    "pullOutSegmentOnClick": {
-      "effect": "back",
-      "speed": 400,
-      "size": 8
-    }
-  }
-});
+    drawPie();
   }
   render() {
     return (
       <div className="main-wrapper">
-        <h>STATISTICS</h> <br/>
+        <div id="genderChart"></div>
+
          <br/>
-        <div id="pieChart"></div>
+         <div className="row">
+           <div className="column stat-col">
+             <div className="stat-title">STATISTICS</div>
+              <div id="chart1"></div>
+              <div id="chart2"></div>
+           </div>
+           <div className="column demo-col">
+              <div className="stat-title">DEMOGRAPHICS</div>
+            <div id="chart3"></div>
+           </div>
+         </div>
+
       </div>
     );
   }
@@ -169,12 +83,8 @@ export class StoryContent extends Component {
   render() {
     return (
       <div className="main-wrapper">
-        <h>STORIES</h>
-        <div className = "cardWrapper">
+        <div className="main-title">STORIES</div>
           <FilteredList items = {stories.magfest2018} />
-        </div>
-        <div className = "selectWrapper">
-        </div>
       </div>
     );
   }

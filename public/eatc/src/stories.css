@@ -1,6 +1,6 @@
 .filterContainer {
   display: grid;
-  grid-template-columns: 10fr 300px;
+  grid-template-columns: 10fr 20vw;
 }
 
 .storiesContainer {
@@ -16,11 +16,12 @@
   /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
   outline: 4px solid lightgray;
   text-align: left;
-  width: 400px;
-  height: 250px;
+  /*width: 325px;*/
+  width: 20vw;
+  /*height: 225px;*/
+  height: 35vh;
   margin: 20px;
   flex-grow: 2;
-
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 1px;
@@ -42,10 +43,12 @@
   flex-direction: column;
   justify-content: start;
   margin-top: 20px;
+  text-align: left;
 }
 
-label {
-  text-align: left;
+.headerButton {
+  margin: 20px;
+  margin-right: 10px;
 }
 
 .checkmark {
