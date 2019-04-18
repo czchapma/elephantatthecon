@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import List from './List';
 import Radio from './Radio';
-import './stories.css';
+import './stories.scss';
 
 class FilteredList extends Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class FilteredList extends Component {
 
     onAddressChanged = (e) => {
       this.setState({
-        header: e.currentTarget.value
+        header: e.currentTarget.getAttribute('value')
       });
     }
 
@@ -23,8 +23,6 @@ class FilteredList extends Component {
       }
 
       else {
-        console.log(this.state.header);
-        console.log(item.header);
         return item.header.search(this.state.header) !== -1
       }
     }

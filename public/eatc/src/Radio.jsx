@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import './stories.css'
+import './stories.scss'
 // import FilteredList from './FilteredList';
 
 class Radio extends Component {
   renderList(it, head, change) {
 
       const items = it.map(item => {
-        return <div key= {item}>
-        <input type="radio" className="headerButton" name = "header"
-                                   value={item}
-                                   defaultChecked={head === item}
-                                   onChange={change}
-                                   /> {item}
+        return <div key= {item} onClick={this.toggleCheck}>
+        <input type="radio" name = "header"
+                            value={item}
+                            checked={head === item}/>
+                            <span value={item} onClick={change}><div className="check"/></span> {item}
       </div>
       });
 

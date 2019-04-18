@@ -63,7 +63,7 @@ class Report extends Component {
   }
 
   render() {
-    // We pass the handle new content function into ReportScroll, 
+    // We pass the handle new content function into ReportScroll,
     // this will handle the changing of ReportContent's data
     return (
       <div className="report-wrapper">
@@ -114,11 +114,11 @@ class ReportScroll extends Component {
   render() {
     return (
       <div className="scroll-wrapper">
-      
-        <li className="scroll-item" ><a  href="#" value="main" onClick= {this.props.onClickFunc}>Main</a></li>
-        <li className="scroll-item"><a  href="#" value="stats" onClick= {this.props.onClickFunc}>Stats</a></li>
-        <li className="scroll-item"><a  href="#" value="stories" onClick= {this.props.onClickFunc}>Stories</a></li>
-  
+
+        <li className="scroll-item" ><a  href="#main" value="main" onClick= {this.props.onClickFunc}>Main</a></li>
+        <li className="scroll-item"><a  href="#stats" value="stats" onClick= {this.props.onClickFunc}>Stats</a></li>
+        <li className="scroll-item"><a  href="#stories" value="stories" onClick= {this.props.onClickFunc}>Stories</a></li>
+
       </div>
     );
   }
@@ -131,9 +131,8 @@ class App extends Component {
       We want to be able to set this reportData based on which report is chosen in
       the header, and pass the data down into the components
 
-      Maybe have some js function to parse json file representing a report? 
+      Maybe have some js function to parse json file representing a report?
     */
-
 
     this.state = {
       data: {

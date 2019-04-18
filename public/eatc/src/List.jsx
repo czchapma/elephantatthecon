@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './stories.css';
+import './stories.scss';
 
 function renderList(it) {
     const items = it.map(item => {
@@ -21,7 +21,6 @@ function renderList(it) {
 
 class List extends Component {
   render() {
-    console.log(this.props.items);
 
     return (
       <div className = "storiesContainer">
