@@ -1,48 +1,41 @@
 import React, { Component } from 'react';
 import List from './List';
+import Radio from './Radio';
+import './stories.scss';
 
 class FilteredList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            header: "all"
+            header: 'All'
         };
     }
 
-    // filterItem = (item) => {
-    //   if (this.state.header == "All") {
-    //     return item.name.toLowerCase().search(this.state.search) != -1
-    //   }
-    //
-    //   else {
-    //     return item.name.toLowerCase().search(this.state.search) !== -1
-    //     && item.type.search(this.state.type) !== -1
-    //   }
-    // }
-    //
-    // filterGeneration = (event) => {
-    //   if (event == 1) {
-    //     this.setState({type: "All"})
-    //   }
-    //   if (event == 2) {
-    //     this.setState({type: "Eric"})
-    //   }
-    //   if (event == 3) {
-    //     this.setState({type: "Penguin"})
-    //   }
-    // }
-    //
-    // sortAndFilter = (item) => {
-    //   item = item.filter(this.filterItem);
-    //   return item;
-    // }
+    onAddressChanged = (e) => {
+      this.setState({
+        header: e.currentTarget.getAttribute('value')
+      });
+    }
+
+    filterItem = (item) => {
+      if (this.state.header == "All") {
+        return item.header.search(this.state.header) === -1
+      }
+
+      else {
+        return item.header.search(this.state.header) !== -1
+      }
+    }
 
     render() {
+
         return (
           <div className = "filterContainer">
-            <List items = {this.props.items}/>
-            <div className = "filters">
-            </div>
+            <List items = {this.props.items.filter(this.filterItem)}/>
+            <Radio onAddressChanged = {this.onAddressChanged}
+                   header = {this.state.header}
+                   items = {this.props.items}
+                   />
           </div>
         );
     }
