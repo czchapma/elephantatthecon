@@ -6,41 +6,78 @@
 <div id="pieChart"></div>
 
 <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script> -->
+
 <script src="../node_modules/d3/dist/d3.min.js"></script>
 <script src="../node_modules/d3pie/d3pie/d3pie.js"></script>
 <script>
 
-var colors = ["#9B51E0", "#D8269B", "#EB5757", "#F2994A", "#F2C94C", "#219653", "#2F80ED"];
+// var colors = ["#2F80ED", "#9B51E0", "#D8269B", "#EB5757", "#F2994A", "#F2C94C", "#219653", "#1bad9c"];
+
+
 let jayson = {
                 'gender': [
-                    ['female', 44],
-                    ['male', 50],
-                    ['nonbinary/genderqueer', 4],
-                    ['agender', 2]
+                    ['male', 55, "#E23636"],
+                    ['female', 43, "#2F80ED"],
+                    ['nonbinary/genderqueer', 7, "#9B51E0"],
+                    ['agender', 4, "#D8269B"],
+                ],
+
+                'i_feel_safe': [
+                    ['always', 75, "#39626A"],
+                    ['usually', 38, "#37859A"],
+                    ['sometimes', 8, "#67AEC1"],
+                    ['rarely', 0, "#9AD2DF"],
+                    ['never', 0, "#DFF9FF"]
+                ],
+
+                'race': [
+                    ['asian', 7, "#E23636"],
+                    ['biracial/multiracial', 9, "#9B51E0"],
+                    ['black', 3, "#2F80ED"],
+                    ['hispanic/latinx', 0, "#1bad9c"],
+                    ['middle eastern', 0, "#219653"],
+                    ['native american', 0, "#F2C94C"],
+                    ['pacific islander', 0, "#F2994A"],
+                    ['white', 79, "#D8269B"]
+                ],
+
+                'sexuality': [
+                    ['asexual', 7, "#9B51E0"],
+                    ['bisexual', 23, "#2F80ED"],
+                    ['gay', 4, "#219653"],
+                    ['lesbian', 2, "#D8269B"],
+                    ['pansexual', 9, "#F2C94C"],
+                    ['queer', 7, "#F2994A"],
+                    ['questioning', 5, "#1bad9c"],
+                    ['straight', 44, "#E23636"]
                 ]
             };
-var content = [];
+
+
+createChart('gender');
+createChart('race');
+createChart('sexuality');
+
+function createChart (title){
+
+	var content = [];
 
 for (var cat in jayson){
-	if (cat === 'gender') {
+	if (cat === title) {
 		for (var data in jayson[cat]){
 			console.log(jayson[cat][data][0]);
 			content[data] = {
 				"label": jayson[cat][data][0],
 				"value": jayson[cat][data][1],
-				"color": "#CCC"
+				"color": jayson[cat][data][2]
 			}
 		}
 	}
 }
-
-var pie = createChart("GENDER");
-
-function createChart (title){
 	return new d3pie("pieChart", {
 	"header": {
 		"title": {
-			"text": title,
+			"text": title.toUpperCase(),
 			"fontSize": 16
 		},
 		"subtitle": {
@@ -64,7 +101,7 @@ function createChart (title){
 		"pieOuterRadius": "48%"
 	},
 	"data": {
-		"sortOrder": "label-desc",
+		"sortOrder": "value-desc",
 		"content": content
 	},
 	"labels": {
@@ -115,312 +152,6 @@ function createChart (title){
 });
 }
 
-// var pie = new d3pie("pieChart", {
-// 	"header": {
-// 		"title": {
-// 			"text": "GENDER",
-// 			"fontSize": 16
-// 		},
-// 		"subtitle": {
-// 			"color": "#999999",
-// 			"fontSize": 10,
-// 			"font": "courier"
-// 		},
-// 		"location": "pie-center",
-// 		"titleSubtitlePadding": 10
-// 	},
-// 	"footer": {
-// 		"color": "#999999",
-// 		"fontSize": 10,
-// 		"font": "open sans",
-// 		"location": "bottom-left"
-// 	},
-// 	"size": {
-// 		"canvasHeight": 450,
-// 		"canvasWidth": 450,
-// 		"pieInnerRadius": "69%",
-// 		"pieOuterRadius": "48%"
-// 	},
-// 	"data": {
-// 		"sortOrder": "label-desc",
-// 		"content": content
-// 	},
-// 	"labels": {
-// 		"outer": {
-// 			"format": "label-value1",
-// 			"pieDistance": 20
-// 		},
-// 		"inner": {
-// 			"format": "none"
-// 		},
-// 		"mainLabel": {
-// 			"fontSize": 11
-// 		},
-// 		"percentage": {
-// 			"color": "#999999",
-// 			"fontSize": 11,
-// 			"decimalPlaces": 0
-// 		},
-// 		"value": {
-// 			"color": "#37859a",
-// 			"fontSize": 11
-// 		},
-// 		"lines": {
-// 			"enabled": true,
-// 			"style": "straight",
-// 			"color": "#1d1d1d"
-// 		},
-// 		"truncation": {
-// 			"enabled": true
-// 		}
-// 	},
-// 	"tooltips": {
-// 		"enabled": true,
-// 		"type": "placeholder",
-// 		"string": "{label}: {value}, {percentage}%",
-// 		"styles": {
-// 			"backgroundColor": "#363636",
-// 			"padding": 6
-// 		}
-// 	},
-// 	"effects": {
-// 		"pullOutSegmentOnClick": {
-// 			"effect": "back",
-// 			"speed": 400,
-// 			"size": 8
-// 		}
-// 	}
-// });
-// var pie = new d3pie("pieChart", {
-// 	"header": {
-// 		"title": {
-// 			"text": "SEXUALITY",
-// 			"fontSize": 16
-// 		},
-// 		"subtitle": {
-// 			"color": "#999999",
-// 			"fontSize": 10,
-// 			"font": "courier"
-// 		},
-// 		"location": "pie-center",
-// 		"titleSubtitlePadding": 10
-// 	},
-// 	"footer": {
-// 		"color": "#999999",
-// 		"fontSize": 10,
-// 		"font": "open sans",
-// 		"location": "bottom-left"
-// 	},
-// 	"size": {
-// 		"canvasHeight": 450,
-// 		"canvasWidth": 450,
-// 		"pieInnerRadius": "69%",
-// 		"pieOuterRadius": "48%"
-// 	},
-// 	"data": {
-// 		"sortOrder": "label-desc",
-// 		"content": [
-// 			{
-// 				"label": "straight",
-// 				"value": 60,
-// 				"color": "#2F80ED"
-// 			},
-// 			{
-// 				"label": "bisexual",
-// 				"value": 18,
-// 				"color": "#219653"
-// 			},
-// 			{
-// 				"label": "pansexual",
-// 				"value": 9,
-// 				"color": "#EB5757"
-// 			},
-// 			{
-// 				"label": "asexual",
-// 				"value": 6,
-// 				"color": "#42aebc"
-// 			},
-// 			{
-// 				"label": "gay",
-// 				"value": 4,
-// 				"color": "#F2C94C"
-// 			},
-// 			{
-// 				"label": "questioning",
-// 				"value": 2,
-// 				"color": "#9B51E0"
-// 			},
-// 			{
-// 				"label": "lesbian",
-// 				"value": 0.5,
-// 				"color": "#F2994A"
-// 			},
-// 			{
-// 				"label": "queer",
-// 				"value": 0.5,
-// 				"color": "#D8269B"
-// 			}
-// 		]
-// 	},
-// 	"labels": {
-// 		"outer": {
-// 			"format": "label-value1",
-// 			"pieDistance": 20
-// 		},
-// 		"inner": {
-// 			"format": "none"
-// 		},
-// 		"mainLabel": {
-// 			"fontSize": 11
-// 		},
-// 		"percentage": {
-// 			"color": "#999999",
-// 			"fontSize": 11,
-// 			"decimalPlaces": 0
-// 		},
-// 		"value": {
-// 			"color": "#37859a",
-// 			"fontSize": 11
-// 		},
-// 		"lines": {
-// 			"enabled": true,
-// 			"style": "straight",
-// 			"color": "#1d1d1d"
-// 		},
-// 		"truncation": {
-// 			"enabled": true
-// 		}
-// 	},
-// 	"tooltips": {
-// 		"enabled": true,
-// 		"type": "placeholder",
-// 		"string": "{label}: {value}, {percentage}%",
-// 		"styles": {
-// 			"backgroundColor": "#363636",
-// 			"padding": 6
-// 		}
-// 	},
-// 	"effects": {
-// 		"pullOutSegmentOnClick": {
-// 			"effect": "back",
-// 			"speed": 400,
-// 			"size": 8
-// 		}
-// 	}
-// });
-
-// var pie = new d3pie("pieChart", {
-// 	"header": {
-// 		"title": {
-// 			"text": "RACE",
-// 			"fontSize": 16
-// 		},
-// 		"subtitle": {
-// 			"color": "#999999",
-// 			"fontSize": 10,
-// 			"font": "courier"
-// 		},
-// 		"location": "pie-center",
-// 		"titleSubtitlePadding": 10
-// 	},
-// 	"footer": {
-// 		"color": "#999999",
-// 		"fontSize": 10,
-// 		"font": "open sans",
-// 		"location": "bottom-left"
-// 	},
-// 	"size": {
-// 		"canvasHeight": 450,
-// 		"canvasWidth": 450,
-// 		"pieInnerRadius": "69%",
-// 		"pieOuterRadius": "48%"
-// 	},
-// 	"data": {
-// 		"sortOrder": "label-desc",
-// 		"content": [
-// 			{
-// 				"label": "white",
-// 				"value": 74,
-// 				"color": "#EB5757"
-// 			},
-// 			{
-// 				"label": "asian",
-// 				"value": 10,
-// 				"color": "#D8269B"
-// 			},
-// 			{
-// 				"label": "hispanic/latinx",
-// 				"value": 5,
-// 				"color": "#2F80ED"
-// 			},
-// 			{
-// 				"label": "black",
-// 				"value": 5,
-// 				"color": "#9B51E0"
-// 			},
-// 			{
-// 				"label": "multiracial",
-// 				"value": 4,
-// 				"color": "#42aebc"
-// 			},
-// 			{
-// 				"label": "pacific islander",
-// 				"value": 1.5,
-// 				"color": "#F2C94C"
-// 			},
-// 			{
-// 				"label": "native american",
-// 				"value": 0.5,
-// 				"color": "#219653"
-// 			}
-// 		]
-// 	},
-// 	"labels": {
-// 		"outer": {
-// 			"format": "label-value1",
-// 			"pieDistance": 20
-// 		},
-// 		"inner": {
-// 			"format": "none"
-// 		},
-// 		"mainLabel": {
-// 			"fontSize": 11
-// 		},
-// 		"percentage": {
-// 			"color": "#999999",
-// 			"fontSize": 11,
-// 			"decimalPlaces": 0
-// 		},
-// 		"value": {
-// 			"color": "#37859a",
-// 			"fontSize": 11
-// 		},
-// 		"lines": {
-// 			"enabled": true,
-// 			"style": "straight",
-// 			"color": "#1d1d1d"
-// 		},
-// 		"truncation": {
-// 			"enabled": true
-// 		}
-// 	},
-// 	"tooltips": {
-// 		"enabled": true,
-// 		"type": "placeholder",
-// 		"string": "{label}: {value}, {percentage}%",
-// 		"styles": {
-// 			"backgroundColor": "#363636",
-// 			"padding": 6
-// 		}
-// 	},
-// 	"effects": {
-// 		"pullOutSegmentOnClick": {
-// 			"effect": "back",
-// 			"speed": 400,
-// 			"size": 8
-// 		}
-// 	}
-// });
 </script>
 
 </body>
