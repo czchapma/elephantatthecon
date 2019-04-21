@@ -108,12 +108,13 @@ body,
 }
 
 #demographics-column {
-    width: 50%;
-    min-width: 500px;
+    width: 49%;
+    border-left: 2px solid lightgrey;
 }
 
 #statistics-column {
-    width: 50%;
+    width: 49%;
+    border-right: 2px solid lightgrey;
 }
 
 #statistics-chart-container {

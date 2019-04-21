@@ -29,22 +29,8 @@ export class MainContent extends Component {
   }
 }
 
-export class StatContent extends Component {
-  constructor(props){
-    super(props);
-  }
-  render() {
-    return (
-      <div className="main-wrapper">
-        <h>STATISTICS</h> <br/>
-         <br/>
-        <img src={img}/>
-      </div>
-    );
-  }
-}
 
-export class TestContent extends Component {
+export class StatContent extends Component {
   constructor(props){
     super(props);
   }

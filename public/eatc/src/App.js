@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 
-import {TestContent,MainContent,StatContent,StoryContent} from './Content.js';
+import {StatContent, MainContent, StoryContent} from './Content.js';
 
 // We can put this in a different file and export it later
 class Header extends Component {
@@ -92,7 +92,7 @@ class ReportContent extends Component {
       content = <MainContent data ={this.props.data}/>
     }
     else if(this.props.mode == "stat"){
-      content = <TestContent data ={this.props.data} />
+      content = <StatContent data ={this.props.data} />
     }
     else if(this.props.mode == "story"){
       content = <StoryContent data ={this.props.data} />

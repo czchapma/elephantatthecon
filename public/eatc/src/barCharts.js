@@ -13,6 +13,7 @@ function createBarChart(id, dataset, label1, label2){
 			var w = 160;
 			var h = 280;
 			var colors = ["#ED917D", "#C24119"];
+			var options = ["no", "yes"];
 			
 			
 
@@ -20,6 +21,8 @@ function createBarChart(id, dataset, label1, label2){
 			for (var data in dataset){
 				total += dataset[data];
 			}
+
+			var tooltip = d3.select("body").append("div").attr("class", "tooltip");
 			
 			var chart = d3.select("#" + id)
 				.attr("width", w)
@@ -45,7 +48,15 @@ function createBarChart(id, dataset, label1, label2){
 			   })
 			   .attr("fill", function(d, i) {
 					return colors[i];
-			   });
+			   })
+			   .on("mousemove", function(d){
+            tooltip
+              .style("left", d3.event.pageX + "px")
+              .style("top", d3.event.pageY - 30 + "px")
+              .style("display", "block")
+              .html(options[dataset.indexOf(d)] + ": " + d + ", " + (d/total*100).toFixed() + "%");
+        	})
+        	.on("mouseout", function(d){ tooltip.style("display", "none");});
 
 			chart
 			.append("text")
