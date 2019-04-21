@@ -1,7 +1,7 @@
-
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 /* main blue colors used for general website */
 $main-blue: #67AEC1;
@@ -25,8 +25,10 @@ $accent-purple: #9B51E0;
 $accent-pink: #D8269B;
 
 /* font */
-$sans-serif-font: "Roboto", sans-serif;
-$serif-font: "Noto Serif", serif;
+$sans-serif-font: "Roboto",
+sans-serif;
+$serif-font: "Noto Serif",
+serif;
 $nav-bar-font-size: 12px;
 $body-font-size: 12px;
 $data-label-font-size: 8px;

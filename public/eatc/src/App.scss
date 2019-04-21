@@ -1,19 +1,21 @@
 @import "globalvars";
 
-html, body, #root {
+html,
+body,
+#root {
     margin: 0;
-  padding: 0;
+    padding: 0;
     height: 100%;
 }
 
 .app-wrapper {
-  text-align: center;
-  margin: 0;
-  height: 100%;
-  background-color: white;
+    text-align: center;
+    margin: 0;
+    height: 100%;
+    background-color: white;
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 /*.App-logo {
@@ -23,138 +25,203 @@ html, body, #root {
 }*/
 
 .app-header {
-  background-color: $main-blue;
-  /*display: flex;
+    background-color: $main-blue;
+    /*display: flex;
   flex-direction: column;
   align-items: center;*/
-  justify-content: center;
-  flex: 5vh;
+    justify-content: center;
+    flex: 5vh;
 }
 
 .app-header a {
-  text-transform: uppercase;
-  font-size: 12px;
-  text-decoration: none;
-  color: white;
-  font-weight: lighter;
-  font-family: $sans-serif-font;
-  letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+    font-family: $sans-serif-font;
+    letter-spacing: 1px;
 }
 
 
 
-.report-wrapper{
-  flex: 95vh;
-  display: flex;
-  flex-direction:row;
-  height: 95%;
-  font-family: $sans-serif-font;
+.report-wrapper {
+    flex: 95vh;
+    display: flex;
+    flex-direction: row;
+    height: 95%;
+    font-family: $sans-serif-font;
 }
 
 .report-wrapper p {
-  font-family: $serif-font;
+    font-family: $serif-font;
 }
 
 .content-wrapper {
-  /*background-color: #37859A;*/
-  /*flex: 92vw;*/
+    /*background-color: #37859A;*/
+    /*flex: 92vw;*/
 
-  flex: 95vw;
-  overflow: auto;
-  padding: 5%;
+    flex: 95vw;
+    overflow: auto;
+    padding: 5%;
 
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .scroll-wrapper {
-  float: left;
-  flex: 5vw;
-  height: 100%;
-  border-right: 3px solid lightgrey;
-  /*position: fixed;*/
+    float: left;
+    flex: 5vw;
+    height: 100%;
+    border-right: 3px solid lightgrey;
+    /*position: fixed;*/
 }
 
 .scroll-wrapper a {
-  text-transform: uppercase;
-  font-size: 12px;
-  text-decoration: none;
-  color: black;
-  font-weight: lighter;
-  font-family: $sans-serif-font;
-  letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+    font-weight: lighter;
+    font-family: $sans-serif-font;
+    letter-spacing: 1px;
 }
 
 .main-wrapper {
-  margin-left: -3vw;
+    margin-left: -3vw;
 }
 
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
+.wrapper-title {
+    margin-bottom: 50px;
+    margin-top: -20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
 
+}
+
+#demographics-column {
+    width: 50%;
+    min-width: 500px;
+}
+
+#statistics-column {
+    width: 50%;
+}
+
+#statistics-chart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.rectangle-chart text {
+    fill: #000;
+    font: 11px sans-serif;
+    text-anchor: initial;
+    font-family: Arial;
+}
+
+.tooltip {
+    position: absolute;
+    display: none;
+    width: auto;
+    background: rgba(54, 54, 54, 0.5);
+    color: white;
+    font-size: 10px;
+    padding: 6px;
+    border-radius: 2px;
+    text-align: center;
+    font-family: Arial;
+}
+
+.chart-container {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.chart-container p {
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 4px;
+    font-family: Arial;
+    font-size: 10px;
+}
+
+.bar-chart text {
+    fill: #000;
+    font: 11px sans-serif;
+    font-family: Arial;
+}
 
 .menu-item {
-  display: inline;
-  padding: 5vh;
+    display: inline;
+    padding: 5vh;
 }
 
-.scroll-item{
-  display: block;
-  margin-top: 20vh;
-  margin-bottom: 0vh;
-  transform-origin: center;
-  transform: rotate(-90deg);
+.scroll-item {
+    display: block;
+    margin-top: 20vh;
+    margin-bottom: 0vh;
+    transform-origin: center;
+    transform: rotate(-90deg);
 }
 
-.main-title{
-  font-weight: 100;
-  font-size: 5em;
-  letter-spacing: .1em;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: black;
-  font-weight: 10;
-  padding-bottom: 3%;
-}
-.main-date{
-  font-size: 3em;
-  font: $sans-serif-font;
-  color: black;
-  padding-bottom: 3%;
+.main-title {
+    font-weight: 100;
+    font-size: 5em;
+    letter-spacing: .1em;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    font-weight: 10;
+    padding-bottom: 3%;
 }
 
-.main-text{
-  text-align:left;
-  font-family: $serif-font;
-  padding-left: 7%;
-  padding-right: 7%;
-  padding-bottom: 2%;
+.main-date {
+    font-size: 3em;
+    font: $sans-serif-font;
+    color: black;
+    padding-bottom: 3%;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.main-text {
+    text-align: left;
+    font-family: $serif-font;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 2%;
 }
+
+
 
 
 
 
 .column {
-  float: left;
-  width: 49.5%;
+    float: left;
+    width: 49.5%;
 }
 
 .stat-col {
-  border-right: 3px solid lightgrey;
+    border-right: 3px solid lightgrey;
 }
 
-.stat-title{
-  font-weight: 100;
-  font-size: 2em;
-  letter-spacing: .1em;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: black;
-  font-weight: 10;
+.stat-title {
+    font-weight: 100;
+    font-size: 2em;
+    letter-spacing: .1em;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    font-weight: 10;
 
 }
 
@@ -163,10 +230,11 @@ html, body, #root {
 }*/
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

@@ -1,20 +1,12 @@
-<html>
-<head></head>
-<body>
+
+import * as d3pie from "d3pie"
+
+export function createPieCharts() {
+
+	var colors = ["#E1A79A", "#DB7B65", "#AD616B", "#397579", "#516F96", "#6F9CAB", "#85B3A9", "#639578" ];
 
 
-<div id="pieChart"></div>
-
-<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script> -->
-
-<script src="../node_modules/d3/dist/d3.min.js"></script>
-<script src="../node_modules/d3pie/d3pie/d3pie.js"></script>
-<script>
-
-// var colors = ["#2F80ED", "#9B51E0", "#D8269B", "#EB5757", "#F2994A", "#F2C94C", "#219653", "#1bad9c"];
-
-
-let jayson = {
+	let jayson = {
                 'gender': [
                     ['male', 55, "#E23636"],
                     ['female', 43, "#2F80ED"],
@@ -54,13 +46,16 @@ let jayson = {
             };
 
 
-createChart('gender');
-createChart('race');
-createChart('sexuality');
+createChart('gender', 'genderPieChart', colors, jayson);
+createChart('race', 'racePieChart', colors, jayson);
+createChart('sexuality', 'sexualityPieChart', colors, jayson);
 
-function createChart (title){
+}
 
-	var content = [];
+
+function createChart (title, pieChart, colors, jayson){
+
+var content = [];
 
 for (var cat in jayson){
 	if (cat === title) {
@@ -69,21 +64,23 @@ for (var cat in jayson){
 			content[data] = {
 				"label": jayson[cat][data][0],
 				"value": jayson[cat][data][1],
-				"color": jayson[cat][data][2]
+				"color": colors[data]
 			}
 		}
 	}
 }
-	return new d3pie("pieChart", {
+	return new d3pie(pieChart, {
 	"header": {
 		"title": {
 			"text": title.toUpperCase(),
-			"fontSize": 16
+			"fontSize": 12
 		},
+
 		"subtitle": {
 			"color": "#999999",
 			"fontSize": 10,
 			"font": "courier"
+
 		},
 		"location": "pie-center",
 		"titleSubtitlePadding": 10
@@ -95,10 +92,10 @@ for (var cat in jayson){
 		"location": "bottom-left"
 	},
 	"size": {
-		"canvasHeight": 450,
-		"canvasWidth": 450,
-		"pieInnerRadius": "69%",
-		"pieOuterRadius": "48%"
+		"canvasHeight": 175,
+		"canvasWidth": 400,
+		"pieInnerRadius": "65%",
+		"pieOuterRadius": "100%"
 	},
 	"data": {
 		"sortOrder": "value-desc",
@@ -122,7 +119,7 @@ for (var cat in jayson){
 		},
 		"value": {
 			"color": "#37859a",
-			"fontSize": 11
+			"fontSize": 11,
 		},
 		"lines": {
 			"enabled": true,
@@ -151,8 +148,3 @@ for (var cat in jayson){
 	}
 });
 }
-
-</script>
-
-</body>
-</html>
