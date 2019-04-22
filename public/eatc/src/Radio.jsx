@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './stories.scss'
 // import FilteredList from './FilteredList';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCamera } from '@fortawesome/free-solid-svg-icons'
+
 class Radio extends Component {
   renderList(it, head, change) {
 

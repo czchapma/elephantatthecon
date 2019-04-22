@@ -9,6 +9,10 @@ import {createRectangleCharts} from './rectangleCharts.js'
 import {createBarCharts} from './barCharts.js'
 import * as d3pie from "d3pie"
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+
 export class MainContent extends Component {
   constructor(props){
     super(props);
