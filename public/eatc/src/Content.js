@@ -12,8 +12,14 @@ import * as d3pie from "d3pie"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUsers } from '@fortawesome/free-solid-svg-icons'
+import { faBalanceScale } from '@fortawesome/free-solid-svg-icons'
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faComment } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faUsers);
+library.add(faBalanceScale);
+library.add(faCheckCircle);
+library.add(faComment);
 
 export class HomeContent extends Component{
   constructor(props){
@@ -45,13 +51,13 @@ export class HomeContent extends Component{
   <div id="believe-text">WE BELIEVE...</div>
 
   <div id="believe-wrapper">
-    <div id="believe-box"> <FontAwesomeIcon icon="users" />
+    <div id="believe-box"> <FontAwesomeIcon className="icon" icon="users" />
     <p>People of all identities have the right to feel safe at conventions.</p></div>
-    <div id="believe-box">
+    <div id="believe-box"> <FontAwesomeIcon className="icon" icon="balance-scale" />
     <p>Every convention has its own challenges and areas for improvement.</p></div>
-    <div id="believe-box">
+    <div id="believe-box"> <FontAwesomeIcon className="icon" icon="check-circle" />
     <p>Convention organizers and their communities want to do the right thing.</p></div>
-    <div id="believe-box">
+    <div id="believe-box"> <FontAwesomeIcon className="icon" icon="comment" />
     <p> Quantitative data and personal stories will empower convention organizers to make their next event safer for all.</p></div>
   </div>
 

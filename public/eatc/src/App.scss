@@ -261,7 +261,8 @@ body,
 
 #home-eatc-wrapper {
     margin-top: 140px;
-    margin-right: -70px;
+    margin-right: -60px;
+    margin-left: 60px;
 }
 
 #home-description {
@@ -324,10 +325,11 @@ body,
     text-align: center;
 }
 
-i {
+.icon {
+    font-size: 40px;
+    color: #39626A;
     margin: 20px;
 }
-
 
 
 
