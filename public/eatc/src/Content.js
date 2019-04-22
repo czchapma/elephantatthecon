@@ -31,7 +31,7 @@ export class HomeContent extends Component{
         <div id="eatc-2">AT THE CON</div>
       </div>
     
-    <img id="logo" src="eatclogo.png"/>
+    <img id="logo" src="../eatclogo.png"/>
   </div>
 
   <div className="home-divider"></div>
