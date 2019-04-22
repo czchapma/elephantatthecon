@@ -27,10 +27,11 @@ body,
 .app-header {
     background-color: $main-blue;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    // justify-content: center;
+    justify-content: center;
     // flex: 5vh;
+
 }
 
 .app-header a {
@@ -42,6 +43,8 @@ body,
     font-family: $sans-serif-font;
     letter-spacing: 1px;
 }
+
+
 
 
 
@@ -101,7 +104,14 @@ body,
 
 .menu-item {
     display: inline;
-    padding: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    height: 100%;
+}
+.menu-item:hover {
+  background-color: $lighter-blue;
 }
 
 .scroll-item {
