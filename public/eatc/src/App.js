@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 
-import {StatContent, MainContent, StoryContent} from './Content.js';
+import {StatContent, MainContent, StoryContent, HomeContent} from './Content.js';
 
 // We can put this in a different file and export it later
 class Header extends Component {
@@ -11,9 +11,9 @@ class Header extends Component {
     return (
       <div className="app-header">
       <ul>
-        <li className="menu-item"><a href="#">home</a></li>
-        <li className="menu-item"><a href="#">magfest 18</a></li>
-        <li className="menu-item"><a href="#">tekko 17</a></li>
+        <li className="menu-item"><a href="#" value="home" onClick= {this.props.onClickFunc}>home</a></li>
+        <li className="menu-item"><a href="#" value="magfest" onClick= {this.props.onClickFunc}>magfest 18</a></li>
+        <li className="menu-item"><a href="#" value="tekko" onClick= {this.props.onClickFunc}>tekko 17</a></li>
         <li className="menu-item"><a href="#">nerdcon 17</a></li>
         <li className="menu-item"><a href="#">geekycon 17</a></li>
         <li className="menu-item"><a href="#">vidcon 17</a></li>
@@ -133,6 +133,7 @@ class App extends Component {
 
       Maybe have some js function to parse json file representing a report?
     */
+    this.handleNewReport = this.handleNewReport.bind(this);
 
     this.state = {
       data: {
@@ -142,15 +143,48 @@ class App extends Component {
         Clearly MAGFest is a special event and an important community for many. At Uplift we understand the power of communities and work with organizers like MAGFest to ensure that these important communities are safe for everyone. With this in mind, we conducted a survey of MAGFest 2018 attendees on safety and inclusion.`,
         stat: './images/stat.png',
         story: 'test'
-      }
+      },
+      mode: "home"
     }
   }
+
+  handleNewReport(e){
+    if(e.target.getAttribute("value") == "home"){
+      this.setState(prevState => ({
+        mode: 'home',
+      }));
+    }
+    else if(e.target.getAttribute("value") == "magfest"){
+      // set data here!!!!
+      this.setState(prevState => ({
+        mode: 'content'
+      }));
+    }
+  }
+
   render() {
+    let content;
+
+    if(this.state.mode == "home"){
+      content = <div><Header onClickFunc = {this.handleNewReport}/>
+      <HomeContent /></div>
+    }
+    else if(this.state.mode == "content"){
+      content = <div><Header onClickFunc = {this.handleNewReport}/>
+        <Report data={this.state.data}/></div>
+    }
+
     // Going to pass the data all the way down to ReportContent
+    // return (
+    //   <div className="app-wrapper">
+    //     <Header />
+    //     <Report data={this.state.data}/>
+    //   </div>
+    // );
+
     return (
       <div className="app-wrapper">
-        <Header />
-        <Report data={this.state.data}/>
+        {content}
       </div>
     );
   }

@@ -13,6 +13,48 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
 
+export class HomeContent extends Component{
+  constructor(props){
+    super(props);
+    console.log(this.props)
+  }
+
+  render(){
+    return (
+      <div id="content-wrapper">
+
+      <div id="title-wrapper">
+    <div id="eatc">ELEPHANT</div>
+    <div id="eatc">AT THE CON</div>
+    <img id="logo" src="logo.png"/>
+  </div>
+
+  <div class="divider"></div>
+
+  <div id="description">
+    <p><a class="accent">Elephant At The Con</a> is a campaign by <a class="accent" href="https://uplifttogether.org/">Uplift</a> dedicated to shining a light on convention safety issues by collecting attendee stories and quantitative data on abuse and harassement at conventions with the goal of creating action plans for organizers to improve in the future.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div id="believe-text">WE BELIEVE...</div>
+
+  <div id="believe-wrapper">
+    <div id="believe-box">
+    <p>People of all identities have the right to feel safe at conventions.</p></div>
+    <div id="believe-box">
+    <p>Every convention has its own challenges and areas for improvement.</p></div>
+    <div id="believe-box">
+    <p>Convention organizers and their communities want to do the right thing.</p></div>
+    <div id="believe-box">
+    <p> Quantitative data and personal stories will empower convention organizers to make their next event safer for all.</p></div>
+  </div>
+
+    </div>
+  );
+  }
+}
+
 export class MainContent extends Component {
   constructor(props){
     super(props);
