@@ -11,7 +11,9 @@ import * as d3pie from "d3pie"
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+import { faUsers } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faUsers);
 
 export class HomeContent extends Component{
   constructor(props){
@@ -21,26 +23,29 @@ export class HomeContent extends Component{
 
   render(){
     return (
-      <div id="content-wrapper">
+      <div id="home-content-wrapper">
 
-      <div id="title-wrapper">
-    <div id="eatc">ELEPHANT</div>
-    <div id="eatc">AT THE CON</div>
-    <img id="logo" src="logo.png"/>
+      <div id="home-title-wrapper">
+      <div id="home-eatc-wrapper">
+        <div id="eatc-1">ELEPHANT</div>
+        <div id="eatc-2">AT THE CON</div>
+      </div>
+    
+    <img id="logo" src="eatclogo.png"/>
   </div>
 
-  <div class="divider"></div>
+  <div className="home-divider"></div>
 
-  <div id="description">
-    <p><a class="accent">Elephant At The Con</a> is a campaign by <a class="accent" href="https://uplifttogether.org/">Uplift</a> dedicated to shining a light on convention safety issues by collecting attendee stories and quantitative data on abuse and harassement at conventions with the goal of creating action plans for organizers to improve in the future.</p>
+  <div id="home-description">
+    <p><a className="accent">Elephant At The Con</a> is a campaign by <a className="accent" href="https://uplifttogether.org/">Uplift</a> dedicated to shining a light on convention safety issues by collecting attendee stories and quantitative data on abuse and harassement at conventions with the goal of creating action plans for organizers to improve in the future.</p>
   </div>
 
-  <div class="divider"></div>
+  <div className="home-divider"></div>
 
   <div id="believe-text">WE BELIEVE...</div>
 
   <div id="believe-wrapper">
-    <div id="believe-box">
+    <div id="believe-box"> <FontAwesomeIcon icon="users" />
     <p>People of all identities have the right to feel safe at conventions.</p></div>
     <div id="believe-box">
     <p>Every convention has its own challenges and areas for improvement.</p></div>
