@@ -274,7 +274,7 @@ body,
     font-family: "Open Sans";
     padding: 20px 0px;
     font-size: 12px;
-    text-align: center;
+    text-align: left;
 }
 
 .accent {
@@ -311,10 +311,10 @@ body,
     width: 250px;
     height: 150px;
     display: flex;
-    flex-direction: column;
-    border: 2px solid #39626A;
-    box-shadow: 10px 10px #67AEC1;
-    margin: 30px;
+    flex-direction: row;
+    // border: 2px solid #39626A;
+    // box-shadow: 10px 10px #67AEC1;
+    margin: 20px;
     align-items: center;
 }
 
@@ -322,7 +322,7 @@ body,
     width: 80%;
     font-family: "Open Sans";
     font-size: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 .icon {
