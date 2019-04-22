@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 /* main blue colors used for general website */
@@ -29,6 +28,9 @@ $sans-serif-font: "Roboto",
 sans-serif;
 $serif-font: "Noto Serif",
 serif;
+$other: "Open Sans",
+sans-serif;
+$font-weight: 700;
 $nav-bar-font-size: 12px;
 $body-font-size: 12px;
 $data-label-font-size: 8px;

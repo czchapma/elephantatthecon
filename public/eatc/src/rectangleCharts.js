@@ -68,3 +68,4 @@ chart.append("text")
     .attr("y", 40)
     .text(label);
 }
+
