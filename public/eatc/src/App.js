@@ -10,15 +10,15 @@ class Header extends Component {
   render() {
     return (
       <div className="app-header">
-      <ul>
-        <li className="menu-item"><a href="#" value="home" onClick= {this.props.onClickFunc}>home</a></li>
-        <li className="menu-item"><a href="#" value="magfest" onClick= {this.props.onClickFunc}>magfest 18</a></li>
-        <li className="menu-item"><a href="#" value="tekko" onClick= {this.props.onClickFunc}>tekko 17</a></li>
-        <li className="menu-item"><a href="#">nerdcon 17</a></li>
-        <li className="menu-item"><a href="#">geekycon 17</a></li>
-        <li className="menu-item"><a href="#">vidcon 17</a></li>
+      
+        <li className="menu-item" id = "home"><a href="#" value="home" onClick= {this.props.onClickFunc}>home</a></li>
+        <li className="menu-item" id = "magfest"><a href="#" value="magfest" onClick= {this.props.onClickFunc}>magfest 18</a></li>
+        <li className="menu-item" id = "tekko"><a href="#" value="tekko" onClick= {this.props.onClickFunc}>tekko 17</a></li>
+        <li className="menu-item" id = "nerdcon"><a href="#" value="nerdcon" onClick= {this.props.onClickFunc}>nerdcon 17</a></li>
+        <li className="menu-item" id = "geekycon"><a href="#" value="geekycon" onClick= {this.props.onClickFunc}>geekycon 17</a></li>
+        <li className="menu-item" id = "vidcon"><a href="#" value="vidcon" onClick= {this.props.onClickFunc}>vidcon 17</a></li>
         <li className="menu-item"><a href="#">vidcon 16</a></li>
-      </ul>
+      
 
       </div>
     );
@@ -149,12 +149,20 @@ class App extends Component {
   }
 
   handleNewReport(e){
+    let x  = document.getElementsByClassName("menu-item");
+      for(let i = 0; i < x.length; i++){
+          x[i].style.backgroundColor = "#67AEC1";
+      }
+    document.getElementById(e.target.getAttribute("value")).style.backgroundColor = "#9AD2DF";
+
     if(e.target.getAttribute("value") == "home"){
+      // document.getElementById("home").style.backgroundColor = "#9AD2DF";
       this.setState(prevState => ({
         mode: 'home',
       }));
     }
     else if(e.target.getAttribute("value") == "magfest"){
+      document.getElementById("magfest").style.backgroundColor = "#9AD2DF";
       // set data here!!!!
       this.setState(prevState => ({
         mode: 'content'
@@ -170,6 +178,7 @@ class App extends Component {
       <HomeContent /></div>
     }
     else if(this.state.mode == "content"){
+
       content = <div><Header onClickFunc = {this.handleNewReport}/>
         <Report data={this.state.data}/></div>
     }
