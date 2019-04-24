@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
+import './responsive.css'
 
 import {StatContent, MainContent, StoryContent, HomeContent} from './Content.js';
+
+import {toggleDropDown} from './responsive.js'
 
 // We can put this in a different file and export it later
 class Header extends Component {
   // No CSS to make it horizontal yet
   render() {
     return (
-      <div className="app-header">
+      <div className="app-header" id = "app-header">
       
         <li className="menu-item" id = "home"><a href="#" value="home" onClick= {this.props.onClickFunc}>home</a></li>
         <li className="menu-item" id = "magfest"><a href="#" value="magfest" onClick= {this.props.onClickFunc}>magfest 18</a></li>
@@ -19,7 +22,7 @@ class Header extends Component {
         <li className="menu-item" id = "vidcon"><a href="#" value="vidcon" onClick= {this.props.onClickFunc}>vidcon 17</a></li>
         <li className="menu-item"><a href="#">vidcon 16</a></li>
       
-
+        <li className="menu-item icon" id = "toggle"><a href="javascript:void(0);"  onClick={toggleDropDown}>&#9776;</a></li>
       </div>
     );
   }
