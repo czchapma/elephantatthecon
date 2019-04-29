@@ -6,30 +6,23 @@ export function createRectangleCharts(data) {
 createRectChart(data, "I felt safe", "rectangle-chart-1");
 createRectChart(data, "I felt safe sharing my gender identity", "rectangle-chart-2");
 createRectChart(data, "I felt safe sharing my sexuality", "rectangle-chart-3");
-
 }
 
+function createRectChart(data, label, id){
 
-function createRectChart(jayson, label, id){
+var dataset = [];
+var options = [];
 
-var content = [];
-
-for (var cat in jayson){
-	if (cat === label) {
-		for (var data in jayson[cat]){
-			content[data] = jayson[cat][data][1];
-		}
-	}
+for (var item in data[label]){
+	options[item] = data[label][item][0];
+	dataset[item] = data[label][item][1];
 }
-
-console.log(content);
 
 var colors = ["#DFF9FF", "#9AD2DF", "#67AEC1", "#37859A", "#39626A"];
-var levels = ["always", "usually", "sometimes", "rarely", "never"];
 
 var acc = 0;
 
-var total = d3.sum(content);
+var total = d3.sum(dataset);
 
 var chart = d3.select("#" + id)
 	.attr("width", "100%")
@@ -40,7 +33,7 @@ var chart = d3.select("#" + id)
 var tooltip = d3.select("body").append("div").attr("class", "tooltip");
 
 var bar = chart.selectAll("g")
-	.data(content)
+	.data(dataset)
 	.enter().append("g");
 bar.append("rect")
 	.attr("width", function(d) { return ((d/total)*100) + "%"; } )
@@ -51,13 +44,13 @@ bar.append("rect")
 		return prev + "%";
 	})
 	.attr("height", 20)
-	.attr("fill",  function(d) { return (colors[content.indexOf(d)]) } )
+	.attr("fill",  function(d) { return (colors[dataset.indexOf(d)]) } )
 	.on("mousemove", function(d){
             tooltip
               .style("left", d3.event.pageX + "px")
               .style("top", d3.event.pageY - 30 + "px")
               .style("display", "block")
-              .html(levels[content.indexOf(d)] + ": " + d + ", " + (d/total*100).toFixed() + "%");
+              .html(options[dataset.indexOf(d)] + ": " + d + ", " + (d/total*100).toFixed() + "%");
         })
    .on("mouseout", function(d){ tooltip.style("display", "none");});
 

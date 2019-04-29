@@ -1,36 +1,31 @@
 
 import * as d3pie from "d3pie"
 
-export function createPieCharts(jayson) {
+export function createPieCharts(data) {
+
+createChart("gender", 'genderPieChart', data);
+createChart("race", 'racePieChart', data);
+createChart("sexuality", 'sexualityPieChart', data);
+
+}
+
+function createChart (label, id, data){
 
 var colors = ["#E1A79A", "#DB7B65", "#AD616B", "#397579", "#516F96", "#6F9CAB", "#85B3A9", "#639578" ];
 
-createChart('gender', 'genderPieChart', colors, jayson);
-createChart('race', 'racePieChart', colors, jayson);
-createChart('sexuality', 'sexualityPieChart', colors, jayson);
-
-}
-
-function createChart (title, pieChart, colors, jayson){
-
 var content = [];
-
-for (var cat in jayson){
-	if (cat === title) {
-		for (var data in jayson[cat]){
-			console.log(jayson[cat][data][0]);
-			content[data] = {
-				"label": jayson[cat][data][0],
-				"value": jayson[cat][data][1],
-				"color": colors[data]
-			}
-		}
+for (var item in data[label]){
+	content[item] = {
+		"label": data[label][item][0],
+		"value": data[label][item][1],
+		"color": colors[item]
 	}
 }
-	return new d3pie(pieChart, {
+
+	return new d3pie(id, {
 	"header": {
 		"title": {
-			"text": title.toUpperCase(),
+			"text": label.toUpperCase(),
 			"fontSize": 12
 		},
 

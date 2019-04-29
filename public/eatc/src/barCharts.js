@@ -2,29 +2,24 @@ import * as d3 from "d3"
 
 export function createBarCharts(data){
 
-
 	createBarChart("bar-chart-1", data, "Someone verbally/harassed me");
 	createBarChart("bar-chart-2", data, "Someone touched me/without my consent");
 	createBarChart("bar-chart-3", data, "Someone sexually/harassed or assaulted me");
 }
 
-function createBarChart(id, jayson, label){
+function createBarChart(id, data, label){
 
-	//Width and height
-			var w = 160;
-			var h = 280;
-			var colors = ["#ED917D", "#C24119"];
-			var options = ["no", "yes"];
+	var w = 160;
+	var h = 280;
+	var colors = ["#ED917D", "#C24119"];
 
-			var dataset = [];
+	var dataset = [];
+	var options = [];
 
-			for (var cat in jayson){
-				if (cat === label) {
-					for (var data in jayson[cat]){
-						dataset[data] = jayson[cat][data][1];
-					}
-				}
-			}
+	for (var item in data[label]){
+		options[item] = data[label][item][0];
+		dataset[item] = data[label][item][1];
+	}
 
 			var res = label.split("/")
 
