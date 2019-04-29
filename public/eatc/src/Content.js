@@ -8,6 +8,7 @@ import {createPieCharts} from './pieCharts.js'
 import {createRectangleCharts} from './rectangleCharts.js'
 import {createBarCharts} from './barCharts.js'
 import * as d3pie from "d3pie"
+// import { getData } from './cssc_script.js'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -160,7 +161,7 @@ export class StoryContent extends Component {
   render() {
     return (
       <div className="main-wrapper">
-        <div className="main-title">STORIES</div>
+        <div className="wrapper-title">STORIES</div>
           <FilteredList items = {stories.magfest2018} />
       </div>
     );

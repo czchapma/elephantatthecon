@@ -7,7 +7,7 @@ function renderList(it) {
       return <div key={item.id}>
           <div className = "card">
             <div className = "title">
-              <h4><b>{String.prototype.toUpperCase.call(item.header)}</b></h4>
+              <h4>{String.prototype.toUpperCase.call(item.header)}</h4>
             </div>
             <div className = "content">
               <p>{quote}</p>

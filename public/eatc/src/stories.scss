@@ -10,7 +10,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 70%;
+  width: 75%;
 }
 
 .btn-group {
@@ -23,7 +23,7 @@
   top: 0;
   bottom: 0;
   height: 40vh;
-  width: 30%;
+  width: 25%;
 }
 
 .card {
@@ -48,6 +48,7 @@
   margin-top: -10px;
 }
 
+
 input[type="radio"] {
   display: none;
 }
@@ -64,18 +65,27 @@ input[type="radio"] + span {
   cursor: pointer;
   border-radius: 50%;
   margin: 20px;
+
 }
 
 input[type="radio"]:checked + span .check{
   background-color: $main-blue;
   background-repeat: no-repeat;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   margin: auto;
-  margin-top: 4.2px;
+  margin-top: 3px;
 }
 
 input[type="radio"] + span {
   margin-right: 20px;
+}
+
+h4 {
+  text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-family: $other;
+    font-weight: $font-weight;
 }

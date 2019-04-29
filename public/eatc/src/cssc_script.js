@@ -16,7 +16,7 @@ function getData(spreadsheetID) {
      * The prefix is because Google Sheets converts every header column to a cleaned version of the text, starting with 'gsx$' (e.g. a header of 'I felt safe.' would be converted to 'gsx$ifeltsafe')
      */
     function findValueByPrefix(object, prefix) {
-        ret = []
+        var ret = []
         console.log(object)
         for (var property in object) {
             if (object.hasOwnProperty(property) && 
@@ -32,7 +32,7 @@ function getData(spreadsheetID) {
      * Depending on the input, will return a preassigned color for the d3 visualization.
      */
     function assignColor(key) {
-        color = "#000000";
+        var color = "#000000";
         switch(key) {
             case "yes":
                 color = "#000000";
@@ -172,11 +172,11 @@ function getData(spreadsheetID) {
 
         var entry = data.feed.entry;
 
-        var formatted_data = {}
+        var formatted_data = {};
         $(entry).each(function(){
             let temp = Object.entries(findValueByPrefix(this, 'gsx$'));
 
-            for (i = 0; i < temp.length; i++) {
+            for (var i = 0; i < temp.length; i++) {
                 // if first row, initialize new array
                 if (formatted_data[temp[i][0]] === void(0)) {
                     formatted_data[temp[i][0]] = [];
@@ -186,7 +186,7 @@ function getData(spreadsheetID) {
 
         });
 
-        for (item in formatted_data) {
+        for (var item in formatted_data) {
             // TODO test things here
             let new_count = formatted_data[item].reduce(function (allResponses, response) {
                 response = response.toLowerCase().split('/ ').join('/');
