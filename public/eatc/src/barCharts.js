@@ -2,20 +2,34 @@ import * as d3 from "d3"
 
 export function createBarCharts(data){
 
-	console.log(data);
 
-	createBarChart("bar-chart-1", [84, 16], "Someone verbally", "harassed me");
-	createBarChart("bar-chart-2", [90, 10], "Someone touched me", "without my consent");
-	createBarChart("bar-chart-3", [89, 11], "Someone sexually", "harassed or assaulted me");
+	createBarChart("bar-chart-1", data, "Someone verbally/harassed me");
+	createBarChart("bar-chart-2", data, "Someone touched me/without my consent");
+	createBarChart("bar-chart-3", data, "Someone sexually/harassed or assaulted me");
 }
 
-function createBarChart(id, dataset, label1, label2){
+function createBarChart(id, jayson, label){
 
 	//Width and height
 			var w = 160;
 			var h = 280;
 			var colors = ["#ED917D", "#C24119"];
 			var options = ["no", "yes"];
+
+			var dataset = [];
+
+			for (var cat in jayson){
+				if (cat === label) {
+					for (var data in jayson[cat]){
+						dataset[data] = jayson[cat][data][1];
+					}
+				}
+			}
+
+			var res = label.split("/")
+
+			var label1 = res[0];
+			var label2 = res[1];
 			
 			
 
@@ -66,7 +80,6 @@ function createBarChart(id, dataset, label1, label2){
     .attr("x", 80)
     .attr("y", 260)
     .text(label1);
-
     chart
 			.append("text")
     .attr("text-anchor", "middle")
