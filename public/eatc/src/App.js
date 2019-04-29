@@ -35,7 +35,7 @@ class Report extends Component {
     this.handleNewContent = this.handleNewContent.bind(this);
     this.state = {
       // reportData: this.props.reportData,
-      data: this.props.data,
+      // data: this.props.data,
       mode: 'main',
       contentData: 'Main Content',
       scrollData: 'Scroll Content'
@@ -71,7 +71,7 @@ class Report extends Component {
     return (
       <div className="report-wrapper">
         <ReportScroll onClickFunc = {this.handleNewContent}/>
-        <ReportContent data={this.state.data} mode ={this.state.mode}/>
+        <ReportContent data={this.props.data} mode ={this.state.mode}/>
       </div>
     );
   }
@@ -81,6 +81,10 @@ class Report extends Component {
 class ReportContent extends Component {
   constructor(props){
     super(props);
+    // this.state = {
+    //   // reportData: this.props.reportData,
+    //   data: this.props.data,
+    // }
   }
   render() {
     // return (
@@ -139,14 +143,22 @@ class App extends Component {
     this.handleNewReport = this.handleNewReport.bind(this);
 
     this.state = {
-      data: {
-        name: 'MAGFEST',
-        intro: `MAGFest (Music and Gaming Festival) is a four day-long event dedicated to the appreciation of video game music, gaming of all types, and the gaming community that took place in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video games at 4 in the morning. A lot of people come with their friends every year. Some have moved away and still travel back every year for the festival.
-
-        Clearly MAGFest is a special event and an important community for many. At Uplift we understand the power of communities and work with organizers like MAGFest to ensure that these important communities are safe for everyone. With this in mind, we conducted a survey of MAGFest 2018 attendees on safety and inclusion.`,
-        stat: './images/stat.png',
-        story: 'test'
-      },
+      // data: {
+      //   name: 'MAGFEST',
+      //   intro: "",
+      //   p1: `MAGFest (Music and Gaming Festival) is a four day-long event dedicated to
+      //   the appreciation of video game music, gaming of all types, and the gaming community that took place
+      //   in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some
+      //   said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video
+      //   games at 4 in the morning. A lot of people come with their friends every year. Some have moved away
+      //   and still travel back every year for the festival.`,
+      //   p2: `Clearly MAGFest is a special event and an important community for many.
+      //   At Uplift we understand the power of communities and work with organizers like MAGFest to ensure
+      //   that these important communities are safe for everyone. With this in mind, we conducted a survey of
+      //   MAGFest 2018 attendees on safety and inclusion.`,
+      //   stat: './images/stat.png',
+      //   story: 'test'
+      // },
       mode: "home"
     }
   }
@@ -168,6 +180,121 @@ class App extends Component {
       document.getElementById("magfest").style.backgroundColor = "#9AD2DF";
       // set data here!!!!
       this.setState(prevState => ({
+        data: {
+        name: 'MAGFEST',
+        intro: "",
+        p1: `MAGFest (Music and Gaming Festival) is a four day-long event dedicated to
+        the appreciation of video game music, gaming of all types, and the gaming community that took place
+        in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some
+        said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video
+        games at 4 in the morning. A lot of people come with their friends every year. Some have moved away
+        and still travel back every year for the festival.`,
+        p2: `Clearly MAGFest is a special event and an important community for many.
+        At Uplift we understand the power of communities and work with organizers like MAGFest to ensure
+        that these important communities are safe for everyone. With this in mind, we conducted a survey of
+        MAGFest 2018 attendees on safety and inclusion.`,
+        stat: './images/stat.png',
+        story: 'test'
+      },
+        mode: 'content'
+      }));
+    }
+    else if(e.target.getAttribute("value") == "tekko"){
+      document.getElementById("tekko").style.backgroundColor = "#9AD2DF";
+      // set data here!!!!
+
+      this.setState(prevState => ({
+        data: {
+        name: 'TEKKO',
+        intro: "",
+        p1: `TEKKO is a four day-long event dedicated to
+        the appreciation of video game music, gaming of all types, and the gaming community that took place
+        in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some
+        said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video
+        games at 4 in the morning. A lot of people come with their friends every year. Some have moved away
+        and still travel back every year for the festival.`,
+        p2: `Clearly TEKKO is a special event and an important community for many.
+        At Uplift we understand the power of communities and work with organizers like TEKKO to ensure
+        that these important communities are safe for everyone. With this in mind, we conducted a survey of
+        MAGFest 2018 attendees on safety and inclusion.`,
+        stat: './images/stat.png',
+        story: 'test'
+      },
+        mode: 'tekko'
+      }));
+    }
+    else if(e.target.getAttribute("value") == "nerdcon"){
+      document.getElementById("nerdcon").style.backgroundColor = "#9AD2DF";
+
+      // set data here!!!!
+      this.setState(prevState => ({
+        data: {
+        name: 'NERDCON',
+        intro: "",
+        p1: `NERDCON is a four day-long event dedicated to
+        the appreciation of video game music, gaming of all types, and the gaming community that took place
+        in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some
+        said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video
+        games at 4 in the morning. A lot of people come with their friends every year. Some have moved away
+        and still travel back every year for the festival.`,
+        p2: `Clearly NERDCON is a special event and an important community for many.
+        At Uplift we understand the power of communities and work with organizers like NERDCON to ensure
+        that these important communities are safe for everyone. With this in mind, we conducted a survey of
+        MAGFest 2018 attendees on safety and inclusion.`,
+        stat: './images/stat.png',
+        story: 'test'
+      },
+        mode: 'content'
+      }));
+    }
+    else if(e.target.getAttribute("value") == "geekycon"){
+      document.getElementById("geekycon").style.backgroundColor = "#9AD2DF";
+      // set data here!!!!
+      
+      this.setState(prevState => ({
+        data: {
+        name: 'GEEKYCON',
+        intro: "",
+        p1: `GEEKYCON is a four day-long event dedicated to
+        the appreciation of video game music, gaming of all types, and the gaming community that took place
+        in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some
+        said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video
+        games at 4 in the morning. A lot of people come with their friends every year. Some have moved away
+        and still travel back every year for the festival.`,
+        p2: `Clearly GEEKYCON is a special event and an important community for many.
+        At Uplift we understand the power of communities and work with organizers like NERDCON to ensure
+        that these important communities are safe for everyone. With this in mind, we conducted a survey of
+        MAGFest 2018 attendees on safety and inclusion.`,
+        stat: './images/stat.png',
+        story: 'test'
+        
+      },
+        mode: 'content'
+      }));
+
+      
+
+    }
+    else if(e.target.getAttribute("value") == "vidcon"){
+      document.getElementById("vidcon").style.backgroundColor = "#9AD2DF";
+      // set data here!!!!
+      this.setState(prevState => ({
+        data: {
+          name: 'VIDCON',
+          intro: "",
+          p1: `VIDCON is a four day-long event dedicated to
+          the appreciation of video game music, gaming of all types, and the gaming community that took place
+          in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some
+          said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video
+          games at 4 in the morning. A lot of people come with their friends every year. Some have moved away
+          and still travel back every year for the festival.`,
+          p2: `Clearly VIDCON is a special event and an important community for many.
+          At Uplift we understand the power of communities and work with organizers like VIDCON to ensure
+          that these important communities are safe for everyone. With this in mind, we conducted a survey of
+          MAGFest 2018 attendees on safety and inclusion.`,
+          stat: './images/stat.png',
+          story: 'test'
+      },
         mode: 'content'
       }));
     }
@@ -180,8 +307,12 @@ class App extends Component {
       content = <div><Header onClickFunc = {this.handleNewReport}/>
       <HomeContent /></div>
     }
-    else if(this.state.mode == "content"){
+    else if(this.state.mode == "tekko"){
 
+      content = <div><Header onClickFunc = {this.handleNewReport}/>
+        <Report data={this.state.data}/></div>
+    }
+    else{
       content = <div><Header onClickFunc = {this.handleNewReport}/>
         <Report data={this.state.data}/></div>
     }
