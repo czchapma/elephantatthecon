@@ -8,7 +8,7 @@ import {createPieCharts} from './pieCharts.js'
 import {createRectangleCharts} from './rectangleCharts.js'
 import {createBarCharts} from './barCharts.js'
 import * as d3pie from "d3pie"
-// import { getData } from './cssc_script.js'
+import { getData } from './cssc_script.js'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -16,11 +16,15 @@ import { faUsers } from '@fortawesome/free-solid-svg-icons'
 import { faBalanceScale } from '@fortawesome/free-solid-svg-icons'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import { faComment } from '@fortawesome/free-solid-svg-icons'
+import { faFileContract } from '@fortawesome/free-solid-svg-icons'
+import { faLink } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faUsers);
 library.add(faBalanceScale);
 library.add(faCheckCircle);
 library.add(faComment);
+library.add(faFileContract);
+library.add(faLink);
 
 export class HomeContent extends Component{
   constructor(props){
@@ -96,6 +100,14 @@ export class MainContent extends Component {
         MAGFest 2018 attendees on safety and inclusion.</div>
         </div>
 
+        <div id="button-wrapper">
+          <div className="convention-button"><a href="https://medium.com/uplifttogether/magfest-2018-the-elephant-at-the-con-9d5392e9eb7e">
+          <FontAwesomeIcon className="convention-icon" icon="file-contract"/></a></div>
+
+          <div className="convention-button"><a href="https://www.magfest.org/">
+          <FontAwesomeIcon className="convention-icon" icon="link"/></a></div>
+        </div>
+
         </div>
 
       </div>
@@ -114,9 +126,10 @@ export class StatContent extends Component {
   }
 
   drawChart() {
+    var data = getData("1zUglE_23KwcIiE0t_aDOLPV7H0i6IIp8SezHv_ZflBo");
     createPieCharts();
     createRectangleCharts();
-    createBarCharts();
+    createBarCharts(data);
   }
   render() {
     return (

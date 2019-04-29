@@ -1,6 +1,8 @@
 import * as d3 from "d3"
 
-export function createBarCharts(){
+export function createBarCharts(data){
+
+	console.log(data);
 
 	createBarChart("bar-chart-1", [84, 16], "Someone verbally", "harassed me");
 	createBarChart("bar-chart-2", [90, 10], "Someone touched me", "without my consent");

@@ -1,5 +1,6 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+
+var $ = require('jquery');
 // ID of the Google Spreadsheet
 var spreadsheetID = "1MzVPabJWKxnmShilL0iO1KYEQDGoTJi-S_ly5ofdthU";
 
@@ -7,7 +8,7 @@ var spreadsheetID = "1MzVPabJWKxnmShilL0iO1KYEQDGoTJi-S_ly5ofdthU";
 /**
  * This function takes in the Google Sheets ID of the cleaned data and returns a JS Object that contains all of the questions and the answers with their individual counts + a preassigned color (for visualization).
  */
-function getData(spreadsheetID) {
+export function getData(spreadsheetID) {
     // Make sure it is public or set to Anyone with link can view 
     var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
 
@@ -17,7 +18,6 @@ function getData(spreadsheetID) {
      */
     function findValueByPrefix(object, prefix) {
         var ret = []
-        console.log(object)
         for (var property in object) {
             if (object.hasOwnProperty(property) && 
             property.toString().startsWith(prefix)) {
@@ -168,11 +168,13 @@ function getData(spreadsheetID) {
         return entry;
     }
 
+    var formatted_data = {};
+
     $.getJSON(url, function(data) {
 
         var entry = data.feed.entry;
 
-        var formatted_data = {};
+        
         $(entry).each(function(){
             let temp = Object.entries(findValueByPrefix(this, 'gsx$'));
 
@@ -212,7 +214,7 @@ function getData(spreadsheetID) {
             formatted_data[item] = final_count;
         }
 
-        console.log(formatted_data);
+        // console.log(formatted_data);
     });
     return formatted_data;
 }
