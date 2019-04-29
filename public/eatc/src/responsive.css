@@ -1,0 +1,52 @@
+.app-header .menu-item.icon {
+  display: none;
+  margin: 0;
+  font-size: 30px;
+}
+
+.app-header .menu-item.icon a{
+  
+  font-size: .7em;
+}
+
+@media screen and (max-width: 700px) {
+  /*.app-header .menu-item:not(:first-child){
+    display: none;
+  }*/
+  .app-header .menu-item{
+    display: none;
+  }
+  .app-header .menu-item.icon {
+    display: flex;
+    /*float: right;*/
+    padding-right: 7vh;
+    
+  }
+  .app-header {
+   /* flex-direction: row;
+    align-items: left;
+    justify-content: left;*/
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .app-header.responsive {
+    position: relative;
+    flex-direction: column;
+  }
+  .app-header.responsive .menu-item.icon {
+    padding-right: 7vh;
+    height: 7vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .app-header.responsive .menu-item {
+    float: none;
+    display: flex;
+    text-align: left;
+  }
+
+
+}
