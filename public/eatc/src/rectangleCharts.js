@@ -21,7 +21,7 @@ createRectChart(data3, label3, "rectangle-chart-3");
 }
 
 
-function createRectChart(data, label, id, colors, levels){
+function createRectChart(data, label, id){
 
 var colors = ["#DFF9FF", "#9AD2DF", "#67AEC1", "#37859A", "#39626A"];
 var levels = ["always", "usually", "sometimes", "rarely", "never"];
