@@ -8,7 +8,7 @@ import {createPieCharts} from './pieCharts.js'
 import {createRectangleCharts} from './rectangleCharts.js'
 import {createBarCharts} from './barCharts.js'
 import * as d3pie from "d3pie"
-import { getData } from './cssc_script.js'
+// import { getData } from './cssc_script.js'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -41,7 +41,7 @@ export class HomeContent extends Component{
         <div id="eatc-1">ELEPHANT</div>
         <div id="eatc-2">AT THE CON</div>
       </div>
-    
+
     <img id="logo" src="../eatclogo.png"/>
   </div>
 
@@ -85,7 +85,7 @@ export class MainContent extends Component {
 
         <div className="main-title">{this.props.data.name}</div>
         <div className="divider"></div>
-        <div className="main-date"><strong>2018</strong></div>
+        <div className="main-date"><strong>{this.props.data.year}</strong></div>
         <div className="divider"></div>
         <div className="convention-text-wrapper">
         <div className="main-text">{this.props.data.p1}</div>
@@ -118,10 +118,10 @@ export class StatContent extends Component {
   }
 
   drawChart() {
-    var data = getData("1zUglE_23KwcIiE0t_aDOLPV7H0i6IIp8SezHv_ZflBo");
+    // var data = getData("1zUglE_23KwcIiE0t_aDOLPV7H0i6IIp8SezHv_ZflBo");
     createPieCharts();
     createRectangleCharts();
-    createBarCharts(data);
+    // createBarCharts(data);
   }
   render() {
     return (
@@ -164,10 +164,12 @@ export class StoryContent extends Component {
     super(props);
   }
   render() {
+    let category = this.props.data.name + this.props.data.year;
+    console.log(category);
     return (
       <div className="main-wrapper">
         <div className="wrapper-title">STORIES</div>
-          <FilteredList items = {stories.magfest2018} />
+          <FilteredList items = {stories[category]} />
       </div>
     );
   }

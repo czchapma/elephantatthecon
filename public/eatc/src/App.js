@@ -13,7 +13,6 @@ class Header extends Component {
   render() {
     return (
       <div className="app-header" id = "app-header">
-      
         <li className="menu-item" id = "home"><a href="#" value="home" onClick= {this.props.onClickFunc}>home</a></li>
         <li className="menu-item" id = "magfest"><a href="#" value="magfest" onClick= {this.props.onClickFunc}>magfest 18</a></li>
         <li className="menu-item" id = "tekko"><a href="#" value="tekko" onClick= {this.props.onClickFunc}>tekko 17</a></li>
@@ -21,7 +20,6 @@ class Header extends Component {
         <li className="menu-item" id = "geekycon"><a href="#" value="geekycon" onClick= {this.props.onClickFunc}>geekycon 17</a></li>
         <li className="menu-item" id = "vidcon"><a href="#" value="vidcon" onClick= {this.props.onClickFunc}>vidcon 17</a></li>
         <li className="menu-item"><a href="#">vidcon 16</a></li>
-      
         <li className="menu-item icon" id = "toggle"><a href="javascript:void(0);"  onClick={toggleDropDown}>&#9776;</a></li>
       </div>
     );
@@ -81,17 +79,8 @@ class Report extends Component {
 class ReportContent extends Component {
   constructor(props){
     super(props);
-    // this.state = {
-    //   // reportData: this.props.reportData,
-    //   data: this.props.data,
-    // }
   }
   render() {
-    // return (
-    //   <div className="content-wrapper">
-    //     <p>{this.props.data}</p>
-    //   </div>
-    // );
 
     let content;
 
@@ -181,7 +170,8 @@ class App extends Component {
       // set data here!!!!
       this.setState(prevState => ({
         data: {
-        name: 'MAGFEST',
+        name: 'magfest',
+        year: '2018',
         intro: "",
         p1: `MAGFest (Music and Gaming Festival) is a four day-long event dedicated to
         the appreciation of video game music, gaming of all types, and the gaming community that took place
@@ -205,7 +195,8 @@ class App extends Component {
 
       this.setState(prevState => ({
         data: {
-        name: 'TEKKO',
+        name: 'tekko',
+        year: '2017',
         intro: "",
         p1: `TEKKO is a four day-long event dedicated to
         the appreciation of video game music, gaming of all types, and the gaming community that took place
@@ -229,7 +220,8 @@ class App extends Component {
       // set data here!!!!
       this.setState(prevState => ({
         data: {
-        name: 'NERDCON',
+        name: 'nerdcon',
+        year: '2017',
         intro: "",
         p1: `NERDCON is a four day-long event dedicated to
         the appreciation of video game music, gaming of all types, and the gaming community that took place
@@ -250,10 +242,11 @@ class App extends Component {
     else if(e.target.getAttribute("value") == "geekycon"){
       document.getElementById("geekycon").style.backgroundColor = "#9AD2DF";
       // set data here!!!!
-      
+
       this.setState(prevState => ({
         data: {
-        name: 'GEEKYCON',
+        name: 'geekycon',
+        year: '2017',
         intro: "",
         p1: `GEEKYCON is a four day-long event dedicated to
         the appreciation of video game music, gaming of all types, and the gaming community that took place
@@ -267,12 +260,12 @@ class App extends Component {
         MAGFest 2018 attendees on safety and inclusion.`,
         stat: './images/stat.png',
         story: 'test'
-        
+
       },
         mode: 'content'
       }));
 
-      
+
 
     }
     else if(e.target.getAttribute("value") == "vidcon"){
@@ -280,7 +273,8 @@ class App extends Component {
       // set data here!!!!
       this.setState(prevState => ({
         data: {
-          name: 'VIDCON',
+          name: 'vidcon',
+          year: '2017',
           intro: "",
           p1: `VIDCON is a four day-long event dedicated to
           the appreciation of video game music, gaming of all types, and the gaming community that took place
@@ -307,11 +301,11 @@ class App extends Component {
       content = <div><Header onClickFunc = {this.handleNewReport}/>
       <HomeContent /></div>
     }
-    else if(this.state.mode == "tekko"){
-
-      content = <div><Header onClickFunc = {this.handleNewReport}/>
-        <Report data={this.state.data}/></div>
-    }
+    // else if(this.state.mode == "tekko"){
+    //
+    //   content = <div><Header onClickFunc = {this.handleNewReport}/>
+    //     <Report data={this.state.data}/></div>
+    // }
     else{
       content = <div><Header onClickFunc = {this.handleNewReport}/>
         <Report data={this.state.data}/></div>
