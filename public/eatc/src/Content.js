@@ -95,10 +95,10 @@ export class MainContent extends Component {
         </div>
 
         <div id="button-wrapper">
-          <div className="convention-button"><a href="https://medium.com/uplifttogether/magfest-2018-the-elephant-at-the-con-9d5392e9eb7e">
+          <div className="convention-button"><a href={this.props.data.conlink}>
           <FontAwesomeIcon className="convention-icon" icon="file-contract"/></a></div>
 
-          <div className="convention-button"><a href="https://www.magfest.org/">
+          <div className="convention-button"><a href={this.props.data.conhome}>
           <FontAwesomeIcon className="convention-icon" icon="link"/></a></div>
         </div>
 

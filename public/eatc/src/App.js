@@ -18,9 +18,9 @@ class Header extends Component {
         <li className="menu-item" id = "magfest"><a href="#" value="magfest" onClick= {this.props.onClickFunc}>magfest 18</a></li>
         <li className="menu-item" id = "tekko"><a href="#" value="tekko" onClick= {this.props.onClickFunc}>tekko 17</a></li>
         <li className="menu-item" id = "nerdcon"><a href="#" value="nerdcon" onClick= {this.props.onClickFunc}>nerdcon 17</a></li>
-        <li className="menu-item" id = "geekycon"><a href="#" value="geekycon" onClick= {this.props.onClickFunc}>geekycon 17</a></li>
         <li className="menu-item" id = "vidcon"><a href="#" value="vidcon" onClick= {this.props.onClickFunc}>vidcon 17</a></li>
-        <li className="menu-item"><a href="#">vidcon 16</a></li>
+        <li className="menu-item" id = "geekycon"><a href="#" value="geekycon" onClick= {this.props.onClickFunc}>geekycon 16</a></li>
+        
         <li className="menu-item" id = "survey"><a href="#" value="survey" onClick= {this.props.onClickFunc}>survey</a></li>
         <li className="menu-item icon" id = "toggle"><a href="javascript:void(0);"  onClick={toggleDropDown}>&#9776;</a></li>
       </div>
@@ -42,6 +42,12 @@ class Report extends Component {
     }
     console.log(this.props.data)
   }
+  reset = () => {
+    this.setState(prevState => ({
+        mode: 'main',
+        contentData :'Main Content'
+      }));
+  };
   // This function will handling switching between different report contents,
   // eg from main to statistics to stories
   handleNewContent(e){
@@ -132,11 +138,13 @@ class App extends Component {
       Maybe have some js function to parse json file representing a report?
     */
     this.handleNewReport = this.handleNewReport.bind(this);
-
     this.state = {
       mode: "home"
     }
+
+    
   }
+
 
   handleNewReport(e){
     let x  = document.getElementsByClassName("menu-item");
@@ -164,6 +172,8 @@ class App extends Component {
         data: {
         name: 'magfest',
         year: '2018',
+        conlink: "https://medium.com/uplifttogether/magfest-2018-the-elephant-at-the-con-9d5392e9eb7e",
+        conhome: "https://www.magfest.org/",
         intro: "",
         p1: `MAGFest (Music and Gaming Festival) is a four day-long event dedicated to
         the appreciation of video game music, gaming of all types, and the gaming community that took place
@@ -176,7 +186,8 @@ class App extends Component {
         that these important communities are safe for everyone. With this in mind, we conducted a survey of
         MAGFest 2018 attendees on safety and inclusion.`,
         stat: './images/stat.png',
-        story: 'test'
+        story: 'test',
+        mode: 'main'
       },
         mode: 'content'
       }));
@@ -189,19 +200,19 @@ class App extends Component {
         data: {
         name: 'tekko',
         year: '2017',
+        conlink:"https://medium.com/uplifttogether/tekko-2017-elephant-at-the-con-report-b2a8c86384e3",
+        conhome: "http://www.teamtekko.us/",
         intro: "",
-        p1: `TEKKO is a four day-long event dedicated to
-        the appreciation of video game music, gaming of all types, and the gaming community that took place
-        in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some
-        said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video
-        games at 4 in the morning. A lot of people come with their friends every year. Some have moved away
-        and still travel back every year for the festival.`,
-        p2: `Clearly TEKKO is a special event and an important community for many.
-        At Uplift we understand the power of communities and work with organizers like TEKKO to ensure
-        that these important communities are safe for everyone. With this in mind, we conducted a survey of
-        MAGFest 2018 attendees on safety and inclusion.`,
+        p1: `Tekko (formerly Tekkoshocon) is an annual four-day convention that takes place 
+at the David L. Lawrence Convention Center in Pittsburgh, Pennsylvania. Mainly dedicated
+to the appreciation of anime, this event includes anime viewings, concerts, cosplay 
+masquerades and competitions, dancing, fashion shows, and gaming.`,
+        p2: `At Uplift we understand the power of communities and work with organizers like Tekko to ensure
+that these important communities are safe for everyone. With this in mind, here is our survey of the 
+Tekko 2017 attendees on safety and inclusion.`,
         stat: './images/stat.png',
-        story: 'test'
+        story: 'test',
+        mode: 'main'
       },
         mode: 'tekko'
       }));
@@ -214,19 +225,21 @@ class App extends Component {
         data: {
         name: 'nerdcon',
         year: '2017',
+        conlink: "https://medium.com/uplifttogether/the-elephant-at-nerdcon-nerdfighteria-c859f88cfd16",
+        conhome: "http://www.nerdcon.com/",
         intro: "",
-        p1: `NERDCON is a four day-long event dedicated to
-        the appreciation of video game music, gaming of all types, and the gaming community that took place
-        in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some
-        said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video
-        games at 4 in the morning. A lot of people come with their friends every year. Some have moved away
-        and still travel back every year for the festival.`,
-        p2: `Clearly NERDCON is a special event and an important community for many.
-        At Uplift we understand the power of communities and work with organizers like NERDCON to ensure
-        that these important communities are safe for everyone. With this in mind, we conducted a survey of
-        MAGFest 2018 attendees on safety and inclusion.`,
+        p1: `In celebration of ten years of Vlogbrothers and the Nerdfighteria community,
+         Nerdfighters from all over the world gathered in Boston, MA for a weekend celebrating 
+         the wonderful community John and Hank Green have created. Thanks to the hard work of 
+         staff, volunteers, and members of the community, it was a memorable weekend, but 
+         unfortunately not everyone felt safe and included.`,
+        p2: `Uplift attended the conference, presenting a workshop on being a leader in
+        online communities, handing out convention safety cards, demonstrating our Chrome 
+        extension that blocks harassing content from social media, and collecting data for
+         our project Elephant At The Con.`,
         stat: './images/stat.png',
-        story: 'test'
+        story: 'test',
+        mode: 'main'
       },
         mode: 'content'
       }));
@@ -239,19 +252,19 @@ class App extends Component {
         data: {
         name: 'geekycon',
         year: '2016',
+        conlink: "https://medium.com/uplifttogether/the-elephant-at-geekycon-the-stories-f65c83b7ce16",
+        conhome: "https://geekyconblr.tumblr.com/post/159302934649/dearbelovedgeekyconcommunity",
         intro: "",
-        p1: `GEEKYCON is a four day-long event dedicated to
-        the appreciation of video game music, gaming of all types, and the gaming community that took place
-        in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some
-        said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video
-        games at 4 in the morning. A lot of people come with their friends every year. Some have moved away
-        and still travel back every year for the festival.`,
-        p2: `Clearly GEEKYCON is a special event and an important community for many.
-        At Uplift we understand the power of communities and work with organizers like NERDCON to ensure
-        that these important communities are safe for everyone. With this in mind, we conducted a survey of
-        MAGFest 2018 attendees on safety and inclusion.`,
+        p1: `GeekyCon targets the online fandoms of Doctor Who, Supernatural, 
+        Glee, Marvel Cinematic Universe, and Disney.`,
+        p2: `At GeekyCon this year, Uplift volunteers educated attendees on our 
+        organization’s mission, offered resources about consent, healthy 
+        relationships, and con safety. We also spoke with attendees about their 
+        experience at the con. The stories, recorded in our Elephant At the Con 
+        survey, are shared below.`,
         stat: './images/stat.png',
-        story: 'test'
+        story: 'test',
+        mode: 'main'
 
       },
         mode: 'content'
@@ -268,18 +281,19 @@ class App extends Component {
           name: 'vidcon',
           year: '2017',
           intro: "",
-          p1: `VIDCON is a four day-long event dedicated to
-          the appreciation of video game music, gaming of all types, and the gaming community that took place
-          in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some
-          said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video
-          games at 4 in the morning. A lot of people come with their friends every year. Some have moved away
-          and still travel back every year for the festival.`,
-          p2: `Clearly VIDCON is a special event and an important community for many.
-          At Uplift we understand the power of communities and work with organizers like VIDCON to ensure
-          that these important communities are safe for everyone. With this in mind, we conducted a survey of
-          MAGFest 2018 attendees on safety and inclusion.`,
+          conlink: "https://medium.com/@UpliftTogether/aaa620a8d26c",
+          conhome: "http://vidcon.com/",
+          p1: `VidCon is a multi-genre online video conference, held annually in 
+          Southern California since 2010. This convention is one of the largest 
+          and most long-standing of its kind in the world, gathering thousands
+           of online video creators, viewers, and industry representatives.`,
+          p2: `At Uplift we understand the power of communities and work with organizers like VidCon to ensure
+that these important communities are safe for everyone. With this in mind, here is our survey of the 
+VidCon 2017 attendees on safety and inclusion.
+`,
           stat: './images/stat.png',
-          story: 'test'
+          story: 'test',
+          mode: 'main'
       },
         mode: 'content'
       }));
