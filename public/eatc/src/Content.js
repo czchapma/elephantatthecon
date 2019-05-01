@@ -4,6 +4,8 @@ import FilteredList from './FilteredList';
 import stories from './stories.json';
 
 import data from './data.json';
+import tekko17 from './data/2017_tekko.json'
+
 
 // import {drawPie} from './demographics.js'
 import {createPieCharts} from './pieCharts.js'
