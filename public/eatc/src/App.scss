@@ -160,6 +160,7 @@ body,
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .wrapper-title {
@@ -176,11 +177,13 @@ body,
 #demographics-column {
     width: 49.5%;
     border-left: 2px solid lightgrey;
+    min-width: 500px;
 }
 
 #statistics-column {
     width: 49.5%;
     border-right: 2px solid lightgrey;
+    min-width: 500px;
 }
 
 #statistics-chart-container {
@@ -573,4 +576,15 @@ a:link {
 
 input[type="radio"] + .leftradio {
   margin-left: 0px;
+}
+
+@media only screen and (max-width: 1100px) {
+  #demographics-column {
+    border-left: 0px solid transparent;
+    min-width: 500px;
+  }
+  #statistics-column {
+    border-right: 0px solid transparent;
+    min-width: 500px;
+  }
 }

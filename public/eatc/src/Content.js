@@ -5,6 +5,7 @@ import stories from './stories.json';
 
 import data from './data.json';
 import tekko17 from './data/2017_tekko.json'
+import nerdcon17 from './data/2017_nerdcon.json'
 
 
 // import {drawPie} from './demographics.js'
@@ -122,9 +123,21 @@ export class StatContent extends Component {
   }
 
   drawChart() {
-    createPieCharts(data);
-    createRectangleCharts(data);
-    createBarCharts(data);
+    var currentdata;
+    if (this.props.data.name === "magfest"){
+      currentdata = data;
+    }
+
+    if (this.props.data.name === "tekko"){
+      currentdata = tekko17;
+    }
+
+    if (this.props.data.name === "nerdcon"){
+      currentdata = nerdcon17;
+    }
+    createPieCharts(currentdata);
+    createRectangleCharts(currentdata);
+    createBarCharts(currentdata);
   }
   render() {
     return (
