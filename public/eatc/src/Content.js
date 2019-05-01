@@ -116,30 +116,36 @@ export class MainContent extends Component {
 export class StatContent extends Component {
   constructor(props){
     super(props);
+    this.currentdata = {};
   }
 
   componentDidMount() {
+    if (this.props.data.name === "magfest"){
+      this.currentdata = data;
+    }
+
+    if (this.props.data.name === "tekko"){
+      this.currentdata = tekko17;
+    }
+
+    if (this.props.data.name === "nerdcon"){
+      this.currentdata = nerdcon17;
+    }
     this.drawChart();
   }
 
   drawChart() {
-    var currentdata;
-    if (this.props.data.name === "magfest"){
-      currentdata = data;
-    }
-
-    if (this.props.data.name === "tekko"){
-      currentdata = tekko17;
-    }
-
-    if (this.props.data.name === "nerdcon"){
-      currentdata = nerdcon17;
-    }
-    createPieCharts(currentdata);
-    createRectangleCharts(currentdata);
-    createBarCharts(currentdata);
+   
+    createPieCharts(this.currentdata);
+    createRectangleCharts(this.currentdata);
+    createBarCharts(this.currentdata);
   }
+
+
   render() {
+
+    
+
     return (
       <div className="main-wrapper">
 
