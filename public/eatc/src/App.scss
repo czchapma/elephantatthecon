@@ -416,7 +416,7 @@ body,
 
 .survey-question {
   display: grid;
-  grid-template-columns: .75fr 1fr;
+  grid-template-columns: .6fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 20px;
   align-items: center;
@@ -500,7 +500,7 @@ a:link {
   height: 20px;
 }
 
-#demo-right textarea {
+#nice {
   width: 100%;
   box-shadow: none;
   border: 0px solid grey;
@@ -525,10 +525,52 @@ a:link {
 }
 
 .multipleChoice-rows {
-  display: flex;
-  flex-direction: column;
   text-align: left;
 }
 
 .multOptions {
+  margin-top: -20px;
+  margin-bottom: -30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 0px;
+}
+
+.multOptions span {
+  margin-left: 0px;
+}
+.buttonContainer {
+  width: 100%;
+  text-align: right;
+  margin-top: 20px;
+}
+
+#submitButton {
+  background-color: rgba(103, 174, 193, .2);
+  font-family: $sans-serif-font;
+  border: none;
+  width: 150px;
+  font-weight: 600;
+  height: 40px;
+  text-transform: uppercase;
+}
+
+#submitButton:hover{
+  background-color: rgba(103, 174, 193, .1);
+  cursor: pointer;
+}
+
+#ugh {
+  margin-left: 5px;
+  margin-top: 5px;
+  width: calc(100% - 33px);
+  box-shadow: none;
+  border: 0px solid grey;
+  background: 	#F0F0F0;
+  height: 20px;
+}
+
+input[type="radio"] + .leftradio {
+  margin-left: 0px;
 }

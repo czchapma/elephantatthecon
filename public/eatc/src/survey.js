@@ -118,25 +118,25 @@ export class SurveyContent extends Component{
               </div>
               <div id="demo-right">
                 <div className = "question-text-demo"> What is your gender?</div>
-                <textarea value="" />
+                <textarea id = "nice" value="" />
                 <div className = "question-text-demo"> Which of the following (if any) apply to you?</div>
 
                 <div className = "multipleChoice-rows">
                   <div className = "multOptions">
                     <input type="radio" name = "safety" value="Always"/>
-                    <span value="Always" onClick={this.onAddressChanged}><div className="check" /></span>  Cis
+                    <span class="leftradio" value="Always" onClick={this.onAddressChanged}><div className="check" /></span>  Cis
                   </div>
 
                   <div className = "multOptions">
                   <input type="radio" name = "safety" value="Usually"/>
-                  <span value="Usually" onClick={this.onAddressChanged}><div className="check"/></span>  Trans
+                  <span class="leftradio" value="Usually" onClick={this.onAddressChanged}><div className="check"/></span>  Trans
                   </div>
 
                   <div className = "multOptions">
 
                   <input type="radio" name = "safety" value="Usually"/>
-                  <span value="Usually" onClick={this.onAddressChanged}><div className="check"/></span>
-                  <textarea value="" />
+                  <span class="leftradio" value="Usually" onClick={this.onAddressChanged}><div className="check"/></span>
+                  <textarea id = "ugh" value="" />
                   </div>
                 </div>
 
@@ -144,6 +144,10 @@ export class SurveyContent extends Component{
             </div>
 
           </div>
+          <div className = "buttonContainer">
+            <input id = "submitButton" type="submit" value="Submit Form"/>
+          </div>
+
         </form>
 
         <div id="footer">
