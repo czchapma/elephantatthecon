@@ -23,6 +23,7 @@ class Radio extends Component {
 
   allHeaders(it) {
     let headers = it.map(function (el) { return el.header; });
+    console.log(headers);
     // let headerArray = Array.from(headers).push("All");
     headers.unshift("All");
     return Array.from(new Set(headers))

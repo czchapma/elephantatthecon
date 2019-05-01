@@ -238,7 +238,7 @@ class App extends Component {
       this.setState(prevState => ({
         data: {
         name: 'geekycon',
-        year: '2017',
+        year: '2016',
         intro: "",
         p1: `GEEKYCON is a four day-long event dedicated to
         the appreciation of video game music, gaming of all types, and the gaming community that took place

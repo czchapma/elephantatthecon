@@ -31,7 +31,9 @@ class FilteredList extends Component {
 
         return (
           <div className = "filterContainer">
+          <div id = "storyCenters">
             <List items = {this.props.items.filter(this.filterItem)}/>
+            </div>
             <Radio onAddressChanged = {this.onAddressChanged}
                    header = {this.state.header}
                    items = {this.props.items}
