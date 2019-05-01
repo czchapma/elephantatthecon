@@ -1,34 +1,46 @@
 {
   "whatisyourgender": [
     [
-      "male",
-      55
-    ],
-    [
       "female",
       43
     ],
     [
-      "nonbinary/genderqueer",
-      7
+      "male",
+      55
+    ],
+    [
+      "nonbinary",
+      5
     ],
     [
       "agender",
       4
+    ],
+    [
+      "demigender",
+      1
+    ],
+    [
+      "genderfluid",
+      1
     ]
   ],
   "whatisyourrace": [
-    [
-      "asian",
-      7
-    ],
     [
       "biracial/multiracial",
       9
     ],
     [
+      "white",
+      79
+    ],
+    [
       "black",
       3
+    ],
+    [
+      "asian",
+      7
     ],
     [
       "latinx/hispanic",
@@ -45,20 +57,32 @@
     [
       "pacific islander",
       0
-    ],
-    [
-      "white",
-      79
     ]
   ],
   "whatisyoursexuality": [
     [
-      "asexual",
+      "straight",
+      44
+    ],
+    [
+      "asexual/greysexual",
+      7
+    ],
+    [
+      "questioning",
+      5
+    ],
+    [
+      "queer",
       7
     ],
     [
       "bisexual",
       23
+    ],
+    [
+      "pansexual",
+      9
     ],
     [
       "gay",
@@ -67,22 +91,6 @@
     [
       "lesbian",
       2
-    ],
-    [
-      "pansexual",
-      9
-    ],
-    [
-      "queer",
-      7
-    ],
-    [
-      "questioning",
-      5
-    ],
-    [
-      "straight",
-      44
     ]
   ],
   "ifeltsafe": [
@@ -99,7 +107,7 @@
       8
     ],
     [
-      "rarely",
+      "often",
       0
     ],
     [
