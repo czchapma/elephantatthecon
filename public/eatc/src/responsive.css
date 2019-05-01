@@ -28,6 +28,15 @@
     justify-content: left;*/
     justify-content: flex-end;
   }
+
+  #demographics-column {
+    width: 100%;
+    border-style: none;
+  }
+  #statistics-column {
+    width: 100%;
+    border-style: none;
+  }
 }
 
 @media screen and (max-width: 700px) {
