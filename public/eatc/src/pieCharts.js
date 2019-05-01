@@ -1,78 +1,31 @@
 
 import * as d3pie from "d3pie"
 
-export function createPieCharts() {
+export function createPieCharts(data) {
 
-	var colors = ["#E1A79A", "#DB7B65", "#AD616B", "#397579", "#516F96", "#6F9CAB", "#85B3A9", "#639578" ];
-
-
-	let jayson = {
-                'gender': [
-                    ['male', 55, "#E23636"],
-                    ['female', 43, "#2F80ED"],
-                    ['nonbinary/genderqueer', 7, "#9B51E0"],
-                    ['agender', 4, "#D8269B"],
-                ],
-
-                'i_feel_safe': [
-                    ['always', 75, "#39626A"],
-                    ['usually', 38, "#37859A"],
-                    ['sometimes', 8, "#67AEC1"],
-                    ['rarely', 0, "#9AD2DF"],
-                    ['never', 0, "#DFF9FF"]
-                ],
-
-                'race': [
-                    ['asian', 7, "#E23636"],
-                    ['biracial/multiracial', 9, "#9B51E0"],
-                    ['black', 3, "#2F80ED"],
-                    ['hispanic/latinx', 0, "#1bad9c"],
-                    ['middle eastern', 0, "#219653"],
-                    ['native american', 0, "#F2C94C"],
-                    ['pacific islander', 0, "#F2994A"],
-                    ['white', 79, "#D8269B"]
-                ],
-
-                'sexuality': [
-                    ['asexual', 7, "#9B51E0"],
-                    ['bisexual', 23, "#2F80ED"],
-                    ['gay', 4, "#219653"],
-                    ['lesbian', 2, "#D8269B"],
-                    ['pansexual', 9, "#F2C94C"],
-                    ['queer', 7, "#F2994A"],
-                    ['questioning', 5, "#1bad9c"],
-                    ['straight', 44, "#E23636"]
-                ]
-            };
-
-
-createChart('gender', 'genderPieChart', colors, jayson);
-createChart('race', 'racePieChart', colors, jayson);
-createChart('sexuality', 'sexualityPieChart', colors, jayson);
+createChart("gender", 'genderPieChart', data);
+createChart("race", 'racePieChart', data);
+createChart("sexuality", 'sexualityPieChart', data);
 
 }
 
+function createChart (label, id, data){
 
-function createChart (title, pieChart, colors, jayson){
+var colors = ["#E1A79A", "#DB7B65", "#AD616B", "#397579", "#516F96", "#6F9CAB", "#85B3A9", "#639578" ];
 
 var content = [];
-
-for (var cat in jayson){
-	if (cat === title) {
-		for (var data in jayson[cat]){
-			console.log(jayson[cat][data][0]);
-			content[data] = {
-				"label": jayson[cat][data][0],
-				"value": jayson[cat][data][1],
-				"color": colors[data]
-			}
-		}
+for (var item in data[label]){
+	content[item] = {
+		"label": data[label][item][0],
+		"value": data[label][item][1],
+		"color": colors[item]
 	}
 }
-	return new d3pie(pieChart, {
+
+	return new d3pie(id, {
 	"header": {
 		"title": {
-			"text": title.toUpperCase(),
+			"text": label.toUpperCase(),
 			"fontSize": 12
 		},
 

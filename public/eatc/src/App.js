@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import './responsive.css'
+import './responsive.css';
+import SurveyContent from './survey.js';
 
 import {StatContent, MainContent, StoryContent, HomeContent} from './Content.js';
 
@@ -20,6 +21,7 @@ class Header extends Component {
         <li className="menu-item" id = "geekycon"><a href="#" value="geekycon" onClick= {this.props.onClickFunc}>geekycon 17</a></li>
         <li className="menu-item" id = "vidcon"><a href="#" value="vidcon" onClick= {this.props.onClickFunc}>vidcon 17</a></li>
         <li className="menu-item"><a href="#">vidcon 16</a></li>
+        <li className="menu-item" id = "survey"><a href="#" value="survey" onClick= {this.props.onClickFunc}>survey</a></li>
         <li className="menu-item icon" id = "toggle"><a href="javascript:void(0);"  onClick={toggleDropDown}>&#9776;</a></li>
       </div>
     );
@@ -132,22 +134,6 @@ class App extends Component {
     this.handleNewReport = this.handleNewReport.bind(this);
 
     this.state = {
-      // data: {
-      //   name: 'MAGFEST',
-      //   intro: "",
-      //   p1: `MAGFest (Music and Gaming Festival) is a four day-long event dedicated to
-      //   the appreciation of video game music, gaming of all types, and the gaming community that took place
-      //   in Maryland in January 2018. When asked what keeps them coming back, some said the concerts, some
-      //   said the cosplay, many said the fact that it’s a twenty-four hour show where you could play video
-      //   games at 4 in the morning. A lot of people come with their friends every year. Some have moved away
-      //   and still travel back every year for the festival.`,
-      //   p2: `Clearly MAGFest is a special event and an important community for many.
-      //   At Uplift we understand the power of communities and work with organizers like MAGFest to ensure
-      //   that these important communities are safe for everyone. With this in mind, we conducted a survey of
-      //   MAGFest 2018 attendees on safety and inclusion.`,
-      //   stat: './images/stat.png',
-      //   story: 'test'
-      // },
       mode: "home"
     }
   }
@@ -163,6 +149,12 @@ class App extends Component {
       // document.getElementById("home").style.backgroundColor = "#9AD2DF";
       this.setState(prevState => ({
         mode: 'home',
+      }));
+    }
+    else if(e.target.getAttribute("value") == "survey"){
+      // document.getElementById("home").style.backgroundColor = "#9AD2DF";
+      this.setState(prevState => ({
+        mode: 'survey',
       }));
     }
     else if(e.target.getAttribute("value") == "magfest"){
@@ -301,11 +293,10 @@ class App extends Component {
       content = <div><Header onClickFunc = {this.handleNewReport}/>
       <HomeContent /></div>
     }
-    // else if(this.state.mode == "tekko"){
-    //
-    //   content = <div><Header onClickFunc = {this.handleNewReport}/>
-    //     <Report data={this.state.data}/></div>
-    // }
+    else if(this.state.mode == "survey"){
+      content = <div><Header onClickFunc = {this.handleNewReport}/>
+        <SurveyContent /></div>
+    }
     else{
       content = <div><Header onClickFunc = {this.handleNewReport}/>
         <Report data={this.state.data}/></div>

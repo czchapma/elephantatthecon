@@ -3,6 +3,8 @@ import img from './images/stat.png'; // Tell Webpack this JS file uses this imag
 import FilteredList from './FilteredList';
 import stories from './stories.json';
 
+import data from './data.json';
+
 // import {drawPie} from './demographics.js'
 import {createPieCharts} from './pieCharts.js'
 import {createRectangleCharts} from './rectangleCharts.js'
@@ -118,10 +120,9 @@ export class StatContent extends Component {
   }
 
   drawChart() {
-    // var data = getData("1zUglE_23KwcIiE0t_aDOLPV7H0i6IIp8SezHv_ZflBo");
-    createPieCharts();
-    createRectangleCharts();
-    // createBarCharts(data);
+    createPieCharts(data);
+    createRectangleCharts(data);
+    createBarCharts(data);
   }
   render() {
     return (
