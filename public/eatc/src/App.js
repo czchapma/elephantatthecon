@@ -32,7 +32,7 @@ class Header extends Component {
 class Report extends Component {
   constructor(props){
     super(props);
-    this.handleNewContent = this.handleNewContent.bind(this);
+    //this.handleNewContent = this.handleNewContent.bind(this);
     this.state = {
       // reportData: this.props.reportData,
       // data: this.props.data,
@@ -42,42 +42,37 @@ class Report extends Component {
     }
     console.log(this.props.data)
   }
-  reset = () => {
-    this.setState(prevState => ({
-        mode: 'main',
-        contentData :'Main Content'
-      }));
-  };
+
   // This function will handling switching between different report contents,
   // eg from main to statistics to stories
-  handleNewContent(e){
-    if(e.target.getAttribute("value") == "main"){
-      this.setState(prevState => ({
-        mode: 'main',
-        contentData :'Main Content'
-      }));
-    }
-    else if(e.target.getAttribute("value") == "stats"){
-      this.setState(prevState => ({
-        mode: 'stat',
-        contentData :'Stats Content'
-      }));
-    }
-    else if(e.target.getAttribute("value") == "stories"){
-      this.setState(prevState => ({
-        mode: 'story',
-        contentData :'Story Content'
-      }));
-    }
-  }
+  // handleNewContent(e){
+  //   if(e.target.getAttribute("value") == "main"){
+  //     this.setState(prevState => ({
+  //       mode: 'main',
+  //       contentData :'Main Content'
+  //     }));
+  //   }
+  //   else if(e.target.getAttribute("value") == "stats"){
+  //     this.setState(prevState => ({
+  //       mode: 'stat',
+  //       contentData :'Stats Content'
+  //     }));
+  //   }
+  //   else if(e.target.getAttribute("value") == "stories"){
+  //     this.setState(prevState => ({
+  //       mode: 'story',
+  //       contentData :'Story Content'
+  //     }));
+  //   }
+  // }
 
   render() {
     // We pass the handle new content function into ReportScroll,
     // this will handle the changing of ReportContent's data
     return (
       <div className="report-wrapper">
-        <ReportScroll onClickFunc = {this.handleNewContent}/>
-        <ReportContent data={this.props.data} mode ={this.state.mode}/>
+        <ReportScroll onClickFunc = {this.props.handleNewContent}/>
+        <ReportContent data={this.props.data} mode ={this.props.rmode}/>
       </div>
     );
   }
@@ -142,7 +137,29 @@ class App extends Component {
       mode: "home"
     }
 
-    
+    this.handleNewContent = this.handleNewContent.bind(this);
+  }
+
+
+  handleNewContent(e){
+    if(e.target.getAttribute("value") == "main"){
+      this.setState(prevState => ({
+        rmode: 'main',
+        
+      }));
+    }
+    else if(e.target.getAttribute("value") == "stats"){
+      this.setState(prevState => ({
+        rmode: 'stat',
+        
+      }));
+    }
+    else if(e.target.getAttribute("value") == "stories"){
+      this.setState(prevState => ({
+        rmode: 'story',
+        
+      }));
+    }
   }
 
 
@@ -186,9 +203,10 @@ class App extends Component {
         that these important communities are safe for everyone. With this in mind, we conducted a survey of
         MAGFest 2018 attendees on safety and inclusion.`,
         stat: './images/stat.png',
-        story: 'test',
-        mode: 'main'
+        story: 'test'
+        
       },
+      rmode: 'main',
         mode: 'content'
       }));
     }
@@ -211,9 +229,10 @@ masquerades and competitions, dancing, fashion shows, and gaming.`,
 that these important communities are safe for everyone. With this in mind, here is our survey of the 
 Tekko 2017 attendees on safety and inclusion.`,
         stat: './images/stat.png',
-        story: 'test',
-        mode: 'main'
+        story: 'test'
+        
       },
+      rmode: 'main',
         mode: 'tekko'
       }));
     }
@@ -238,9 +257,10 @@ Tekko 2017 attendees on safety and inclusion.`,
         extension that blocks harassing content from social media, and collecting data for
          our project Elephant At The Con.`,
         stat: './images/stat.png',
-        story: 'test',
-        mode: 'main'
+        story: 'test'
+        
       },
+      rmode: 'main',
         mode: 'content'
       }));
     }
@@ -263,10 +283,11 @@ Tekko 2017 attendees on safety and inclusion.`,
         experience at the con. The stories, recorded in our Elephant At the Con 
         survey, are shared below.`,
         stat: './images/stat.png',
-        story: 'test',
-        mode: 'main'
+        story: 'test'
+        
 
       },
+      rmode: 'main',
         mode: 'content'
       }));
 
@@ -292,9 +313,10 @@ that these important communities are safe for everyone. With this in mind, here 
 VidCon 2017 attendees on safety and inclusion.
 `,
           stat: './images/stat.png',
-          story: 'test',
-          mode: 'main'
+          story: 'test'
+         
       },
+      rmode: 'main',
         mode: 'content'
       }));
     }
@@ -313,7 +335,7 @@ VidCon 2017 attendees on safety and inclusion.
     }
     else{
       content = <div><Header onClickFunc = {this.handleNewReport}/>
-        <Report data={this.state.data}/></div>
+        <Report data={this.state.data} handleNewContent = {this.handleNewContent} rmode = {this.state.rmode}/></div>
     }
 
     // Going to pass the data all the way down to ReportContent
