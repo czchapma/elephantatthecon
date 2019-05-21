@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.scss';
-import './responsive.css';
+import './style/App.scss';
+import './style/responsive.css';
 import SurveyContent from './survey.js';
 
 import {StatContent, MainContent, StoryContent, HomeContent} from './Content.js';
 
-import {toggleDropDown} from './responsive.js'
+import {toggleDropDown} from './helpers/responsive.js'
 
-// We can put this in a different file and export it later
 class Header extends Component {
-  // No CSS to make it horizontal yet
   render() {
     return (
       <div className="app-header" id = "app-header">
@@ -28,44 +26,15 @@ class Header extends Component {
   }
 }
 
-// We can put this in a different file and export it later
 class Report extends Component {
   constructor(props){
     super(props);
-    //this.handleNewContent = this.handleNewContent.bind(this);
     this.state = {
-      // reportData: this.props.reportData,
-      // data: this.props.data,
       mode: 'main',
       contentData: 'Main Content',
       scrollData: 'Scroll Content'
     }
-    console.log(this.props.data)
   }
-
-  // This function will handling switching between different report contents,
-  // eg from main to statistics to stories
-  // handleNewContent(e){
-  //   if(e.target.getAttribute("value") == "main"){
-  //     this.setState(prevState => ({
-  //       mode: 'main',
-  //       contentData :'Main Content'
-  //     }));
-  //   }
-  //   else if(e.target.getAttribute("value") == "stats"){
-  //     this.setState(prevState => ({
-  //       mode: 'stat',
-  //       contentData :'Stats Content'
-  //     }));
-  //   }
-  //   else if(e.target.getAttribute("value") == "stories"){
-  //     this.setState(prevState => ({
-  //       mode: 'story',
-  //       contentData :'Story Content'
-  //     }));
-  //   }
-  // }
-
   render() {
     // We pass the handle new content function into ReportScroll,
     // this will handle the changing of ReportContent's data
@@ -78,13 +47,11 @@ class Report extends Component {
   }
 }
 
-// We can put this in a different file and export it later
 class ReportContent extends Component {
   constructor(props){
     super(props);
   }
   render() {
-
     let content;
 
     if(this.props.mode == "main"){
@@ -108,7 +75,6 @@ class ReportContent extends Component {
   }
 }
 
-// We can put this in a different file and export it later
 class ReportScroll extends Component {
   render() {
     return (
@@ -129,8 +95,6 @@ class App extends Component {
     /*
       We want to be able to set this reportData based on which report is chosen in
       the header, and pass the data down into the components
-
-      Maybe have some js function to parse json file representing a report?
     */
     this.handleNewReport = this.handleNewReport.bind(this);
     this.state = {
@@ -140,7 +104,8 @@ class App extends Component {
     this.handleNewContent = this.handleNewContent.bind(this);
   }
 
-
+  // this function handles the content switching of a particular report
+  // although it is defined here, its "scope" is within a ReportContent
   handleNewContent(e){
     if(e.target.getAttribute("value") == "main"){
       this.setState(prevState => ({
@@ -162,22 +127,33 @@ class App extends Component {
     }
   }
 
-
+  // this function handles the switching of a report
+  // clicking on the nav bar will invoke this function, which changes the data
+  // and renders a new report
   handleNewReport(e){
+    // handles the color changes in navigation bar
     let x  = document.getElementsByClassName("menu-item");
       for(let i = 0; i < x.length; i++){
           x[i].style.backgroundColor = "#67AEC1";
       }
     document.getElementById(e.target.getAttribute("value")).style.backgroundColor = "#9AD2DF";
 
+    // DATA FORMAT
+    // this.data.name - report name
+    // this.data.year - report year
+    // this.data.conlink - link to uplift article
+    // this.data.conhome - link to convention website
+    // this.data.p1 - paragraph 1 of main content
+    // this.data.p2 - paragraph 2 of main content
+
+    // this data is passed all the way to the child components, which render based
+    // on it
     if(e.target.getAttribute("value") == "home"){
-      // document.getElementById("home").style.backgroundColor = "#9AD2DF";
       this.setState(prevState => ({
         mode: 'home',
       }));
     }
     else if(e.target.getAttribute("value") == "survey"){
-      // document.getElementById("home").style.backgroundColor = "#9AD2DF";
       this.setState(prevState => ({
         mode: 'survey',
       }));
@@ -204,15 +180,13 @@ class App extends Component {
         MAGFest 2018 attendees on safety and inclusion.`,
         stat: './images/stat.png',
         story: 'test'
-        
       },
-      rmode: 'main',
+        rmode: 'main',
         mode: 'content'
       }));
     }
     else if(e.target.getAttribute("value") == "tekko"){
       document.getElementById("tekko").style.backgroundColor = "#9AD2DF";
-      // set data here!!!!
 
       this.setState(prevState => ({
         data: {
@@ -266,8 +240,6 @@ Tekko 2017 attendees on safety and inclusion.`,
     }
     else if(e.target.getAttribute("value") == "geekycon"){
       document.getElementById("geekycon").style.backgroundColor = "#9AD2DF";
-      // set data here!!!!
-
       this.setState(prevState => ({
         data: {
         name: 'geekycon',
@@ -290,9 +262,6 @@ Tekko 2017 attendees on safety and inclusion.`,
       rmode: 'main',
         mode: 'content'
       }));
-
-
-
     }
     else if(e.target.getAttribute("value") == "vidcon"){
       document.getElementById("vidcon").style.backgroundColor = "#9AD2DF";
@@ -337,15 +306,6 @@ VidCon 2017 attendees on safety and inclusion.
       content = <div><Header onClickFunc = {this.handleNewReport}/>
         <Report data={this.state.data} handleNewContent = {this.handleNewContent} rmode = {this.state.rmode}/></div>
     }
-
-    // Going to pass the data all the way down to ReportContent
-    // return (
-    //   <div className="app-wrapper">
-    //     <Header />
-    //     <Report data={this.state.data}/>
-    //   </div>
-    // );
-
     return (
       <div className="app-wrapper">
         {content}

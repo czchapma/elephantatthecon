@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import List from './List';
 import Radio from './Radio';
-import './stories.scss';
+import './style/stories.scss';
 
 class FilteredList extends Component {
     constructor(props) {

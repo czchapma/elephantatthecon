@@ -3,15 +3,17 @@ import img from './images/stat.png'; // Tell Webpack this JS file uses this imag
 import FilteredList from './FilteredList';
 import stories from './stories.json';
 
-import data from './data.json';
+import data from './data/data.json';
 import tekko17 from './data/2017_tekko.json'
 import nerdcon17 from './data/2017_nerdcon.json'
+import vidcon18 from './data/2018_vidcon.json'
+//import geekycon16 from './data/2016_geekycon.json'
 
 
 // import {drawPie} from './demographics.js'
-import {createPieCharts} from './pieCharts.js'
-import {createRectangleCharts} from './rectangleCharts.js'
-import {createBarCharts} from './barCharts.js'
+import {createPieCharts} from './helpers/pieCharts.js'
+import {createRectangleCharts} from './helpers/rectangleCharts.js'
+import {createBarCharts} from './helpers/barCharts.js'
 import * as d3pie from "d3pie"
 // import { getData } from './cssc_script.js'
 
@@ -31,6 +33,8 @@ library.add(faComment);
 library.add(faFileContract);
 library.add(faLink);
 
+
+// Handles the home page
 export class HomeContent extends Component{
   constructor(props){
     super(props);
@@ -76,10 +80,13 @@ export class HomeContent extends Component{
   }
 }
 
+// Handles the main page of a report
+// this.props.data contains all necessary data
 export class MainContent extends Component {
   constructor(props){
     super(props);
     console.log(this.props)
+
   }
 
   render() {
@@ -112,7 +119,8 @@ export class MainContent extends Component {
   }
 }
 
-
+// Handles the statistics/demographics page of a report
+// this.props.data contains all necessary data
 export class StatContent extends Component {
   constructor(props){
     super(props);
@@ -131,11 +139,20 @@ export class StatContent extends Component {
     if (this.props.data.name === "nerdcon"){
       this.currentdata = nerdcon17;
     }
+
+    if (this.props.data.name === "geekycon"){
+      //this.currentdata = geekycon16;
+    }
+
+    if (this.props.data.name === "vidcon"){
+      this.currentdata = vidcon18;
+    }
     this.drawChart();
   }
 
   drawChart() {
-   
+    // each of these functions draws their respective chart; check js files 
+    // for specifics
     createPieCharts(this.currentdata);
     createRectangleCharts(this.currentdata);
     createBarCharts(this.currentdata);
@@ -143,8 +160,6 @@ export class StatContent extends Component {
 
 
   render() {
-
-    
 
     return (
       <div className="main-wrapper">
@@ -181,11 +196,14 @@ export class StatContent extends Component {
   }
 }
 
+// Handles the story page of a report
+// this.props.data contains all necessary data
 export class StoryContent extends Component {
   constructor(props){
     super(props);
   }
   render() {
+    //check FilteredList for specifics
     let category = this.props.data.name + this.props.data.year;
     console.log(category);
     return (

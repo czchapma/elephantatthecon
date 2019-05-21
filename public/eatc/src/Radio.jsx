@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './stories.scss'
+import './style/stories.scss'
 // import FilteredList from './FilteredList';
 
 import { library } from '@fortawesome/fontawesome-svg-core'

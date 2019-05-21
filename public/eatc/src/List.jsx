@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './stories.scss';
+import './style/stories.scss';
 
 function renderList(it) {
     const items = it.map(item => {
