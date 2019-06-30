@@ -21,15 +21,14 @@ export class SurveyContent extends Component{
 
           <div id="survey-title-wrapper">
             <div id="survey-title">
-              MAGFEST 2018
+              VidCon 2019
             </div>
             <div id="survey-information">
-              <p>MAGFest (Music and Gaming Festival) is a four day-long
-              event dedicated to the appreciation of video game music, gaming
-              of all types, and the gaming community that took place in Maryland
-              in January 2018. By completing this survey, I acknowledge that my
-              answers may be used by MAGFEST staff for future Uplift Work
-              to promote safer conventions.
+              <p>VidCon is a multi-genre online video conference, held 
+                annually in Southern California since 2010.  By completing 
+                this survey, I acknowledge that my answers may be used by 
+                VidCon staff for future Uplift Work to promote safer 
+                conventions.
               </p>
             </div>
           </div>
