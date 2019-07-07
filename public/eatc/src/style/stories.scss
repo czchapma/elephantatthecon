@@ -56,7 +56,16 @@
 
 
 input[type="radio"] {
-  display: none;
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  width: 12px;
+  height: 12px;
+  border: 10px solid $darker-blue;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 10px;
+  background: white left top no-repeat;
 }
 
 input[type="radio"] + span {
@@ -73,7 +82,7 @@ input[type="radio"] + span {
   margin: 20px;
 }
 
-input[type="radio"]:checked + span .check{
+input[type="radio"]:checked + label .check{
   background-color: $main-blue;
   background-repeat: no-repeat;
   width: 10px;
@@ -83,8 +92,10 @@ input[type="radio"]:checked + span .check{
   margin-top: 3px;
 }
 
-input[type="radio"] + span {
-  margin-right: 5px;
+label {
+  font-family: "Open Sans";
+  font-size: 14px;
+  padding: 5px;
 }
 
 h4 {
