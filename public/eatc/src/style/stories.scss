@@ -56,40 +56,25 @@
 
 
 input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
   display: inline-block;
   position: relative;
-  top: 0px;
+  top: 10px;
   width: 12px;
   height: 12px;
-  border: 10px solid $darker-blue;
+  border: 2px solid $darker-blue;
   cursor: pointer;
   border-radius: 50%;
   margin: 10px;
   background: white left top no-repeat;
 }
 
-input[type="radio"] + span {
-  display: inline-block;
-  position: relative;
-  top: -1px;
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-  background: white left top no-repeat;
-  border: 3px solid $darker-blue;
-  cursor: pointer;
-  border-radius: 50%;
-  margin: 20px;
-}
 
-input[type="radio"]:checked + label .check{
+input[type="radio"]:checked{
   background-color: $main-blue;
-  background-repeat: no-repeat;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin: auto;
-  margin-top: 3px;
 }
 
 label {
@@ -104,4 +89,58 @@ h4 {
     font-size: 14px;
     font-family: $other;
     font-weight: $font-weight;
+}
+
+@media screen and (max-width:680px) {
+  input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #37859A;
+    cursor: pointer;
+    border-radius: 70%;
+    margin: 8px;
+    background: white left top no-repeat;
+  }
+
+  input[type="radio"]:checked{
+    background-color: $main-blue;
+  }
+  
+  label {
+    font-family: "Open Sans";
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  input {
+    width: 100%;
+    box-shadow: none;
+    border: 0 solid grey;
+    background: #f0f0f0;
+    height: 20px;
+  }
+}
+@media screen and (max-width:450px) {
+  .btn-group {
+    flex-direction: column
+  }
+  .card{
+    outline: 4px solid lightgray;
+    text-align: left;
+    width: 15vw;
+    min-width: 200px;
+    height: 35vh;
+    margin: 20px;
+    padding-left: 30px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 10px;
+  }
 }
