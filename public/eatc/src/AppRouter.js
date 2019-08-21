@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {HomeContent} from './Content.js';
 
@@ -40,4 +41,4 @@ function AppRouter() {
   );
 }
 
-export default AppRouter;
+ReactDOM.render(routing, document.getElementById('root'));
