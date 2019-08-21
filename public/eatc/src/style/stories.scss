@@ -72,6 +72,32 @@ input[type="radio"] {
   background: white left top no-repeat;
 }
 
+input[type=radio]+span {
+  // top: -1px;
+  // width: 16px;
+  // height: 16px;
+  // vertical-align: middle;
+  // border: 3px solid #37859a;
+  // border-radius: 50%;
+  // margin: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  left:-35px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0;
+  margin: 10px;
+  background: white left top no-repeat;
+  vertical-align: middle;
+}
+
 
 input[type="radio"]:checked{
   background-color: $main-blue;
@@ -142,5 +168,12 @@ h4 {
     padding-right: 5px;
     padding-top: 1px;
     padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width:375px) {
+  input[type=radio]+span {
+    top: -30px;
+    left: -10px;
   }
 }
