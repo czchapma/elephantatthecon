@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Redirect } from 'react-router';
 import { HomeContent} from './Content.js';
-import './AppRouter.js';
+// import './AppRouter.js';
 
 export class SurveyContent extends Component{
   constructor(props){
@@ -58,7 +58,7 @@ export class SurveyContent extends Component{
       redirectToHome: true
     });
     alert(`Thank you!`);
-    //formSubmitEvent.preventDefault();
+    // formSubmitEvent.preventDefault();
   };
 
   render(){
@@ -133,14 +133,15 @@ export class SurveyContent extends Component{
             </div>
 
             <div className = "survey-question surveyFill">
-                  <div className = "question-text filltext"> At any point in the weekend, did you feel uncomfortable at MAGFest or see others in a difficult situation?</div>
+                  <div className = "question-text filltext"> At any point in the weekend, did you feel uncomfortable at VidCon or see others in a difficult situation?</div>
                   <div className = "radio-row">
                     <textarea value={this.state.value} onChange={this.onAddressChanged} name="entry.872631186"/>
                   </div>
             </div>
+            
+            <div className="survey-header"> Personal Information </div>
 
             <div id="demographic-info">
-              <div className="survey-header"> Personal Information </div>
               <div id="survey-subheader">
               The following demographic questions are optional but will help us analyze data by demographics to discover safety trends that may correlate with specific identities.
               </div>
@@ -185,7 +186,7 @@ export class SurveyContent extends Component{
         </form>
 
         <div id="footer">
-          <p> Elephant at the Con is a project by <a href="uplifttogether.org">Uplift: Online Communities Against Sexual Violence</a>.
+          <p> Elephant at the Con is a project by <a href="www.uplifttogether.org">Uplift: Online Communities Against Sexual Violence</a>.
           </p>
           <p> Questions or comments? <a href="mailto:contactus@uplifttogether.org">Email us.</a>
           </p>
