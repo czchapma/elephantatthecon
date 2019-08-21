@@ -7,6 +7,7 @@ import data from './data/data.json';
 import tekko17 from './data/2017_tekko.json'
 import nerdcon17 from './data/2017_nerdcon.json'
 import vidcon18 from './data/2018_vidcon.json'
+import magfest18 from './data/2018_magfest.json'
 //import geekycon16 from './data/2016_geekycon.json'
 
 
@@ -15,7 +16,7 @@ import {createPieCharts} from './helpers/pieCharts.js'
 import {createRectangleCharts} from './helpers/rectangleCharts.js'
 import {createBarCharts} from './helpers/barCharts.js'
 import * as d3pie from "d3pie"
-// import { getData } from './cssc_script.js'
+// import { getData } from './data/cssc_script.js'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -129,7 +130,7 @@ export class StatContent extends Component {
 
   componentDidMount() {
     if (this.props.data.name === "magfest"){
-      this.currentdata = data;
+      this.currentdata = magfest18;
     }
 
     if (this.props.data.name === "tekko"){
@@ -144,7 +145,7 @@ export class StatContent extends Component {
       //this.currentdata = geekycon16;
     }
 
-    if (this.props.data.name === "vidcon"){
+    if (this.props.data.name === "vidcon18"){
       this.currentdata = vidcon18;
     }
     this.drawChart();

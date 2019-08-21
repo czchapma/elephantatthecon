@@ -13,6 +13,7 @@ class Header extends Component {
     return (
       <div className="app-header" id = "app-header">
         <li className="menu-item" id = "home"><a href="#" value="home" onClick= {this.props.onClickFunc}>home</a></li>
+        <li className="menu-item" id = "vidcon18"><a href="#" value="vidcon18" onClick= {this.props.onClickFunc}>vidcon 18</a></li>        
         <li className="menu-item" id = "magfest"><a href="#" value="magfest" onClick= {this.props.onClickFunc}>magfest 18</a></li>
         <li className="menu-item" id = "tekko"><a href="#" value="tekko" onClick= {this.props.onClickFunc}>tekko 17</a></li>
         <li className="menu-item" id = "nerdcon"><a href="#" value="nerdcon" onClick= {this.props.onClickFunc}>nerdcon 17</a></li>
@@ -280,6 +281,31 @@ Tekko 2017 attendees on safety and inclusion.`,
           p2: `At Uplift we understand the power of communities and work with organizers like VidCon to ensure
 that these important communities are safe for everyone. With this in mind, here is our survey of the 
 VidCon 2017 attendees on safety and inclusion.
+`,
+          stat: './images/stat.png',
+          story: 'test'
+         
+      },
+      rmode: 'main',
+        mode: 'content'
+      }));
+    } else if(e.target.getAttribute("value") == "vidcon18"){
+      document.getElementById("vidcon18").style.backgroundColor = "#9AD2DF";
+      // set data here!!!!
+      this.setState(prevState => ({
+        data: {
+          name: 'vidcon18',
+          year: '2018',
+          intro: "",
+          conlink: "https://medium.com/@UpliftTogether/the-elephant-at-vidcon-2018-3c7acb446d2a",
+          conhome: "http://vidcon.com/",
+          p1: `VidCon is a multi-genre online video conference, held annually in 
+          Southern California since 2010. This convention is one of the largest 
+          and most long-standing of its kind in the world, gathering thousands
+           of online video creators, viewers, and industry representatives.`,
+          p2: `At Uplift we understand the power of communities and work with organizers like VidCon to ensure
+that these important communities are safe for everyone. With this in mind, here is our survey of the 
+VidCon 2018 attendees on safety and inclusion.
 `,
           stat: './images/stat.png',
           story: 'test'

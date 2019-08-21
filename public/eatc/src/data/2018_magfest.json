@@ -1,5 +1,5 @@
 {
-    "whatisyourgender": [
+    "gender": [
         [
             "female",
             251
@@ -11,13 +11,13 @@
         [
             "nonbinary/genderqueer",
             32
-        ]
+        ],
         [
             "agender",
             6
-        ],
+        ]
     ],
-    "whatisyourrace": [
+    "race": [
         [
             "asian",
             32
@@ -52,7 +52,7 @@
         ]
     ],
 
-    "whatisyoursexuality": [
+    "sexuality": [
         [
             "asexual",
             30
@@ -86,7 +86,7 @@
             8
         ]
     ],
-    "ifeltsafe": [
+    "I felt safe": [
         [
             "always",
             364
@@ -108,7 +108,7 @@
             1
         ]
     ],
-    "ifeltsafesharingmysexuality": [
+    "I felt safe sharing my sexuality": [
         [
             "always",
             413
@@ -130,7 +130,7 @@
             10
         ]
     ],
-    "ifeltsafesharingmygenderidentity": [
+    "I felt safe sharing my gender identity": [
         [
             "always",
             458
@@ -152,7 +152,7 @@
             3
         ]
     ],
-    "someoneverballyharassedme": [
+    "Someone verbally/harassed me": [
         [
             "no",
             497
@@ -162,7 +162,7 @@
             62
         ]
     ],
-    "someonetouchedmewithoutmyconsent": [
+    "Someone touched me/without my consent": [
         [
             "no",
             449
@@ -172,7 +172,7 @@
             110
         ]
     ],
-    "someonesexuallyharassedorassaultedme": [
+    "Someone sexually/harassed or assaulted me": [
         [
             "no",
             535

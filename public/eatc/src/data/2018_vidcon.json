@@ -1,5 +1,5 @@
 {
-    "whatisyourgender": [
+    "gender": [
         [
             "male",
             20
@@ -17,7 +17,7 @@
             1
         ]
     ],
-    "whatisyourrace": [
+    "race": [
         [
             "black",
             7
@@ -25,10 +25,6 @@
         [
             "white",
             84
-        ],
-        [
-            "hispanic/latinx",
-            11
         ],
         [
             "native american",
@@ -52,10 +48,10 @@
         ],
         [
             "latinx/hispanic",
-            0
+            11
         ]
     ],
-    "whatisyoursexuality": [
+    "sexuality": [
         [
             "straight",
             53
@@ -89,7 +85,7 @@
             4
         ]
     ],
-    "ifeelsafeatvidcon": [
+    "I felt safe": [
         [
             "always",
             79
@@ -110,8 +106,8 @@
             "never",
             0
         ]
-    ],
-    "someonehasverballyharrassedmeatvidcon": [
+    ],    
+    "Someone verbally/harassed me": [
         [
             "no",
             120
@@ -121,7 +117,7 @@
             6
         ]
     ],
-    "someonehastouchedmewithoutmyconsentatvidcon": [
+    "Someone touched me/without my consent": [
         [
             "no",
             120
@@ -131,7 +127,7 @@
             6
         ]
     ],
-    "someonehassexuallyharrassedorassaultedmeatvidcon": [
+    "Someone sexually/harassed or assaulted me": [
         [
             "no",
             123
