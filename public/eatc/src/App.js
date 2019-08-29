@@ -13,12 +13,13 @@ class Header extends Component {
     return (
       <div className="app-header" id = "app-header">
         <li className="menu-item" id = "home"><a href="#" value="home" onClick= {this.props.onClickFunc}>home</a></li>
+        <li className="menu-item" id = "leakycon18"><a href="#" value="leakycon18" onClick= {this.props.onClickFunc}>leakycon 18</a></li>        
         <li className="menu-item" id = "vidcon18"><a href="#" value="vidcon18" onClick= {this.props.onClickFunc}>vidcon 18</a></li>        
         <li className="menu-item" id = "magfest"><a href="#" value="magfest" onClick= {this.props.onClickFunc}>magfest 18</a></li>
         <li className="menu-item" id = "tekko"><a href="#" value="tekko" onClick= {this.props.onClickFunc}>tekko 17</a></li>
         <li className="menu-item" id = "nerdcon"><a href="#" value="nerdcon" onClick= {this.props.onClickFunc}>nerdcon 17</a></li>
-        <li className="menu-item" id = "vidcon"><a href="#" value="vidcon" onClick= {this.props.onClickFunc}>vidcon 17</a></li>
-        <li className="menu-item" id = "geekycon"><a href="#" value="geekycon" onClick= {this.props.onClickFunc}>geekycon 16</a></li>
+        {/* <li className="menu-item" id = "vidcon"><a href="#" value="vidcon" onClick= {this.props.onClickFunc}>vidcon 17</a></li> */}
+        {/* <li className="menu-item" id = "geekycon"><a href="#" value="geekycon" onClick= {this.props.onClickFunc}>geekycon 16</a></li> */}
         
         <li className="menu-item" id = "survey"><a href="#" value="survey" onClick= {this.props.onClickFunc}>survey</a></li>
         <li className="menu-item icon" id = "toggle"><a href="javascript:void(0);"  onClick={toggleDropDown}>&#9776;</a></li>
@@ -157,6 +158,29 @@ class App extends Component {
     else if(e.target.getAttribute("value") == "survey"){
       this.setState(prevState => ({
         mode: 'survey',
+      }));
+    }    
+    else if(e.target.getAttribute("value") == "leakycon18"){
+      document.getElementById("leakycon18").style.backgroundColor = "#9AD2DF";
+      this.setState(prevState => ({
+        data: {
+        name: 'leakycon18',
+        year: '2018',
+        conlink: "https://medium.com/uplifttogether/magfest-2018-the-elephant-at-the-con-9d5392e9eb7e",
+        conhome: "https://www.leakycon.com",
+        intro: "",
+        p1: `LeakyCon is the largest unofficial convention for fans of Harry Potter and the many magical 
+        elements of J.K. Rowling's Wizarding World. LeakyCon has provided the Harry Potter fandom with 
+        a place to gather and celebrate its passion since 2009.`,
+        p2: `Clearly LeakyCon is a special event and an important community for many.
+        At Uplift we understand the power of communities and work with organizers like LeakyCon to ensure
+        that these important communities are safe for everyone. With this in mind, we conducted a survey of
+        LeakyCon 2018 attendees on safety and inclusion.`,
+        stat: './images/stat.png',
+        story: 'test'
+      },
+        rmode: 'main',
+        mode: 'content'
       }));
     }
     else if(e.target.getAttribute("value") == "magfest"){

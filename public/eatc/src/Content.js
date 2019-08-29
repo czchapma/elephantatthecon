@@ -8,7 +8,7 @@ import tekko17 from './data/2017_tekko.json'
 import nerdcon17 from './data/2017_nerdcon.json'
 import vidcon18 from './data/2018_vidcon.json'
 import magfest18 from './data/2018_magfest.json'
-//import geekycon16 from './data/2016_geekycon.json'
+import leaky18 from './data/2018_leakycon.json'
 
 
 // import {drawPie} from './demographics.js'
@@ -129,6 +129,10 @@ export class StatContent extends Component {
   }
 
   componentDidMount() {
+    if (this.props.data.name === "leakycon18"){
+      this.currentdata = leaky18;
+    }
+    
     if (this.props.data.name === "magfest"){
       this.currentdata = magfest18;
     }
