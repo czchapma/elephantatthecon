@@ -1,0 +1,124 @@
+{
+  "gender": [
+    [
+      "female",
+      93
+    ],
+    [
+      "male",
+      5
+    ],
+    [
+      "agender",
+      1
+    ],
+    [
+      "non bisexualnary",
+      3
+    ]
+  ],
+  "I felt safe": [
+    [
+      "always",
+      86
+    ],
+    [
+      "usually",
+      16
+    ],
+    [
+      "sometimes",
+      3
+    ],
+    [
+      "rarely",
+      0
+    ],
+    [
+      "never",
+      0
+    ]
+  ],
+  "Someone verbally/harassed me": [
+    [
+      "no",
+      99
+    ],
+    [
+      "yes",
+      6
+    ]
+  ],
+  "Someone touched me/without my consent": [
+    [
+      "yes",
+      11
+    ],
+    [
+      "no",
+      94
+    ]
+  ],
+  "Someone sexually/harassed or assaulted me": [
+    [
+      "no",
+      102
+    ],
+    [
+      "yes",
+      3
+    ]
+  ],
+  "race": [
+    [
+      "white",
+      80
+    ],
+    [
+      "asian",
+      4
+    ],
+    [
+      "biracial/multiracial",
+      5
+    ],
+    [
+      "pacific islander",
+      1
+    ],
+    [
+      "latinx/hispanic",
+      8
+    ],
+    [
+      "black",
+      1
+    ]
+  ],
+  "sexuality": [
+    [
+      "queer",
+      5
+    ],
+    [
+      "heterosexual ",
+      43
+    ],
+    [
+      "asexual",
+      7
+    ],
+    [
+      "pansexual",
+      8
+    ],
+    [
+      "bisexual/demisexual",
+      28
+    ],
+    [
+      "homosexual",
+      3
+    ]
+  ]
+}
