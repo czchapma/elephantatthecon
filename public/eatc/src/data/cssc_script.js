@@ -2,14 +2,15 @@
 
 var $ = require('jquery');
 // ID of the Google Spreadsheet
-var spreadsheetID = "1MzVPabJWKxnmShilL0iO1KYEQDGoTJi-S_ly5ofdthU";
+//var spreadsheetID = "1MzVPabJWKxnmShilL0iO1KYEQDGoTJi-S_ly5ofdthU";
+var spreadsheetID = "1NU5mgpaL6Ukzcg5m8-7xORabHyc8VUtp0OFe-JRrs4I";
 
 
 /**
  * This function takes in the Google Sheets ID of the cleaned data and returns a JS Object that contains all of the questions and the answers with their individual counts + a preassigned color (for visualization).
  */
 export function getData(spreadsheetID) {
-    // Make sure it is public or set to Anyone with link can view 
+    // Make sure it is public or set to Anyone with link can view
     var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
 
     /**
@@ -19,7 +20,7 @@ export function getData(spreadsheetID) {
     function findValueByPrefix(object, prefix) {
         var ret = []
         for (var property in object) {
-            if (object.hasOwnProperty(property) && 
+            if (object.hasOwnProperty(property) &&
             property.toString().startsWith(prefix)) {
                 // TODO find the VALUE OF THE THINGS
                 ret[property.replace(prefix,'')] = object[property].$t;
@@ -97,7 +98,7 @@ export function getData(spreadsheetID) {
             case "asian":
                 color = "#000000";
                 break;
-            case "biracial/multiracial": 
+            case "biracial/multiracial":
                 color = "#000000";
                 break;
             case "middle eastern":
@@ -121,7 +122,7 @@ export function getData(spreadsheetID) {
     }
 
     /**
-     * This function ensures that for any question, all the proper 
+     * This function ensures that for any question, all the proper
      */
     function completeEntries(entry) {
 
@@ -174,7 +175,7 @@ export function getData(spreadsheetID) {
 
         var entry = data.feed.entry;
 
-        
+
         $(entry).each(function(){
             let temp = Object.entries(findValueByPrefix(this, 'gsx$'));
 
@@ -218,5 +219,3 @@ export function getData(spreadsheetID) {
     });
     return formatted_data;
 }
-
-

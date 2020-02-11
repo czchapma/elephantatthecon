@@ -13,14 +13,15 @@ class Header extends Component {
     return (
       <div className="app-header" id = "app-header">
         <li className="menu-item" id = "home"><a href="#" value="home" onClick= {this.props.onClickFunc}>home</a></li>
-        <li className="menu-item" id = "leakycon18"><a href="#" value="leakycon18" onClick= {this.props.onClickFunc}>leakycon 18</a></li>        
-        <li className="menu-item" id = "vidcon18"><a href="#" value="vidcon18" onClick= {this.props.onClickFunc}>vidcon 18</a></li>        
+        <li className="menu-item" id = "magfest19"><a href="#" value="magfest19" onClick= {this.props.onClickFunc}>magfest 19</a></li>
+        <li className="menu-item" id = "leakycon18"><a href="#" value="leakycon18" onClick= {this.props.onClickFunc}>leakycon 18</a></li>
+        <li className="menu-item" id = "vidcon18"><a href="#" value="vidcon18" onClick= {this.props.onClickFunc}>vidcon 18</a></li>
         <li className="menu-item" id = "magfest"><a href="#" value="magfest" onClick= {this.props.onClickFunc}>magfest 18</a></li>
         <li className="menu-item" id = "tekko"><a href="#" value="tekko" onClick= {this.props.onClickFunc}>tekko 17</a></li>
         <li className="menu-item" id = "nerdcon"><a href="#" value="nerdcon" onClick= {this.props.onClickFunc}>nerdcon 17</a></li>
         {/* <li className="menu-item" id = "vidcon"><a href="#" value="vidcon" onClick= {this.props.onClickFunc}>vidcon 17</a></li> */}
         {/* <li className="menu-item" id = "geekycon"><a href="#" value="geekycon" onClick= {this.props.onClickFunc}>geekycon 16</a></li> */}
-        
+
         <li className="menu-item" id = "survey"><a href="#" value="survey" onClick= {this.props.onClickFunc}>survey</a></li>
         <li className="menu-item icon" id = "toggle"><a href="javascript:void(0);"  onClick={toggleDropDown}>&#9776;</a></li>
       </div>
@@ -112,19 +113,19 @@ class App extends Component {
     if(e.target.getAttribute("value") == "main"){
       this.setState(prevState => ({
         rmode: 'main',
-        
+
       }));
     }
     else if(e.target.getAttribute("value") == "stats"){
       this.setState(prevState => ({
         rmode: 'stat',
-        
+
       }));
     }
     else if(e.target.getAttribute("value") == "stories"){
       this.setState(prevState => ({
         rmode: 'story',
-        
+
       }));
     }
   }
@@ -159,7 +160,9 @@ class App extends Component {
       this.setState(prevState => ({
         mode: 'survey',
       }));
-    }    
+    }
+
+
     else if(e.target.getAttribute("value") == "leakycon18"){
       document.getElementById("leakycon18").style.backgroundColor = "#9AD2DF";
       this.setState(prevState => ({
@@ -169,8 +172,8 @@ class App extends Component {
         conlink: "https://medium.com/uplifttogether/magfest-2018-the-elephant-at-the-con-9d5392e9eb7e",
         conhome: "https://www.leakycon.com",
         intro: "",
-        p1: `LeakyCon is the largest unofficial convention for fans of Harry Potter and the many magical 
-        elements of J.K. Rowling's Wizarding World. LeakyCon has provided the Harry Potter fandom with 
+        p1: `LeakyCon is the largest unofficial convention for fans of Harry Potter and the many magical
+        elements of J.K. Rowling's Wizarding World. LeakyCon has provided the Harry Potter fandom with
         a place to gather and celebrate its passion since 2009.`,
         p2: `Clearly LeakyCon is a special event and an important community for many.
         At Uplift we understand the power of communities and work with organizers like LeakyCon to ensure
@@ -183,6 +186,9 @@ class App extends Component {
         mode: 'content'
       }));
     }
+
+
+
     else if(e.target.getAttribute("value") == "magfest"){
       document.getElementById("magfest").style.backgroundColor = "#9AD2DF";
       // set data here!!!!
@@ -220,16 +226,16 @@ class App extends Component {
         conlink:"https://medium.com/uplifttogether/tekko-2017-elephant-at-the-con-report-b2a8c86384e3",
         conhome: "http://www.teamtekko.us/",
         intro: "",
-        p1: `Tekko (formerly Tekkoshocon) is an annual four-day convention that takes place 
+        p1: `Tekko (formerly Tekkoshocon) is an annual four-day convention that takes place
 at the David L. Lawrence Convention Center in Pittsburgh, Pennsylvania. Mainly dedicated
-to the appreciation of anime, this event includes anime viewings, concerts, cosplay 
+to the appreciation of anime, this event includes anime viewings, concerts, cosplay
 masquerades and competitions, dancing, fashion shows, and gaming.`,
         p2: `At Uplift we understand the power of communities and work with organizers like Tekko to ensure
-that these important communities are safe for everyone. With this in mind, here is our survey of the 
+that these important communities are safe for everyone. With this in mind, here is our survey of the
 Tekko 2017 attendees on safety and inclusion.`,
         stat: './images/stat.png',
         story: 'test'
-        
+
       },
       rmode: 'main',
         mode: 'tekko'
@@ -247,17 +253,17 @@ Tekko 2017 attendees on safety and inclusion.`,
         conhome: "http://www.nerdcon.com/",
         intro: "",
         p1: `In celebration of ten years of Vlogbrothers and the Nerdfighteria community,
-         Nerdfighters from all over the world gathered in Boston, MA for a weekend celebrating 
-         the wonderful community John and Hank Green have created. Thanks to the hard work of 
-         staff, volunteers, and members of the community, it was a memorable weekend, but 
+         Nerdfighters from all over the world gathered in Boston, MA for a weekend celebrating
+         the wonderful community John and Hank Green have created. Thanks to the hard work of
+         staff, volunteers, and members of the community, it was a memorable weekend, but
          unfortunately not everyone felt safe and included.`,
         p2: `Uplift attended the conference, presenting a workshop on being a leader in
-        online communities, handing out convention safety cards, demonstrating our Chrome 
+        online communities, handing out convention safety cards, demonstrating our Chrome
         extension that blocks harassing content from social media, and collecting data for
          our project Elephant At The Con.`,
         stat: './images/stat.png',
         story: 'test'
-        
+
       },
       rmode: 'main',
         mode: 'content'
@@ -272,16 +278,16 @@ Tekko 2017 attendees on safety and inclusion.`,
         conlink: "https://medium.com/uplifttogether/the-elephant-at-geekycon-the-stories-f65c83b7ce16",
         conhome: "https://geekyconblr.tumblr.com/post/159302934649/dearbelovedgeekyconcommunity",
         intro: "",
-        p1: `GeekyCon targets the online fandoms of Doctor Who, Supernatural, 
+        p1: `GeekyCon targets the online fandoms of Doctor Who, Supernatural,
         Glee, Marvel Cinematic Universe, and Disney.`,
-        p2: `At GeekyCon this year, Uplift volunteers educated attendees on our 
-        organization’s mission, offered resources about consent, healthy 
-        relationships, and con safety. We also spoke with attendees about their 
-        experience at the con. The stories, recorded in our Elephant At the Con 
+        p2: `At GeekyCon this year, Uplift volunteers educated attendees on our
+        organization’s mission, offered resources about consent, healthy
+        relationships, and con safety. We also spoke with attendees about their
+        experience at the con. The stories, recorded in our Elephant At the Con
         survey, are shared below.`,
         stat: './images/stat.png',
         story: 'test'
-        
+
 
       },
       rmode: 'main',
@@ -298,17 +304,17 @@ Tekko 2017 attendees on safety and inclusion.`,
           intro: "",
           conlink: "https://medium.com/@UpliftTogether/aaa620a8d26c",
           conhome: "http://vidcon.com/",
-          p1: `VidCon is a multi-genre online video conference, held annually in 
-          Southern California since 2010. This convention is one of the largest 
+          p1: `VidCon is a multi-genre online video conference, held annually in
+          Southern California since 2010. This convention is one of the largest
           and most long-standing of its kind in the world, gathering thousands
            of online video creators, viewers, and industry representatives.`,
           p2: `At Uplift we understand the power of communities and work with organizers like VidCon to ensure
-that these important communities are safe for everyone. With this in mind, here is our survey of the 
+that these important communities are safe for everyone. With this in mind, here is our survey of the
 VidCon 2017 attendees on safety and inclusion.
 `,
           stat: './images/stat.png',
           story: 'test'
-         
+
       },
       rmode: 'main',
         mode: 'content'
@@ -323,22 +329,52 @@ VidCon 2017 attendees on safety and inclusion.
           intro: "",
           conlink: "https://medium.com/@UpliftTogether/the-elephant-at-vidcon-2018-3c7acb446d2a",
           conhome: "http://vidcon.com/",
-          p1: `VidCon is a multi-genre online video conference, held annually in 
-          Southern California since 2010. This convention is one of the largest 
+          p1: `VidCon is a multi-genre online video conference, held annually in
+          Southern California since 2010. This convention is one of the largest
           and most long-standing of its kind in the world, gathering thousands
            of online video creators, viewers, and industry representatives.`,
           p2: `At Uplift we understand the power of communities and work with organizers like VidCon to ensure
-that these important communities are safe for everyone. With this in mind, here is our survey of the 
+that these important communities are safe for everyone. With this in mind, here is our survey of the
 VidCon 2018 attendees on safety and inclusion.
 `,
           stat: './images/stat.png',
           story: 'test'
-         
+
       },
       rmode: 'main',
         mode: 'content'
       }));
     }
+
+    else if (e.target.getAttribute("value") == "magfest19") {
+
+        document.getElementById("magfest19").style.backgroundColor = "#9AD2DF";
+        // set data here!!!!
+        this.setState(prevState => ({
+          data: {
+            name: 'magfest19',
+            year: '2019',
+            intro: "",
+            conlink: "https://medium.com/uplifttogether/the-elephant-at-magfest-2019-4e7200dbf00e",
+            conhome: "https://super.magfest.org/",
+            p1: `MAGFest (Music and Gaming Festival) is an event dedicated to the appreciation of video
+            game music, gaming of all types, and the gaming community. The event, which took place in Maryland
+            in early January 2019, is a twenty-four-hour show offering arcades, tabletop, LAN, music, speakers,
+            and more.`,
+            p2: `At Uplift we understand the power of communities and work with organizers like VidCon to ensure
+  that these important communities are safe for everyone. With this in mind, here is our survey of the
+  VidCon 2018 attendees on safety and inclusion.
+  `,
+            stat: './images/stat.png',
+            story: 'test'
+
+        },
+        rmode: 'main',
+          mode: 'content'
+        }));
+
+    }
+
   }
 
   render() {

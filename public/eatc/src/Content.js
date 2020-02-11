@@ -9,7 +9,7 @@ import nerdcon17 from './data/2017_nerdcon.json'
 import vidcon18 from './data/2018_vidcon.json'
 import magfest18 from './data/2018_magfest.json'
 import leaky18 from './data/2018_leakycon.json'
-
+import magfest19 from './data/2019_magfest.json'
 
 // import {drawPie} from './demographics.js'
 import {createPieCharts} from './helpers/pieCharts.js'
@@ -129,10 +129,14 @@ export class StatContent extends Component {
   }
 
   componentDidMount() {
+      if (this.props.data.name === "magfest19"){
+        this.currentdata = magfest19;
+      }
+
     if (this.props.data.name === "leakycon18"){
       this.currentdata = leaky18;
     }
-    
+
     if (this.props.data.name === "magfest"){
       this.currentdata = magfest18;
     }
@@ -152,11 +156,14 @@ export class StatContent extends Component {
     if (this.props.data.name === "vidcon18"){
       this.currentdata = vidcon18;
     }
+
+
+
     this.drawChart();
   }
 
   drawChart() {
-    // each of these functions draws their respective chart; check js files 
+    // each of these functions draws their respective chart; check js files
     // for specifics
     createPieCharts(this.currentdata);
     createRectangleCharts(this.currentdata);
