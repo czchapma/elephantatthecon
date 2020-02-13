@@ -369,7 +369,7 @@ VidCon 2018 attendees on safety and inclusion.
             story: 'test'
 
         },
-        rmode: 'main',
+          rmode: 'main',
           mode: 'content'
         }));
 

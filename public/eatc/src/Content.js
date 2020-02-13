@@ -129,9 +129,9 @@ export class StatContent extends Component {
   }
 
   componentDidMount() {
-      if (this.props.data.name === "magfest19"){
+    if (this.props.data.name == "magfest19"){
         this.currentdata = magfest19;
-      }
+    }
 
     if (this.props.data.name === "leakycon18"){
       this.currentdata = leaky18;
@@ -165,6 +165,7 @@ export class StatContent extends Component {
   drawChart() {
     // each of these functions draws their respective chart; check js files
     // for specifics
+    console.log(this.currentData);
     createPieCharts(this.currentdata);
     createRectangleCharts(this.currentdata);
     createBarCharts(this.currentdata);

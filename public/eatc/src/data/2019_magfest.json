@@ -1,5 +1,5 @@
 {
-  "whatisyourgender": [
+  "gender": [
     [
       "female",
       43
@@ -25,11 +25,59 @@
       1
     ]
   ],
-  "whatisyourrace": [
+  "I felt safe": [
     [
-      "biracial/multiracial",
-      9
+      "always",
+      71
     ],
+    [
+      "sometimes",
+      8
+    ],
+    [
+      "usually",
+      36
+    ],
+    [
+      "rarely",
+      0
+    ],
+    [
+      "never",
+      0
+    ]
+  ],
+  "Someone verbally/harassed me": [
+    [
+      "no",
+      106
+    ],
+    [
+      "yes",
+      9
+    ]
+  ],
+  "Someone touched me/without my consent": [
+    [
+      "no",
+      105
+    ],
+    [
+      "yes",
+      10
+    ]
+  ],
+  "Someone sexually/harassed or assaulted me": [
+    [
+      "no",
+      110
+    ],
+    [
+      "yes",
+      5
+    ]
+  ],
+  "race": [
     [
       "white",
       79
@@ -47,6 +95,10 @@
       3
     ],
     [
+      "biracial/multiracial",
+      8
+    ],
+    [
       "middle eastern",
       0
     ],
@@ -59,7 +111,7 @@
       0
     ]
   ],
-  "whatisyoursexuality": [
+  "sexuality": [
     [
       "straight",
       44
@@ -91,58 +143,6 @@
     [
       "lesbian",
       2
-    ]
-  ],
-  "ifeltsafe": [
-    [
-      "always",
-      75
-    ],
-    [
-      "usually",
-      38
-    ],
-    [
-      "sometimes",
-      8
-    ],
-    [
-      "often",
-      0
-    ],
-    [
-      "never",
-      0
-    ]
-  ],
-  "someoneverballyharassedme": [
-    [
-      "no",
-      112
-    ],
-    [
-      "yes",
-      9
-    ]
-  ],
-  "someonetouchedmewithoutmyconsent": [
-    [
-      "no",
-      111
-    ],
-    [
-      "yes",
-      10
-    ]
-  ],
-  "someonesexuallyharrassedorassaultedme": [
-    [
-      "no",
-      116
-    ],
-    [
-      "yes",
-      5
     ]
   ]
 }
