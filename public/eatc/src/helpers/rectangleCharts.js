@@ -3,9 +3,20 @@ import * as d3 from "d3"
 
 export function createRectangleCharts(data) {
 
-createRectChart(data, "I felt safe", "rectangle-chart-1");
-createRectChart(data, "I felt safe sharing my gender identity", "rectangle-chart-2");
-createRectChart(data, "I felt safe sharing my sexuality", "rectangle-chart-3");
+//Check if these questions do exist in the json file
+if (data.hasOwnProperty("I felt safe")) {
+	createRectChart(data, "I felt safe", "rectangle-chart-1");
+}
+
+
+if (data.hasOwnProperty("I felt safe sharing my gender identity")) {
+	createRectChart(data, "I felt safe sharing my gender identity", "rectangle-chart-2");
+}
+
+if (data.hasOwnProperty("I felt safe sharing my sexuality")) {
+	createRectChart(data, "I felt safe sharing my sexuality", "rectangle-chart-3");
+}
+
 }
 
 function createRectChart(data, label, id){
@@ -27,7 +38,7 @@ var total = d3.sum(dataset);
 var chart = d3.select("#" + id)
 	.attr("width", "100%")
 	.attr("height", 86);
-	
+
 // var color = d3.scale.category20c();
 
 var tooltip = d3.select("body").append("div").attr("class", "tooltip");
@@ -62,4 +73,3 @@ chart.append("text")
     .attr("y", 40)
     .text(label);
 }
-

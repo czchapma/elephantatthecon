@@ -150,7 +150,7 @@ export class StatContent extends Component {
     }
 
     if (this.props.data.name === "geekycon"){
-      //this.currentdata = geekycon16;
+      //this.currentdata = geekycon16; //--- there is no json file for this conference
     }
 
     if (this.props.data.name === "vidcon18"){
@@ -218,12 +218,22 @@ export class StoryContent extends Component {
   render() {
     //check FilteredList for specifics
     let category = this.props.data.name + this.props.data.year;
-    console.log(category);
-    return (
-      <div className="main-wrapper">
-        <div className="wrapper-title">STORIES</div>
-          <FilteredList items = {stories[category]} />
-      </div>
-    );
+    //console.log(category);
+
+    if (stories.hasOwnProperty(category)) {
+        return (
+          <div className="main-wrapper">
+            <div className="wrapper-title">STORIES</div>
+              <FilteredList items = {stories[category]} />
+          </div>
+        );
+    } else {
+        return (
+          <div>
+            Our apologies, the stories of this conference have not been uploaded. Please come back later. Thank you.
+          </div>
+        );
+    }
+
   }
 }

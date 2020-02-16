@@ -67,7 +67,7 @@ class ReportContent extends Component {
       content = <StoryContent data ={this.props.data} />
     }
     else{
-      content = "Uh Oh!"
+      content = "Something is wrong with rendering ReportContent"
     }
 
     return (
