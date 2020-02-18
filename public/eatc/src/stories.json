@@ -1,4 +1,27 @@
 {
+    "magfest192019":[
+        {"id":1, "header": "Security/Safety",
+            "quote": "I felt uncomfortable at the presence of armed (with both firearms and stun guns) ‘security’ and ‘police’ throughout the fest."},
+        {"id":2, "header": "Security/Safety",
+            "quote": "I feel that the hired security staff were rude and unresponsive, at best. Past experience from many MAGFests has shown me that they are dismissive of harassment complaints, answer to nobody, and don’t resolve issues."},
+        {"id":3, "header": "Security/Safety",
+            "quote": "Staff had no knowledge of the location of stairs when an elevator shut down. In my situation, this was just an inconvenience, but could be an actual problem if a fire or similar situation occurred."},
+        {"id":4, "header": "Photography",
+            "quote": "There were a few moments when I was trying to take a break from having photos taken of me in cosplay when people went to take a picture without asking."},
+        {"id":5, "header": "Alcohol",
+            "quote": "Loud party people in our halls and on the con floor being uncomfortably drunk."},
+        {"id":6, "header": "Alt-Right Attendees",
+            "quote": "I saw and avoided a person in what looked like a Kekistan costume, knowing its ties to toxic 4chan culture and white supremacist “Unite the Right” rallies in Charlottesville."},
+        {"id":7, "header": "Alt-Right Attendees",
+            "quote": "[There was a] wizard walking around with MAGA nazi gun symbolism."},
+        {"id":8, "header": "Harrassment",
+            "quote": "A friend of mine dealt with people grabbing and pulling their wheelchair."},
+        {"id":9, "header": "Harrassment",
+            "quote": "Someone bumped into me while he was standing up, then hit me in the head with his bag. That was frustrating but what bothered me was when he hugged me in “apology” without asking."},
+        {"id":10, "header": "Harrassment",
+            "quote": "I didn’t directly observe this, but my friend told me a man followed her unsolicited in the hotel room hallway for a few minutes trying to talk to her. She thinks he was well-meaning, but couldn’t follow the social cues, but also still super creepy."}
+    ],
+
   "magfest2018": [
   {"id": 1, "header": "The Positive",
   "quote": "I never feel uncomfortable at MAGFest, I know that if anything did happen, that MAGFest would advocate for me."},
