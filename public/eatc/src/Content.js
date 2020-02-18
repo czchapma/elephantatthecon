@@ -230,7 +230,7 @@ export class StoryContent extends Component {
     } else {
         return (
           <div>
-            Our apologies, the stories of this conference have not been uploaded. Please come back later. Thank you.
+            Our apologies, the stories of this convention have not been uploaded. Please come back later. Thank you.
           </div>
         );
     }
