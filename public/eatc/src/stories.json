@@ -22,6 +22,24 @@
             "quote": "I didn’t directly observe this, but my friend told me a man followed her unsolicited in the hotel room hallway for a few minutes trying to talk to her. She thinks he was well-meaning, but couldn’t follow the social cues, but also still super creepy."}
     ],
 
+    "leakycon182018":[
+        {"id":1, "header": "The Positive",
+            "quote": "Never [felt unsafe], the staff were super helpful."},
+        {"id":2, "header": "The Positive",
+            "quote": "This is my fourth leaky(/geeky) and it is by far the most wholesome/safe feeling con I have ever been to."},
+        {"id":3, "header": "Gender-Neutral Restrooms",
+            "quote": "There was a woman in one of the restroom lines complaining that one of the other restrooms was gender neutral. She asked me if it bothered me, especially since I had my teenage daughter with me."},
+        {"id":4, "header": "Gender-Neutral Restrooms",
+            "quote": "I had to tell her ‘No’, I did not find it a problem at all and it did not bother me. There is still work to be done."},
+        {"id":5, "header": "Physical and Sexual Misconduct",
+            "quote": "I was chatting with a fellow LeakyCon attendee. It was a friendly, engaging conversation. He briefly patted my shoulder with his hand. I know that this is often meant to be a friendly, playful gesture. "},
+        {"id":6, "header": "Physical and Sexual Misconduct",
+            "quote": "Particularly from a male to a female. But it is something that has always made me uncomfortable. I never really know how to react, except to ignore it."},
+        {"id":7, "header": "Convention Center Staff",
+            "quote": "Several of my friends reported being made to feel uncomfortable and unsafe around convention center staff. They were forced to engage in conversations about support for our current president, the NRA, and other topics that caused them to feel unsafe."}
+
+    ],
+
     "vidcon182018":[
         {"id":1, "header": "The Positive",
             "quote": "As a chaperone I felt safe and I felt my kids were safe walking around on their own. I was very surprised and pleased!"},
@@ -31,13 +49,13 @@
             "quote": "I was in cosplay and a fellow guest came up recording myself and the group I was with and he grabbed my wrist [without permission] so I would spin around and show my costume from all angles."},
         {"id":4, "header": "Physical and Sexual Misconduct",
             "quote": "My friend and I were approached by four men at VidCon prom... They were exhibiting some sort of predatory behavior, approaching us unattached from any other group. We left the prom shortly after that."},
-        {"id":5, "header": "Bag Check and Convention Security",
+        {"id":5, "header": "Convention Security",
             "quote": "I was uncomfortable with the fact that there was never a bag check. Also emails were sent out stating the rules of what could and could not be brought in yet backpacks and whatever was inside the backpacks were allowed."},
-        {"id":6, "header": "Bag Check and Convention Security",
+        {"id":6, "header": "Convention Security",
             "quote": "The only difference I think that would have made me feel safer is for a bag check at every entrance… I did appreciate the bag check before meet and greets but we shouldn’t even go that long without security checks."},
-        {"id":7, "header": "Bag Check and Convention Security",
+        {"id":7, "header": "Convention Security",
             "quote": "The security guard opened by calling me over and stated that I was showing too much skin… In the end I had to walk away and heard them calling after me and said more things."},
-        {"id":8, "header": "Bag Check and Convention Security",
+        {"id":8, "header": "Convention Security",
             "quote": "I relayed this to a group of creators, both attendees and guests of the con, as we were chatting before the next panel and one stated that he heard some security personal catcalling attendees earlier as well."},
         {"id":9, "header": "LGBTQ+ Safety",
             "quote": "In the ACC North building on the 2nd floor, there was a sign for an all gender restroom. When I turned the corner there was just a men’s restroom and a women’s restroom, with no further gender neutral signage. I felt extremely uncomfortable and didn’t know what to do so I left the building."},

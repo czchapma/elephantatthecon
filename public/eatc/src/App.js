@@ -169,7 +169,7 @@ class App extends Component {
         data: {
         name: 'leakycon18',
         year: '2018',
-        conlink: "https://medium.com/uplifttogether/magfest-2018-the-elephant-at-the-con-9d5392e9eb7e",
+        conlink: "https://uplifttogether.org/nomagicinabuse",
         conhome: "https://www.leakycon.com",
         intro: "",
         p1: `LeakyCon is the largest unofficial convention for fans of Harry Potter and the many magical
