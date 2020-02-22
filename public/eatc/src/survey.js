@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Redirect } from 'react-router';
@@ -16,8 +17,8 @@ export class SurveyContent extends Component{
   }
 
   onAddressChanged = (e) => {
-    const newState = e.currentTarget.getAttribute('value'); 
-    
+    const newState = e.currentTarget.getAttribute('value');
+
     this.setState({
       // safety: e.currentTarget.getAttribute('value')
       text: newState,
@@ -57,7 +58,10 @@ export class SurveyContent extends Component{
     this.setState({
       redirectToHome: true
     });
-    alert(`Thank you!`);
+
+
+    // {console.log("form submitted")}
+    alert(`Thank you! Your answer has been recorded`);
     // formSubmitEvent.preventDefault();
   };
 
@@ -73,23 +77,21 @@ export class SurveyContent extends Component{
 
           <div id="survey-title-wrapper">
             <div id="survey-title">
-              VidCon 2019
+              Convention Safety
             </div>
             <div id="survey-information">
-              <p>VidCon is a multi-genre online video conference, held 
-                annually in Southern California since 2010.  The results of this survey will be shared in a future report and may be used by Uplift for future work to promote safe conventions and shared with VidCon staff.  By completing this survey, you acknowledge that that your responses will be used for these purposes.
-              </p>
+              <p>The results of this survey will be shared in a future report and may be used by Uplift for future work to promote safe conventions and shared with the convention staff. By completing this survey, you acknowledge that that your responses will be used for these purposes.</p>
             </div>
           </div>
-          
+
           <iframe name="hidden_iframe" id="hidden_iframe"height="0px" width="0px" frameBorder="0px"></iframe>
-          <form id="myform" action="https://docs.google.com/forms/d/e/1FAIpQLSdDB3osiIabN3qamlMYG0_cdh3LKQGdGHumFe_FPmuH91QA3w/formResponse" method="post" target="hidden_iframe" onSubmit={this.handleFormSubmit}>
-          <div className="survey-header">
+          <form id="myform" onSubmit={this.handleFormSubmit} action="https://docs.google.com/forms/d/e/1FAIpQLScIb9GguBeDtAteXkLi-unMsOUF3xuKcJ6GZVW19UvFqFv3VQ/formResponse" method="post" target="hidden_iframe">
+                <div className="survey-header">
                   Event Information
                 </div>
-            
+
             <div className = "survey-question">
-              <div className = "question-text"> I feel safe at VidCon:</div>
+              <div className = "question-text"> I feel safe at the convention:</div>
               <div className="radio-row">
                 <label><input type="radio" name="entry.351585626" value="always"checked={this.state.safety === "always"}
                 onChange={this.handleChange}className="form-check-input"/>Always</label>
@@ -98,47 +100,47 @@ export class SurveyContent extends Component{
                 <label><input type="radio" name="entry.351585626" value="sometimes"checked={this.state.safety === "sometimes"}
                 onChange={this.handleChange}className="form-check-input"/>Sometimes</label>
                 <label><input type="radio" name="entry.351585626" value="rarely"checked={this.state.safety === "rarely"}
-                onChange={this.handleChange}className="form-check-input"/>Rarely</label>                 
+                onChange={this.handleChange}className="form-check-input"/>Rarely</label>
               </div>
             </div>
 
             <div className = "survey-question">
-              <div className = "question-text">Someone has verbally harrassed me at VidCon:</div>
+              <div className = "question-text">Someone has verbally harrassed me at the convention:</div>
               <div className="radio-row">
               <label><input type="radio" name="entry.556186155" value="yes"checked={this.state.verbal === "yes"}
               onChange={this.handleChangeVerbal}className="form-check-input"/>Yes</label>
               <label><input type="radio" name="entry.556186155" value="no"checked={this.state.verbal === "no"}
-              onChange={this.handleChangeVerbal}className="form-check-input"/>No</label>             
+              onChange={this.handleChangeVerbal}className="form-check-input"/>No</label>
               </div>
             </div>
-            
+
             <div className = "survey-question">
-              <div className = "question-text">Someone has touched me without my consent at VidCon:</div>
+              <div className = "question-text">Someone has touched me without my consent at the convention:</div>
               <div className="radio-row">
               <label><input type="radio" name="entry.1792789459" value="yes"checked={this.state.touch === "yes"}
               onChange={this.handleChangeTouch}className="form-check-input"/>Yes</label>
               <label><input type="radio" name="entry.1792789459" value="no"checked={this.state.touch === "no"}
-              onChange={this.handleChangeTouch}className="form-check-input"/>No</label>             
+              onChange={this.handleChangeTouch}className="form-check-input"/>No</label>
               </div>
             </div>
 
             <div className = "survey-question">
-              <div className = "question-text">Someone has sexually harrassed or assaulted me at VidCon:</div>
+              <div className = "question-text">Someone has sexually harrassed or assaulted me at the convention:</div>
               <div className="radio-row">
               <label><input type="radio" name="entry.939669801" value="yes"checked={this.state.sexual === "yes"}
               onChange={this.handleChangeS}className="form-check-input"/>Yes</label>
               <label><input type="radio" name="entry.939669801" value="no"checked={this.state.sexual === "no"}
-              onChange={this.handleChangeS}className="form-check-input"/>No</label>             
+              onChange={this.handleChangeS}className="form-check-input"/>No</label>
               </div>
             </div>
 
             <div className = "survey-question surveyFill">
-                  <div className = "question-text filltext"> At any point in the weekend, did you feel uncomfortable at VidCon or see others in a difficult situation?</div>
+                  <div className = "question-text filltext"> At any point in the weekend, did you feel uncomfortable at the convention or see others in a difficult situation?</div>
                   <div className = "radio-row">
                     <textarea value={this.state.value} onChange={this.onAddressChanged} name="entry.872631186"/>
                   </div>
             </div>
-            
+
             <div className="survey-header"> Personal Information </div>
 
             <div id="demographic-info">
@@ -148,7 +150,7 @@ export class SurveyContent extends Component{
               <div id="demo-left">
                 <div className = "question-text-demo"> What is your gender?</div>
                 <textarea value={this.state.value} onChange={this.onAddressChanged}name="entry.722266204"/>
-                
+
                 <div className = "question-text-demo"> Do you have a disability or chronic illness?</div>
                 <textarea value={this.state.value} onChange={this.onAddressChanged} name="entry.2033834358"/>
 
@@ -179,6 +181,7 @@ export class SurveyContent extends Component{
 
               </div>
             </div>
+
           <div className = "buttonContainer" id="submit_div">
             <input id = "submitButton" type="submit" value="Submit Form"/>
           </div>
