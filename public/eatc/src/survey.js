@@ -55,12 +55,12 @@ export class SurveyContent extends Component{
   };
 
   handleFormSubmit = formSubmitEvent => {
-    this.setState({
-      redirectToHome: true
-    });
+    // this.setState({
+    //   redirectToHome: true
+    // });
 
 
-    // {console.log("form submitted")}
+    {console.log("form submitted")}
     alert(`Thank you! Your answer has been recorded`);
     // formSubmitEvent.preventDefault();
   };
@@ -105,7 +105,7 @@ export class SurveyContent extends Component{
             </div>
 
             <div className = "survey-question">
-              <div className = "question-text">Someone has verbally harrassed me at the convention:</div>
+              <div className = "question-text">Someone has verbally harassed me at the convention:</div>
               <div className="radio-row">
               <label><input type="radio" name="entry.556186155" value="yes"checked={this.state.verbal === "yes"}
               onChange={this.handleChangeVerbal}className="form-check-input"/>Yes</label>
