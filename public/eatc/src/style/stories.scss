@@ -19,10 +19,11 @@
   width: 80%;
 }
 
+//this is for the menu on the right
 .btn-group {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   margin-top: 20px;
   text-align: left;
   position: sticky;
@@ -32,6 +33,7 @@
   width: 20%;
 }
 
+//This is each quote's container -- the card
 .card {
   outline: 4px solid lightgray;
   text-align: left;
@@ -46,6 +48,7 @@
 }
 
 .content {
+  display: flex;
   font-size: 12px;
   // font-style: oblique;
   line-height: 1.6;
@@ -59,7 +62,7 @@ input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  
+
   display: inline-block;
   position: relative;
   top: 10px;
@@ -72,6 +75,7 @@ input[type="radio"] {
   background: white left top no-repeat;
 }
 
+// This is for each category label's text
 input[type=radio]+span {
   // top: -1px;
   // width: 16px;
@@ -83,7 +87,7 @@ input[type=radio]+span {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  
+
   display: inline-block;
   position: relative;
   top: 0px;
@@ -122,7 +126,7 @@ h4 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    
+
     display: inline-block;
     position: relative;
     top: 10px;
@@ -138,7 +142,7 @@ h4 {
   input[type="radio"]:checked{
     background-color: $main-blue;
   }
-  
+
   label {
     font-family: "Open Sans";
     font-size: 12px;
@@ -154,9 +158,14 @@ h4 {
   }
 }
 @media screen and (max-width:450px) {
+
+
   .btn-group {
-    flex-direction: column
+    flex-direction: column;
+    position: relative;
+    width: 100%;
   }
+
   .card{
     outline: 4px solid lightgray;
     text-align: left;

@@ -363,7 +363,7 @@ VidCon 2018 attendees on safety and inclusion.
             and more.`,
             p2: `At Uplift we understand the power of communities and work with organizers like VidCon to ensure
   that these important communities are safe for everyone. With this in mind, here is our survey of the
-  VidCon 2018 attendees on safety and inclusion.
+  MAGFest 2019 attendees on safety and inclusion.
   `,
             stat: './images/stat.png',
             story: 'test'
