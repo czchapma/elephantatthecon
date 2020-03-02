@@ -175,6 +175,7 @@ export class StatContent extends Component {
   render() {
 
     return (
+
       <div className="main-wrapper">
 
       <div id="wrapper">

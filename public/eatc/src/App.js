@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './style/App.scss';
 import './style/responsive.css';
+
 import SurveyContent from './survey.js';
 import {StatContent, MainContent, StoryContent, HomeContent} from './Content.js';
-//import {StatContent, MainContent, StoryContent, HomeContent, SurveyContent} from './Content.js';
 
 import {toggleDropDown} from './helpers/responsive.js'
 
-class Header extends Component {
+//change on March 1, 2020: added export key word
+export class Header extends Component {
   render() {
     return (
       <div className="app-header" id = "app-header">

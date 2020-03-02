@@ -3,7 +3,16 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Redirect } from 'react-router';
 import { HomeContent} from './Content.js';
+
+import { Header } from './App.js';
+
 // import './AppRouter.js';
+import {toggleDropDown} from './helpers/responsive.js'
+
+// <div className="app-header">
+//   <li className="menu-item" id = "home"><a href="/home" value="home">Return to Home Page</a></li>
+//   <li className="menu-item icon" id = "toggle"><a href="javascript:void(0);"  onClick={toggleDropDown}>&#9776;</a></li>
+// </div>
 
 export class SurveyContent extends Component{
   constructor(props){
@@ -15,6 +24,7 @@ export class SurveyContent extends Component{
     };
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
+
 
   onAddressChanged = (e) => {
     const newState = e.currentTarget.getAttribute('value');
@@ -55,6 +65,9 @@ export class SurveyContent extends Component{
   };
 
   handleFormSubmit = formSubmitEvent => {
+
+      // Deleting this return to home statement and the preventDefault call will make survey actually submit
+
     // this.setState({
     //   redirectToHome: true
     // });
@@ -62,18 +75,22 @@ export class SurveyContent extends Component{
 
     {console.log("form submitted")}
     alert(`Thank you! Your answer has been recorded`);
-    // formSubmitEvent.preventDefault();
+    //formSubmitEvent.preventDefault();
+
   };
 
   render(){
     const redirectToHome = this.state.redirectToHome;
     if (redirectToHome === true) {
-        // return <Redirect to="/home" />
-        window.location.reload();
+        return <Redirect to="/home" />
+        //window.location.reload();
     }
 
     return (
+
       <div id="home-content-wrapper">
+
+
 
           <div id="survey-title-wrapper">
             <div id="survey-title">
@@ -184,7 +201,9 @@ export class SurveyContent extends Component{
 
           <div className = "buttonContainer" id="submit_div">
             <input id = "submitButton" type="submit" value="Submit Form"/>
+            <a href="/home"><input id = "returnHomeButton" type="button" value="Return to Home Page"/></a>
           </div>
+
 
         </form>
 

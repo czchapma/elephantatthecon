@@ -360,7 +360,7 @@ body,
 }
 
 #survey-title-wrapper {
-  background-color: rgba(103, 174, 193, .2);
+  background-color: rgba(103, 174, 193, .5);
   opacity: 20%;
   margin: 40px;
   width: 60vw;
@@ -392,6 +392,7 @@ body,
   margin-top: 1%;
   margin-bottom: 5%;
   font-size: 14px;
+  color:black;
 }
 
 #survey-form {
@@ -561,7 +562,7 @@ a:link {
   margin-top: 20px;
 }
 
-#submitButton {
+#submitButton, #returnHomeButton {
   background-color: rgba(103, 174, 193, .2);
   font-family: $sans-serif-font;
   border: none;
@@ -573,6 +574,11 @@ a:link {
 
 #submitButton:hover{
   background-color: rgba(103, 174, 193, .1);
+  cursor: pointer;
+}
+
+#returnHomeButton:hover{
+  background-color: rgba(150, 174, 193, 1);
   cursor: pointer;
 }
 
@@ -623,7 +629,7 @@ input[type="radio"] + .leftradio {
     margin-bottom: 0%;
     text-transform: uppercase;
   }
-  
+
   #survey-information {
     width: 80%;
     text-align: left;
@@ -668,7 +674,7 @@ input[type="radio"] + .leftradio {
     margin-bottom: 0%;
     text-transform: uppercase;
   }
-  
+
   #survey-information {
     width: 80%;
     text-align: left;
@@ -687,7 +693,7 @@ input[type="radio"] + .leftradio {
     margin-top: 15%;
     text-align: center;
   }
-  
+
   #survey-subheader {
     text-align: left;
     font-family: "Open Sans";
@@ -695,7 +701,7 @@ input[type="radio"] + .leftradio {
     grid-column: 1 / 3;
     padding-bottom: 10px;
   }
-  
+
   .survey-question {
     display: grid;
     grid-template-columns: 0.6fr 0.80fr;
@@ -707,7 +713,7 @@ input[type="radio"] + .leftradio {
     height: 50px;
     margin-left: 8px;
   }
-  
+
   .question-text {
     font-family: "Open Sans";
     // font-size: 14px;
@@ -716,20 +722,20 @@ input[type="radio"] + .leftradio {
     // margin-bottom: 30%;
     // padding: 10px;
   }
-  
+
   .radio-row {
     font-family: "Open Sans";
     justify-self: center;
     text-align: center;
     width: 80%;
   }
-  
+
   .form-check-input {
     position: absolute;
     margin-top: .3rem;
     margin-left: -1.25rem;
   }
-  
+
   #demographic-info {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -796,7 +802,7 @@ div#bar-chart-container {
     font-size: 12px;
     font-family: "Open Sans";
     height: 50px;
-}  
+}
 }
 
 @media screen and (max-width:320px) {
