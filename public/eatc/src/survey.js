@@ -86,19 +86,27 @@ export class SurveyContent extends Component{
         //window.location.reload();
     }
 
+    // <div id="survey-title-wrapper">
+
+    // <div id="survey-title">
+    //   Convention Safety
+    // </div>
+    // <div id="survey-information">
+    //   <p>The results of this survey will be shared in a future report and may be used by Uplift for future work to promote safe conventions and shared with the convention staff. By completing this survey, you acknowledge that that your responses will be used for these purposes.</p>
+    // </div>
+
     return (
 
       <div id="home-content-wrapper">
 
-
-
-          <div id="survey-title-wrapper">
-            <div id="survey-title">
-              Convention Safety
+          <div id="home-title-wrapper">
+            <div id="home-eatc-wrapper">
+                <div id="eatc-1">ELEPHANT</div>
+                <div id="eatc-2">AT THE CON</div>
+                <div id="eatc-3">Convention Survey</div>
             </div>
-            <div id="survey-information">
-              <p>The results of this survey will be shared in a future report and may be used by Uplift for future work to promote safe conventions and shared with the convention staff. By completing this survey, you acknowledge that that your responses will be used for these purposes.</p>
-            </div>
+
+            <img id="logo" src="../eatclogo.png"/>
           </div>
 
           <iframe name="hidden_iframe" id="hidden_iframe"height="0px" width="0px" frameBorder="0px"></iframe>
@@ -201,7 +209,7 @@ export class SurveyContent extends Component{
 
           <div className = "buttonContainer" id="submit_div">
             <input id = "submitButton" type="submit" value="Submit Form"/>
-            <a href="/home"><input id = "returnHomeButton" type="button" value="Return to Home Page"/></a>
+            <a href="/home"><input id="returnHomeButton" type="button" value="Return to Home Page"/></a>
           </div>
 
 
