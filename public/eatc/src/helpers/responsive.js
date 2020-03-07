@@ -1,5 +1,5 @@
 export function toggleDropDown(){
-	console.log("yo");
+	// console.log("yo");
 	var x = document.getElementById("app-header");
 	if (x.className === "app-header") {
 		x.className += " responsive";

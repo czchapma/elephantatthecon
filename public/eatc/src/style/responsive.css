@@ -39,11 +39,15 @@
   }
 
   .survey-header{
-      margin-top: 10%;
-      margin-bottom: 10%;
+      padding-top: 20px;
+      padding-bottom: 20px;
   }
 
+
+
+/* For the Survey page */
   .hidden_iframe{
+      display: flex;
       width: 80%;
   }
 
@@ -53,19 +57,20 @@
 
   .survey-question{
       position: relative;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
   }
   .question-text {
       position: relative;
       display: flex;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
   }
-
   .buttonContainer {
       align-content: center;
   }
+
+
 }
 
 @media screen and (max-width: 700px) {

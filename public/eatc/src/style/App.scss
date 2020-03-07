@@ -266,6 +266,16 @@ body,
     text-align: right;
 }
 
+#eatc-3 {
+    position: relative;
+    font-size: 25px;
+    color: #67AEC1;
+    font-family: "Open Sans";
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
 #home-eatc-wrapper {
     margin-top: 140px;
     margin-right: -60px;
@@ -404,13 +414,15 @@ body,
 }
 
 .survey-header {
+  position: relative;
   font-family: "Open Sans";
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
   padding: 5px;
   padding-left: 0px;
+  margin-top: 15%;
 }
 
 #survey-subheader {
@@ -444,6 +456,11 @@ body,
   justify-self: left;
   text-align: left;
   width: 100%;
+}
+
+#gender-other {
+    position: relative;
+    min-width: 60px;
 }
 
 .form-check-input {
@@ -685,14 +702,7 @@ input[type="radio"] + .leftradio {
     font-size: 12px;
   }
 
-  .survey-header {
-    font-family: "Open Sans";
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-top: 15%;
-    text-align: center;
-  }
+
 
   #survey-subheader {
     text-align: left;

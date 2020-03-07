@@ -9,11 +9,6 @@ import { Header } from './App.js';
 // import './AppRouter.js';
 import {toggleDropDown} from './helpers/responsive.js'
 
-// <div className="app-header">
-//   <li className="menu-item" id = "home"><a href="/home" value="home">Return to Home Page</a></li>
-//   <li className="menu-item icon" id = "toggle"><a href="javascript:void(0);"  onClick={toggleDropDown}>&#9776;</a></li>
-// </div>
-
 export class SurveyContent extends Component{
   constructor(props){
     super(props);
@@ -105,7 +100,6 @@ export class SurveyContent extends Component{
                 <div id="eatc-2">AT THE CON</div>
                 <div id="eatc-3">Convention Survey</div>
             </div>
-
             <img id="logo" src="../eatclogo.png"/>
           </div>
 
@@ -199,7 +193,7 @@ export class SurveyContent extends Component{
 
                     <label><input type="radio" name="entry.130234048.other_option_response" value="other"checked={this.state.describe === "other"}
                     onChange={this.handleChangeD}className="form-check-input"/>Other:</label>
-                    <input type="text" name="entry.86141345" value={this.state.value} onChange={this.onAddressChanged}/>
+                    <input id="gender-other" type="text" name="entry.86141345" value={this.state.value} onChange={this.onAddressChanged}/>
                     {/* <textarea value={this.state.value} onChange={this.onAddressChanged} name="entry.872631186"/>        */}
                   </div>
                 </div>
