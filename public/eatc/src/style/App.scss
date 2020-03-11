@@ -19,6 +19,8 @@ body,
 }
 
 .app-header {
+    position: fixed;
+    width: 100%;
     background-color: $main-blue;
     display: flex;
     flex-direction: row;
@@ -56,8 +58,7 @@ body,
 
     flex: 95vw;
     // overflow: auto;
-    //padding: 3%;
-    padding-top: 3%;
+    padding-top: 6%;
 
     align-items: center;
     justify-content: center;

@@ -8,7 +8,7 @@ import {StatContent, MainContent, StoryContent, HomeContent} from './Content.js'
 
 import {toggleDropDown} from './helpers/responsive.js'
 
-//change on March 1, 2020: added export key word
+
 export class Header extends Component {
   render() {
     return (
@@ -362,7 +362,7 @@ VidCon 2018 attendees on safety and inclusion.
             game music, gaming of all types, and the gaming community. The event, which took place in Maryland
             in early January 2019, is a twenty-four-hour show offering arcades, tabletop, LAN, music, speakers,
             and more.`,
-            p2: `At Uplift we understand the power of communities and work with organizers like VidCon to ensure
+            p2: `At Uplift we understand the power of communities and work with organizers like MAGFest to ensure
   that these important communities are safe for everyone. With this in mind, here is our survey of the
   MAGFest 2019 attendees on safety and inclusion.
   `,
