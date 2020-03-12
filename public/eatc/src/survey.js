@@ -109,7 +109,7 @@ export class SurveyContent extends Component{
                   Event Information
                 </div>
 
-            <div className = "survey-question">
+
               <div className = "question-text"> I feel safe at the convention:</div>
               <div className="radio-row">
                 <label><input type="radio" name="entry.351585626" value="always"checked={this.state.safety === "always"}
@@ -121,9 +121,8 @@ export class SurveyContent extends Component{
                 <label><input type="radio" name="entry.351585626" value="rarely"checked={this.state.safety === "rarely"}
                 onChange={this.handleChange}className="form-check-input"/>Rarely</label>
               </div>
-            </div>
 
-            <div className = "survey-question">
+
               <div className = "question-text">Someone has verbally harassed me at the convention:</div>
               <div className="radio-row">
               <label><input type="radio" name="entry.556186155" value="yes"checked={this.state.verbal === "yes"}
@@ -131,9 +130,8 @@ export class SurveyContent extends Component{
               <label><input type="radio" name="entry.556186155" value="no"checked={this.state.verbal === "no"}
               onChange={this.handleChangeVerbal}className="form-check-input"/>No</label>
               </div>
-            </div>
 
-            <div className = "survey-question">
+
               <div className = "question-text">Someone has touched me without my consent at the convention:</div>
               <div className="radio-row">
               <label><input type="radio" name="entry.1792789459" value="yes"checked={this.state.touch === "yes"}
@@ -141,9 +139,8 @@ export class SurveyContent extends Component{
               <label><input type="radio" name="entry.1792789459" value="no"checked={this.state.touch === "no"}
               onChange={this.handleChangeTouch}className="form-check-input"/>No</label>
               </div>
-            </div>
 
-            <div className = "survey-question">
+
               <div className = "question-text">Someone has sexually harrassed or assaulted me at the convention:</div>
               <div className="radio-row">
               <label><input type="radio" name="entry.939669801" value="yes"checked={this.state.sexual === "yes"}
@@ -151,10 +148,10 @@ export class SurveyContent extends Component{
               <label><input type="radio" name="entry.939669801" value="no"checked={this.state.sexual === "no"}
               onChange={this.handleChangeS}className="form-check-input"/>No</label>
               </div>
-            </div>
 
-            <div className = "survey-question surveyFill">
-                  <div className = "question-text filltext"> At any point in the weekend, did you feel uncomfortable at the convention or see others in a difficult situation?</div>
+
+            <div className = "surveyFill">
+                  <div className = "question-text"> At any point in the weekend, did you feel uncomfortable at the convention or see others in a difficult situation?</div>
                   <div className = "radio-row">
                     <textarea value={this.state.value} onChange={this.onAddressChanged} name="entry.872631186"/>
                   </div>
