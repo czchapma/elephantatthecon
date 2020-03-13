@@ -10,6 +10,7 @@ import vidcon18 from './data/2018_vidcon.json'
 import magfest18 from './data/2018_magfest.json'
 import leaky18 from './data/2018_leakycon.json'
 import magfest19 from './data/2019_magfest.json'
+import magfest20 from './data/2020_magfest.json'
 
 // import {drawPie} from './demographics.js'
 import {createPieCharts} from './helpers/pieCharts.js'
@@ -129,6 +130,10 @@ export class StatContent extends Component {
   }
 
   componentDidMount() {
+      if (this.props.data.name == "magfest20"){
+          this.currentdata = magfest20;
+      }
+
     if (this.props.data.name == "magfest19"){
         this.currentdata = magfest19;
     }

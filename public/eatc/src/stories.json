@@ -1,4 +1,62 @@
 {
+
+    "magfest202020":[
+        {"id":1, "header": "The Positive",
+            "quote": "Many of the folks surveyed had positive things to say about MAGFest and the efforts made by the organizers and fellow attendees to make it a good experience."},
+        {"id":2, "header": "The Positive",
+            "quote": "This year has restored my faith in MAGFest. My first year in 2004 [and I was harassed in a way that] stuck with me and made me never want to return. This year everyone was kind and respectful and staff did not make me feel unwelcome in the slightest."},
+        {"id":3, "header": "The Positive",
+            "quote": "Some new friends and I had a productive conversation about high fives, hugs, and consent."},
+        {"id":4, "header": "The Positive",
+            "quote": "At photo shoots the staffers explicitly went over safety, consent and what to do if you felt unsafe. I was very pleased to see this being taken so seriously."},
+        {"id":5, "header": "The Positive",
+            "quote": "I was in the LARP room the whole time…. We focus as much as possible on consent and safety in our little space, and I'm really happy to see that being extended to more of the con."},
+
+        {"id":6, "header": "Staff Concerns",
+            "quote": "I attempted to bring an open container into the Marketplace as a shopkeep in cosplay. The volunteer or staff member at the door went to tell me that I couldn't, then physically touched my badge and my hip/butt and went, ‘Oh, you're a Shopkeep."},
+        {"id":7, "header": "Staff Concerns",
+            "quote": "I was harassed by a staff member who claimed my shorts were too short (they had ridden up a little) I tugged them back down, but she demanded I find tape and tape my pants to my thighs because it wasn’t appropriate. My cosplay was not con-inappropriate and I was made to feel slutty and anxious."},
+
+        {"id":8, "header": "Police/Security",
+            "quote": "The heavy police presence in and around the convention made me feel extremely anxious, uncomfortable, and afraid. Seeing cops with guns is retraumatizing for me."},
+        {"id":9, "header": "Police/Security",
+            "quote": "The uniformed police officers working security in the con were mocking attendees as we walked by, [and] that made me uncomfortable."},
+        {"id":10, "header": "Police/Security",
+            "quote": "I felt that there wasn't enough security to protect con goers from people that actively wanted to do harm. There were way too many incidents during that weekend and I imagine that con security, hotel security and the police were overwhelmed due to these incidents. Please step up security for next year!"},
+
+        {"id":11, "header": "Trans Inclusion",
+            "quote": "I heard someone had made a 'girl with a beard' comment to one of the cosplayers. I don't know that person's pronouns but had that been me (transmasc), it would have been a very uncomfortable situation. It sort of put me on edge for the rest of the con."},
+        {"id":12, "header": "Trans Inclusion",
+            "quote": "I was at a karaoke event on Friday and watched a group of people making fun of a trans woman who was performing at the time. I spoke up and they denied doing it, even though they were videotaping and mocking her. As a trans person myself, I did not feel safe."},
+        {"id":13, "header": "Trans Inclusion",
+            "quote": "When I was participating in a Magic event in the CCG room, participants are required to use their DCI accounts. Since mine is really old, it has my deadname, which can't be changed on the account. So, I had to deal with getting deadnamed during the event."},
+
+        {"id":14, "header": "Accessibility",
+            "quote": "I have a service dog and the amount of people who yelled, barked, or tried to grab my dog seemed excessive this year. I have noticed more and more service dogs at the event so maybe service dog information or blurb on a sign to inform people that such behavior is not good would be helpful."},
+        {"id":15, "header": "Accessibility",
+            "quote": "I was breastfeeding my newborn and I got some stares and snickers and the nursing room that the hotel provides is smelly and gross and it was always being used. I nursed her in a lot of halls but it would've been nice to have a calm down room for kids like the quiet room."},
+
+        {"id":16, "header": "Intoxication/Drug Use",
+            "quote": "I helped out four [overly intoxicated] people this year ( I am a nurse).  [I] feel like although we all do not condone drinking and drugs use in conjunction with a fest, it happens. [There] needs to be more awareness and resources downstairs for medical attention."},
+        {"id":17, "header": "Intoxication/Drug Use",
+            "quote": "Saturday night, a very intoxicated male grabbed my left breast after a very friendly hug. I told him to back off and don't ever do that without consent. The drunkenness at MagFest is obscene, sad & definitely makes for awkward, unsafe scenarios like this. "},
+
+        {"id":18, "header": "Cosplay",
+            "quote": "While I was in lady-presenting cosplay, there were two different strangers (men) who touched me by my stomach / hip areas to get me to move. I wasn't sexually harassed or anything, but touching people without consent is gross."},
+        {"id":19, "header": "Cosplay",
+            "quote": "I was seriously uncomfortable when derogatory comments were made about others and cosplayers who did not fit the social norm of “small, petite, fit, and sexy.” I called out the behavior, but inappropriate sexual comments were made continually by both strangers overheard in conversation and from those I met."},
+
+        {"id":20, "header": "Harrassment/Assault",
+            "quote": "My friend was stuck in an elevator with a group of people, when they got off the elevator and hung around to chat some of them started to get weird, claiming they wanted to bite her and were ‘trying really hard not to bite’ her. One of them eventually did, and she bolted. Not a fun scenario."},
+        {"id":21, "header": "Harrassment/Assault",
+            "quote": "There is an attendee that approaches me every year at Magfest and harasses me. I reached out to Magfest security the second year, but was told there was nothing they could do. However, they did suggest I reach out to Magfest staff to escort me should I not feel safe again...."},
+        {"id":22, "header": "Harrassment/Assault",
+            "quote": "[cont.] A year later, I received an email from Magfest stating they were sorry to hear of what happened and advised if I got a restraining order they could help. Unfortunately, this person will not provide me any info for me to get a restraining order. So, I just deal with it year to year."}
+
+
+
+    ],
+
     "magfest192019":[
         {"id":1, "header": "Security/Safety",
             "quote": "I felt uncomfortable at the presence of armed (with both firearms and stun guns) ‘security’ and ‘police’ throughout the fest."},

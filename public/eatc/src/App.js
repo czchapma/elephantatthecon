@@ -14,6 +14,7 @@ export class Header extends Component {
     return (
       <div className="app-header" id = "app-header">
         <li className="menu-item" id = "home"><a href="#" value="home" onClick= {this.props.onClickFunc}>home</a></li>
+        <li className="menu-item" id = "magfest20"><a href="#" value="magfest20" onClick= {this.props.onClickFunc}>magfest 20</a></li>
         <li className="menu-item" id = "magfest19"><a href="#" value="magfest19" onClick= {this.props.onClickFunc}>magfest 19</a></li>
         <li className="menu-item" id = "leakycon18"><a href="#" value="leakycon18" onClick= {this.props.onClickFunc}>leakycon 18</a></li>
         <li className="menu-item" id = "vidcon18"><a href="#" value="vidcon18" onClick= {this.props.onClickFunc}>vidcon 18</a></li>
@@ -366,6 +367,32 @@ VidCon 2018 attendees on safety and inclusion.
   that these important communities are safe for everyone. With this in mind, here is our survey of the
   MAGFest 2019 attendees on safety and inclusion.
   `,
+            stat: './images/stat.png',
+            story: 'test'
+
+        },
+          rmode: 'main',
+          mode: 'content'
+        }));
+
+    }
+
+    else if (e.target.getAttribute("value") == "magfest20") {
+
+        document.getElementById("magfest20").style.backgroundColor = "#9AD2DF";
+        // set data here!!!!
+        this.setState(prevState => ({
+          data: {
+            name: 'magfest20',
+            year: '2020',
+            intro: "",
+            conlink: "https://medium.com/uplifttogether/the-elephant-at-magfest-2019-4e7200dbf00e",
+            conhome: "https://super.magfest.org/",
+            p1: `MAGFest (Music and Gaming Festival) is an event dedicated to the appreciation of video game music, gaming of all types, and the gaming community.
+            MAGFest is a twenty-four-hour show that takes place in Maryland.
+            Many attendees are veterans who have been coming for years; some are local and some travel specifically for the convention.`,
+            p2: `For the third consecutive year, Uplift has worked with MAGFest to improve the safety and inclusion at community events.
+            Each year, we have surveyed attendees about their experiences with safety and inclusion at MAGFest. `,
             stat: './images/stat.png',
             story: 'test'
 
