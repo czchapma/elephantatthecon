@@ -11,16 +11,19 @@ createChart("sexuality", 'sexualityPieChart', data);
 
 function createChart (label, id, data){
 
-var colors = ["#E1A79A", "#DB7B65", "#AD616B", "#397579", "#516F96", "#6F9CAB", "#85B3A9", "#639578" ];
+	var colors = ["#E1A79A", "#DB7B65", "#AD616B", "#397579", "#516F96", "#6F9CAB", "#85B3A9", "#639578" ];
 
-var content = [];
-for (var item in data[label]){
-	content[item] = {
-		"label": data[label][item][0],
-		"value": data[label][item][1],
-		"color": colors[item]
+	var content = [];
+
+
+	for (var item in data[label]){
+		content[item] = {
+			"label": data[label][item][0],
+			"value": data[label][item][1],
+			"color": colors[item]
+		}
 	}
-}
+
 
 	return new d3pie(id, {
 	"header": {
