@@ -12,9 +12,16 @@ const routing = (
         {/* <Redirect from="/" to="/home"/> */}
         <Route path="/home" component={App} />
         <Route path="/survey" component={SurveyContent} />
+
+        <title>Elephant at the Con</title>
+        <meta id="og-description" property="og:description" content="Elephant At The Con is a campaign by Uplift dedicated to shining a light on convention safety issues by collecting attendee stories and quantitative data on abuse and harassment at conventions with the goal of creating action plans for organizers to improve in the future."/>
+        <meta id="og-title" property="og:title" content="Convention Safety Research by Uplift"/>
+        <meta id="og-image" property="og:image" content="../eatclogo.png"/>
+
       </div>
     </Router>
   )
+
 
 ReactDOM.render(routing, document.getElementById('root'));
 

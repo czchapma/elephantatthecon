@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MetaTags from 'react-meta-tags';
 import logo from './logo.svg';
 import './style/App.scss';
 import './style/responsive.css';
@@ -9,10 +10,11 @@ import {StatContent, MainContent, StoryContent, HomeContent} from './Content.js'
 import {toggleDropDown} from './helpers/responsive.js'
 
 
-export class Header extends Component {
+class Header extends Component {
   render() {
     return (
       <div className="app-header" id = "app-header">
+
         <li className="menu-item" id = "home"><a href="#" value="home" onClick= {this.props.onClickFunc}>home</a></li>
         <li className="menu-item" id = "magfest20"><a href="#" value="magfest20" onClick= {this.props.onClickFunc}>magfest 20</a></li>
         <li className="menu-item" id = "magfest19"><a href="#" value="magfest19" onClick= {this.props.onClickFunc}>magfest 19</a></li>
@@ -84,11 +86,9 @@ class ReportScroll extends Component {
   render() {
     return (
       <div className="scroll-wrapper">
-
         <li className="scroll-item" ><a  href="#main" value="main" onClick= {this.props.onClickFunc}>Main</a></li>
         <li className="scroll-item"><a  href="#stats" value="stats" onClick= {this.props.onClickFunc}>Stats</a></li>
         <li className="scroll-item"><a  href="#stories" value="stories" onClick= {this.props.onClickFunc}>Stories</a></li>
-
       </div>
     );
   }
@@ -311,9 +311,8 @@ Tekko 2017 attendees on safety and inclusion.`,
           and most long-standing of its kind in the world, gathering thousands
            of online video creators, viewers, and industry representatives.`,
           p2: `At Uplift we understand the power of communities and work with organizers like VidCon to ensure
-that these important communities are safe for everyone. With this in mind, here is our survey of the
-VidCon 2017 attendees on safety and inclusion.
-`,
+          that these important communities are safe for everyone. With this in mind, here is our survey of the
+          VidCon 2017 attendees on safety and inclusion.`,
           stat: './images/stat.png',
           story: 'test'
 
@@ -336,9 +335,8 @@ VidCon 2017 attendees on safety and inclusion.
           and most long-standing of its kind in the world, gathering thousands
            of online video creators, viewers, and industry representatives.`,
           p2: `At Uplift we understand the power of communities and work with organizers like VidCon to ensure
-that these important communities are safe for everyone. With this in mind, here is our survey of the
-VidCon 2018 attendees on safety and inclusion.
-`,
+          that these important communities are safe for everyone. With this in mind, here is our survey of the
+          VidCon 2018 attendees on safety and inclusion.`,
           stat: './images/stat.png',
           story: 'test'
 
@@ -364,9 +362,8 @@ VidCon 2018 attendees on safety and inclusion.
             in early January 2019, is a twenty-four-hour show offering arcades, tabletop, LAN, music, speakers,
             and more.`,
             p2: `At Uplift we understand the power of communities and work with organizers like MAGFest to ensure
-  that these important communities are safe for everyone. With this in mind, here is our survey of the
-  MAGFest 2019 attendees on safety and inclusion.
-  `,
+            that these important communities are safe for everyone. With this in mind, here is our survey of the
+            MAGFest 2019 attendees on safety and inclusion.`,
             stat: './images/stat.png',
             story: 'test'
 
@@ -406,21 +403,39 @@ VidCon 2018 attendees on safety and inclusion.
   }
 
   render() {
+
     let content;
 
     if(this.state.mode == "home"){
-      content = <div><Header onClickFunc = {this.handleNewReport}/>
-      <HomeContent /></div>
+      content =
+      <div>
+          <MetaTags>
+              <title>Elephant at the Con</title>
+              <meta id="og-description" property="og:description" content="Elephant At The Con is a campaign by Uplift dedicated to shining a light on convention safety issues by collecting attendee stories and quantitative data on abuse and harassment at conventions with the goal of creating action plans for organizers to improve in the future"/>
+              <meta id="og-title" property="og:title" content="Convention Safety Research by Uplift"/>
+              <meta id="og-image" property="og:image" content="../eatclogo.png"/>
+          </MetaTags>
+          <Header onClickFunc = {this.handleNewReport}/>
+          <HomeContent />
+      </div>
     }
     else if(this.state.mode == "survey"){
-      content = <div><Header onClickFunc = {this.handleNewReport}/>
-        <SurveyContent /></div>
+      content =
+        <div>
+            <Header onClickFunc = {this.handleNewReport}/>
+            <SurveyContent />
+        </div>
     }
     else{
-      content = <div><Header onClickFunc = {this.handleNewReport}/>
-        <Report data={this.state.data} handleNewContent = {this.handleNewContent} rmode = {this.state.rmode}/></div>
+      content =
+        <div>
+            <Header onClickFunc = {this.handleNewReport}/>
+            <Report data={this.state.data} handleNewContent = {this.handleNewContent} rmode = {this.state.rmode}/>
+        </div>
     }
+
     return (
+
       <div className="app-wrapper">
         {content}
       </div>

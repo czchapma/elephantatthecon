@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {HomeContent} from './Content.js';
+import {SurveyContent} from './survey.js';
 
 function Index() {
   return <h2>Home</h2>;
@@ -34,6 +35,7 @@ function AppRouter() {
         </nav>
 
         <Route path="/home" exact component={HomeContent} />
+        <Route path="/survey" exact component={SurveyContent} />
         {/* <Route path="/about/" component={About} />
         <Route path="/users/" component={Users} /> */}
       </div>
