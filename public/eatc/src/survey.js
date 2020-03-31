@@ -2,11 +2,10 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Redirect } from 'react-router';
-import { HomeContent} from './Content.js';
-
-import { Header } from './App.js';
-
+//import { HomeContent} from './Content.js';
+//import { Header } from './App.js';
 // import './AppRouter.js';
+
 import {toggleDropDown} from './helpers/responsive.js'
 
 export class SurveyContent extends Component{

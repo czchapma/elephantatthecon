@@ -16,7 +16,7 @@ class Header extends Component {
       <div className="app-header" id = "app-header">
 
         <li className="menu-item" id = "home"><a href="#" value="home" onClick= {this.props.onClickFunc}>home</a></li>
-        <li className="menu-item" id = "magfest20"><a href="#" value="magfest20" onClick= {this.props.onClickFunc}>magfest 20</a></li>
+        <li className="menu-item" id = "magfest20"><a href="/magfest20" value="magfest20" onClick= {this.props.onClickFunc}>magfest 20</a></li>
         <li className="menu-item" id = "magfest19"><a href="#" value="magfest19" onClick= {this.props.onClickFunc}>magfest 19</a></li>
         <li className="menu-item" id = "leakycon18"><a href="#" value="leakycon18" onClick= {this.props.onClickFunc}>leakycon 18</a></li>
         <li className="menu-item" id = "vidcon18"><a href="#" value="vidcon18" onClick= {this.props.onClickFunc}>vidcon 18</a></li>
@@ -158,6 +158,7 @@ class App extends Component {
         mode: 'home',
       }));
     }
+
     else if(e.target.getAttribute("value") == "survey"){
       this.setState(prevState => ({
         mode: 'survey',
@@ -409,12 +410,6 @@ Tekko 2017 attendees on safety and inclusion.`,
     if(this.state.mode == "home"){
       content =
       <div>
-          <MetaTags>
-              <title>Elephant at the Con</title>
-              <meta id="og-description" property="og:description" content="Elephant At The Con is a campaign by Uplift dedicated to shining a light on convention safety issues by collecting attendee stories and quantitative data on abuse and harassment at conventions with the goal of creating action plans for organizers to improve in the future"/>
-              <meta id="og-title" property="og:title" content="Convention Safety Research by Uplift"/>
-              <meta id="og-image" property="og:image" content="../eatclogo.png"/>
-          </MetaTags>
           <Header onClickFunc = {this.handleNewReport}/>
           <HomeContent />
       </div>
@@ -426,7 +421,7 @@ Tekko 2017 attendees on safety and inclusion.`,
             <SurveyContent />
         </div>
     }
-    else{
+    else {
       content =
         <div>
             <Header onClickFunc = {this.handleNewReport}/>

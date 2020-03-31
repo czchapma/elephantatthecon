@@ -5,12 +5,17 @@ import './style/index.css';
 import App from './App.js';
 import * as serviceWorker from './serviceWorker';
 import SurveyContent from './survey.js';
+import {MAG20} from './magfest20.js';
 
 const routing = (
     <Router>
       <div>
-        {/* <Redirect from="/" to="/home"/> */} 
+        {/*
+            <Redirect from="/" to="/home"/>
+        */}
+
         <Route path="/home" component={App} />
+        <Route path="/magfest20" component={MAG20}/>
         <Route path="/survey" component={SurveyContent} />
 
         <title>Elephant at the Con</title>
