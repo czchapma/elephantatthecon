@@ -15,7 +15,7 @@ const routing = (
             <Redirect from="/" to="/home"/>
         */}
 
-        <Route path="/home" component={App} />
+        <Route path="/" component={App} exact />
         <Route path="/magfest20" component={MAG20}/>
         <Route path="/magfest19" component={MAG19}/>
         <Route path="/survey" component={SurveyContent} />

@@ -39,7 +39,7 @@ class Header extends Component {
     return (
       <div className="app-header" id = "app-header">
 
-        <li className="menu-item" id = "home"><a href="/home" value="home" onClick= {this.props.onClickFunc}>home</a></li>
+        <li className="menu-item" id = "home"><a href="/" value="home" onClick= {this.props.onClickFunc}>home</a></li>
         <li className="menu-item" id = "magfest20"><a href="/magfest20" value="magfest20" onClick= {this.props.onClickFunc}>magfest 20</a></li>
         <li className="menu-item" id = "magfest19"><a href="#" value="magfest19" onClick= {this.props.onClickFunc}>magfest 19</a></li>
         <li className="menu-item" id = "leakycon18"><a href="#" value="leakycon18" onClick= {this.props.onClickFunc}>leakycon 18</a></li>
