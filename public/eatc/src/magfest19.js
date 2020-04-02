@@ -40,8 +40,8 @@ class Header extends Component {
       <div className="app-header" id = "app-header">
 
         <li className="menu-item" id = "home"><a href="/home" value="home" onClick= {this.props.onClickFunc}>home</a></li>
-        <li className="menu-item" id = "magfest20"><a href="#" value="magfest20" onClick= {this.props.onClickFunc}>magfest 20</a></li>
-        <li className="menu-item" id = "magfest19"><a href="/magfest19" value="magfest19" onClick= {this.props.onClickFunc}>magfest 19</a></li>
+        <li className="menu-item" id = "magfest20"><a href="/magfest20" value="magfest20" onClick= {this.props.onClickFunc}>magfest 20</a></li>
+        <li className="menu-item" id = "magfest19"><a href="#" value="magfest19" onClick= {this.props.onClickFunc}>magfest 19</a></li>
         <li className="menu-item" id = "leakycon18"><a href="#" value="leakycon18" onClick= {this.props.onClickFunc}>leakycon 18</a></li>
         <li className="menu-item" id = "vidcon18"><a href="#" value="vidcon18" onClick= {this.props.onClickFunc}>vidcon 18</a></li>
         <li className="menu-item" id = "magfest"><a href="#" value="magfest" onClick= {this.props.onClickFunc}>magfest 18</a></li>
@@ -164,14 +164,16 @@ class MainContent extends Component {
 
         <div className="main-title">magfest</div>
         <div className="divider"></div>
-        <div className="main-date"><strong>2020</strong></div>
+        <div className="main-date"><strong>2019</strong></div>
         <div className="divider"></div>
         <div className="convention-text-wrapper">
-        <div className="main-text">MAGFest (Music and Gaming Festival) is an event dedicated to the appreciation of video game music, gaming of all types, and the gaming community.
-        MAGFest is a twenty-four-hour show that takes place in Maryland.
-        Many attendees are veterans who have been coming for years; some are local and some travel specifically for the convention.</div>
-        <div className="main-text">For the third consecutive year, Uplift has worked with MAGFest to improve the safety and inclusion at community events.
-        Each year, we have surveyed attendees about their experiences with safety and inclusion at MAGFest.</div>
+        <div className="main-text">MAGFest (Music and Gaming Festival) is an event dedicated to the appreciation of video
+        game music, gaming of all types, and the gaming community. The event, which took place in Maryland
+        in early January 2019, is a twenty-four-hour show offering arcades, tabletop, LAN, music, speakers,
+        and more.</div>
+        <div className="main-text">At Uplift we understand the power of communities and work with organizers like MAGFest to ensure
+        that these important communities are safe for everyone. With this in mind, here is our survey of the
+        MAGFest 2019 attendees on safety and inclusion.</div>
         </div>
 
         <div id="button-wrapper">
@@ -258,7 +260,7 @@ export class StoryContent extends Component {
   }
   render() {
     //check FilteredList for specifics
-    let category = "magfest202020";
+    let category = "magfest202019";
 
     if (stories.hasOwnProperty(category)) {
         return (
@@ -278,7 +280,7 @@ export class StoryContent extends Component {
   }
 }
 
-export class MAG20 extends Component {
+export class MAG19 extends Component {
     constructor(props){
       super(props);
       /*
@@ -376,4 +378,4 @@ export class MAG20 extends Component {
 
 }
 
-export default MAG20;
+export default MAG19;

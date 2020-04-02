@@ -5,7 +5,8 @@ import './style/index.css';
 import App from './App.js';
 import * as serviceWorker from './serviceWorker';
 import SurveyContent from './survey.js';
-import {MAG20} from './magfest20.js';
+import MAG20 from './magfest20.js';
+import MAG19 from './magfest19.js';
 
 const routing = (
     <Router>
@@ -16,6 +17,7 @@ const routing = (
 
         <Route path="/home" component={App} />
         <Route path="/magfest20" component={MAG20}/>
+        <Route path="/magfest19" component={MAG19}/>
         <Route path="/survey" component={SurveyContent} />
 
         <title>Elephant at the Con</title>
