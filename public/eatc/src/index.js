@@ -4,22 +4,25 @@ import { BrowserRouter as Router, Route, PrivateRoute, Link, Redirect } from "re
 import './style/index.css';
 import App from './App.js';
 import * as serviceWorker from './serviceWorker';
+
+import MAG20 from './conventions/magfest20.js';
+import MAG19 from './conventions/magfest19.js';
+import LEAKY18 from './conventions/leakycon18.js';
 import SurveyContent from './survey.js';
-import MAG20 from './magfest20.js';
-import MAG19 from './magfest19.js';
 
 const routing = (
     <Router>
       <div>
-        {/*
-            <Redirect from="/" to="/home"/>
-        */}
 
+        {/* Routing for each sub-url */}
         <Route path="/" component={App} exact />
         <Route path="/magfest20" component={MAG20}/>
         <Route path="/magfest19" component={MAG19}/>
-        <Route path="/survey" component={SurveyContent} />
+        <Route path="/leakycon18" component={LEAKY18}/>
+        <Route path="/survey" component={SurveyContent}/>
 
+
+        {/* Meta tags for social preview */}
         <title>Elephant at the Con</title>
         <meta id="og-description" property="og:description" content="Elephant At The Con is a campaign by Uplift dedicated to shining a light on convention safety issues by collecting attendee stories and quantitative data on abuse and harassment at conventions with the goal of creating action plans for organizers to improve in the future."/>
         <meta id="og-title" property="og:title" content="Convention Safety Research by Uplift"/>

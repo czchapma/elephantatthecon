@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import MetaTags from 'react-meta-tags';
-import logo from './logo.svg';
-import './style/App.scss';
-import './style/responsive.css';
-import {toggleDropDown} from './helpers/responsive.js'
+import logo from '../logo.svg';
+import '../style/App.scss';
+import '../style/responsive.css';
+import {toggleDropDown} from '../helpers/responsive.js'
 
-import img from './images/stat.png'; // Tell Webpack this JS file uses this image
-import FilteredList from './FilteredList';
-import stories from './stories.json';
+import Header from '../Header.js';
 
-import data from './data/data.json';
-import magfest20 from './data/2020_magfest.json'
+import img from '../images/stat.png'; // Tell Webpack this JS file uses this image
+import FilteredList from '../FilteredList';
+import stories from '../stories.json';
 
-import {createPieCharts} from './helpers/pieCharts.js'
-import {createRectangleCharts} from './helpers/rectangleCharts.js'
-import {createBarCharts} from './helpers/barCharts.js'
+import data from '../data/data.json';
+import magfest19 from '../data/2019_magfest.json'
+
+import {createPieCharts} from '../helpers/pieCharts.js'
+import {createRectangleCharts} from '../helpers/rectangleCharts.js'
+import {createBarCharts} from '../helpers/barCharts.js'
 import * as d3pie from "d3pie"
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -33,29 +35,6 @@ library.add(faComment);
 library.add(faFileContract);
 library.add(faLink);
 
-
-class Header extends Component {
-  render() {
-    return (
-      <div className="app-header" id = "app-header">
-
-        <li className="menu-item" id = "home"><a href="/" value="home" onClick= {this.props.onClickFunc}>home</a></li>
-        <li className="menu-item" id = "magfest20"><a href="#" value="magfest20" onClick= {this.props.onClickFunc}>magfest 20</a></li>
-        <li className="menu-item" id = "magfest19"><a href="/magfest19" value="magfest19" onClick= {this.props.onClickFunc}>magfest 19</a></li>
-        <li className="menu-item" id = "leakycon18"><a href="#" value="leakycon18" onClick= {this.props.onClickFunc}>leakycon 18</a></li>
-        <li className="menu-item" id = "vidcon18"><a href="#" value="vidcon18" onClick= {this.props.onClickFunc}>vidcon 18</a></li>
-        <li className="menu-item" id = "magfest"><a href="#" value="magfest" onClick= {this.props.onClickFunc}>magfest 18</a></li>
-        <li className="menu-item" id = "tekko"><a href="#" value="tekko" onClick= {this.props.onClickFunc}>tekko 17</a></li>
-        <li className="menu-item" id = "nerdcon"><a href="#" value="nerdcon" onClick= {this.props.onClickFunc}>nerdcon 17</a></li>
-        {/* <li className="menu-item" id = "vidcon"><a href="#" value="vidcon" onClick= {this.props.onClickFunc}>vidcon 17</a></li> */}
-        {/* <li className="menu-item" id = "geekycon"><a href="#" value="geekycon" onClick= {this.props.onClickFunc}>geekycon 16</a></li> */}
-
-        <li className="menu-item" id = "survey"><a href="/survey" value="survey" onClick= {this.props.onClickFunc}>survey</a></li>
-        <li className="menu-item icon" id = "toggle"><a href="javascript:void(0);"  onClick={toggleDropDown}>&#9776;</a></li>
-      </div>
-    );
-  }
-}
 
 
 class ReportScroll extends Component {
@@ -164,14 +143,16 @@ class MainContent extends Component {
 
         <div className="main-title">magfest</div>
         <div className="divider"></div>
-        <div className="main-date"><strong>2020</strong></div>
+        <div className="main-date"><strong>2019</strong></div>
         <div className="divider"></div>
         <div className="convention-text-wrapper">
-        <div className="main-text">MAGFest (Music and Gaming Festival) is an event dedicated to the appreciation of video game music, gaming of all types, and the gaming community.
-        MAGFest is a twenty-four-hour show that takes place in Maryland.
-        Many attendees are veterans who have been coming for years; some are local and some travel specifically for the convention.</div>
-        <div className="main-text">For the third consecutive year, Uplift has worked with MAGFest to improve the safety and inclusion at community events.
-        Each year, we have surveyed attendees about their experiences with safety and inclusion at MAGFest.</div>
+        <div className="main-text">MAGFest (Music and Gaming Festival) is an event dedicated to the appreciation of video
+        game music, gaming of all types, and the gaming community. The event, which took place in Maryland
+        in early January 2019, is a twenty-four-hour show offering arcades, tabletop, LAN, music, speakers,
+        and more.</div>
+        <div className="main-text">At Uplift we understand the power of communities and work with organizers like MAGFest to ensure
+        that these important communities are safe for everyone. With this in mind, here is our survey of the
+        MAGFest 2019 attendees on safety and inclusion.</div>
         </div>
 
         <div id="button-wrapper">
@@ -197,7 +178,7 @@ class StatContent extends Component {
 
   componentDidMount() {
 
-    this.currentdata = magfest20;
+    this.currentdata = magfest19;
 
     this.drawChart();
   }
@@ -258,7 +239,7 @@ export class StoryContent extends Component {
   }
   render() {
     //check FilteredList for specifics
-    let category = "magfest202020";
+    let category = "magfest192019";
 
     if (stories.hasOwnProperty(category)) {
         return (
@@ -278,7 +259,7 @@ export class StoryContent extends Component {
   }
 }
 
-export class MAG20 extends Component {
+export class MAG19 extends Component {
     constructor(props){
       super(props);
       /*
@@ -323,35 +304,6 @@ export class MAG20 extends Component {
         }
       document.getElementById(e.target.getAttribute("value")).style.backgroundColor = "#9AD2DF";
 
-      // DATA FORMAT
-      // this.data.name - report name
-      // this.data.year - report year
-      // this.data.conlink - link to uplift article
-      // this.data.conhome - link to convention website
-      // this.data.p1 - paragraph 1 of main content
-      // this.data.p2 - paragraph 2 of main content
-
-      document.getElementById("magfest20").style.backgroundColor = "#9AD2DF";
-      // set data here!!!!
-      this.setState(prevState => ({
-        data: {
-          name: 'magfest20',
-          year: '2020',
-          intro: "",
-          conlink: "https://medium.com/uplifttogether/the-elephant-at-magfest-2019-4e7200dbf00e",
-          conhome: "https://super.magfest.org/",
-          p1: `MAGFest (Music and Gaming Festival) is an event dedicated to the appreciation of video game music, gaming of all types, and the gaming community.
-          MAGFest is a twenty-four-hour show that takes place in Maryland.
-          Many attendees are veterans who have been coming for years; some are local and some travel specifically for the convention.`,
-          p2: `For the third consecutive year, Uplift has worked with MAGFest to improve the safety and inclusion at community events.
-          Each year, we have surveyed attendees about their experiences with safety and inclusion at MAGFest. `,
-          stat: './images/stat.png',
-          story: 'test'
-
-      },
-        rmode: 'main',
-        mode: 'content'
-      }));
 
   }
 
@@ -376,4 +328,4 @@ export class MAG20 extends Component {
 
 }
 
-export default MAG20;
+export default MAG19;
