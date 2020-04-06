@@ -9,9 +9,8 @@ import Header from '../Header.js';
 
 import img from '../images/stat.png'; // Tell Webpack this JS file uses this image
 import FilteredList from '../FilteredList';
-import stories from '../stories.json';
 
-import data from '../data/data.json';
+import stories from '../stories.json';
 import magfest20 from '../data/2020_magfest.json'
 
 import {createPieCharts} from '../helpers/pieCharts.js'

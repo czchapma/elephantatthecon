@@ -8,6 +8,10 @@ import * as serviceWorker from './serviceWorker';
 import MAG20 from './conventions/magfest20.js';
 import MAG19 from './conventions/magfest19.js';
 import LEAKY18 from './conventions/leakycon18.js';
+import VID18 from './conventions/vidcon18.js';
+import MAG18 from './conventions/magfest18.js';
+import TEKKO17 from './conventions/tekko17.js';
+import NERD17 from './conventions/nerdcon17.js';
 import SurveyContent from './survey.js';
 
 const routing = (
@@ -19,6 +23,10 @@ const routing = (
         <Route path="/magfest20" component={MAG20}/>
         <Route path="/magfest19" component={MAG19}/>
         <Route path="/leakycon18" component={LEAKY18}/>
+        <Route path="/vidcon18" component={VID18}/>
+        <Route path="/magfest18" component={MAG18}/>
+        <Route path="/tekko17" component={TEKKO17}/>
+        <Route path="/nerdcon17" component={NERD17}/>
         <Route path="/survey" component={SurveyContent}/>
 
 

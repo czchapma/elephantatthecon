@@ -11,7 +11,7 @@ import img from '../images/stat.png'; // Tell Webpack this JS file uses this ima
 import FilteredList from '../FilteredList';
 
 import stories from '../stories.json';
-import leakycon18 from '../data/2018_leakycon.json'
+import tekko2017 from '../data/2017_tekko.json'
 
 import {createPieCharts} from '../helpers/pieCharts.js'
 import {createRectangleCharts} from '../helpers/rectangleCharts.js'
@@ -55,8 +55,6 @@ class ReportContent extends Component {
   }
   render() {
     let content;
-
-
 
     if(this.props.mode == "main"){
       content = <MainContent/>
@@ -140,25 +138,25 @@ class MainContent extends Component {
 
         <div className="convention-wrapper">
 
-        <div className="main-title">leakycon</div>
+        <div className="main-title">tekko</div>
         <div className="divider"></div>
-        <div className="main-date"><strong>2018</strong></div>
+        <div className="main-date"><strong>2017</strong></div>
         <div className="divider"></div>
         <div className="convention-text-wrapper">
-        <div className="main-text">LeakyCon is the largest unofficial convention for fans of Harry Potter and the many magical
-        elements of J.K. Rowling's Wizarding World. LeakyCon has provided the Harry Potter fandom with
-        a place to gather and celebrate its passion since 2009.</div>
-        <div className="main-text">Clearly LeakyCon is a special event and an important community for many.
-        At Uplift we understand the power of communities and work with organizers like LeakyCon to ensure
-        that these important communities are safe for everyone. With this in mind, we conducted a survey of
-        LeakyCon 2018 attendees on safety and inclusion.</div>
+        <div className="main-text">Tekko (formerly Tekkoshocon) is an annual four-day convention that takes place
+        at the David L. Lawrence Convention Center in Pittsburgh, Pennsylvania. Mainly dedicated
+        to the appreciation of anime, this event includes anime viewings, concerts, cosplay
+        masquerades and competitions, dancing, fashion shows, and gaming.</div>
+        <div className="main-text">At Uplift we understand the power of communities and work with organizers like Tekko to ensure
+        that these important communities are safe for everyone. With this in mind, here is our survey of the
+        Tekko 2017 attendees on safety and inclusion.</div>
         </div>
 
         <div id="button-wrapper">
-          <div className="convention-button"><a href="https://uplifttogether.org/nomagicinabuse">
+          <div className="convention-button"><a href="https://medium.com/uplifttogether/tekko-2017-elephant-at-the-con-report-b2a8c86384e3">
           <FontAwesomeIcon className="convention-icon" icon="file-contract"/></a></div>
 
-          <div className="convention-button"><a href="https://www.leakycon.com">
+          <div className="convention-button"><a href="http://www.teamtekko.us/">
           <FontAwesomeIcon className="convention-icon" icon="link"/></a></div>
         </div>
 
@@ -177,7 +175,7 @@ class StatContent extends Component {
 
   componentDidMount() {
 
-    this.currentdata = leakycon18;
+    this.currentdata = tekko2017;
 
     this.drawChart();
   }
@@ -237,8 +235,8 @@ export class StoryContent extends Component {
     super(props);
   }
   render() {
-    //check FilteredList for specifics
-    let category = "leakycon182018";
+
+    let category = "tekko2017";
 
     if (stories.hasOwnProperty(category)) {
         return (
@@ -258,7 +256,7 @@ export class StoryContent extends Component {
   }
 }
 
-export class LEAKY18 extends Component {
+export class TEKKO17 extends Component {
     constructor(props){
       super(props);
       /*
@@ -327,4 +325,4 @@ export class LEAKY18 extends Component {
 
 }
 
-export default LEAKY18;
+export default TEKKO17;

@@ -11,7 +11,7 @@ import img from '../images/stat.png'; // Tell Webpack this JS file uses this ima
 import FilteredList from '../FilteredList';
 
 import stories from '../stories.json';
-import leakycon18 from '../data/2018_leakycon.json'
+import nerdcon2017 from '../data/2017_nerdcon.json'
 
 import {createPieCharts} from '../helpers/pieCharts.js'
 import {createRectangleCharts} from '../helpers/rectangleCharts.js'
@@ -55,8 +55,6 @@ class ReportContent extends Component {
   }
   render() {
     let content;
-
-
 
     if(this.props.mode == "main"){
       content = <MainContent/>
@@ -140,25 +138,27 @@ class MainContent extends Component {
 
         <div className="convention-wrapper">
 
-        <div className="main-title">leakycon</div>
+        <div className="main-title">nerdcon</div>
         <div className="divider"></div>
-        <div className="main-date"><strong>2018</strong></div>
+        <div className="main-date"><strong>2017</strong></div>
         <div className="divider"></div>
         <div className="convention-text-wrapper">
-        <div className="main-text">LeakyCon is the largest unofficial convention for fans of Harry Potter and the many magical
-        elements of J.K. Rowling's Wizarding World. LeakyCon has provided the Harry Potter fandom with
-        a place to gather and celebrate its passion since 2009.</div>
-        <div className="main-text">Clearly LeakyCon is a special event and an important community for many.
-        At Uplift we understand the power of communities and work with organizers like LeakyCon to ensure
-        that these important communities are safe for everyone. With this in mind, we conducted a survey of
-        LeakyCon 2018 attendees on safety and inclusion.</div>
+        <div className="main-text">In celebration of ten years of Vlogbrothers and the Nerdfighteria community,
+         Nerdfighters from all over the world gathered in Boston, MA for a weekend celebrating
+         the wonderful community John and Hank Green have created. Thanks to the hard work of
+         staff, volunteers, and members of the community, it was a memorable weekend, but
+         unfortunately not everyone felt safe and included.</div>
+        <div className="main-text">Uplift attended the conference, presenting a workshop on being a leader in
+        online communities, handing out convention safety cards, demonstrating our Chrome
+        extension that blocks harassing content from social media, and collecting data for
+         our project Elephant At The Con.</div>
         </div>
 
         <div id="button-wrapper">
-          <div className="convention-button"><a href="https://uplifttogether.org/nomagicinabuse">
+          <div className="convention-button"><a href="https://medium.com/uplifttogether/the-elephant-at-nerdcon-nerdfighteria-c859f88cfd16">
           <FontAwesomeIcon className="convention-icon" icon="file-contract"/></a></div>
 
-          <div className="convention-button"><a href="https://www.leakycon.com">
+          <div className="convention-button"><a href="http://www.nerdcon.com/">
           <FontAwesomeIcon className="convention-icon" icon="link"/></a></div>
         </div>
 
@@ -177,7 +177,7 @@ class StatContent extends Component {
 
   componentDidMount() {
 
-    this.currentdata = leakycon18;
+    this.currentdata = nerdcon2017;
 
     this.drawChart();
   }
@@ -237,8 +237,8 @@ export class StoryContent extends Component {
     super(props);
   }
   render() {
-    //check FilteredList for specifics
-    let category = "leakycon182018";
+
+    let category = "nerdcon2017";
 
     if (stories.hasOwnProperty(category)) {
         return (
@@ -258,7 +258,7 @@ export class StoryContent extends Component {
   }
 }
 
-export class LEAKY18 extends Component {
+export class NERD17 extends Component {
     constructor(props){
       super(props);
       /*
@@ -327,4 +327,4 @@ export class LEAKY18 extends Component {
 
 }
 
-export default LEAKY18;
+export default NERD17;

@@ -2,9 +2,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Redirect } from 'react-router';
-//import { HomeContent} from './Content.js';
-//import { Header } from './App.js';
-// import './AppRouter.js';
 
 import {toggleDropDown} from './helpers/responsive.js'
 
@@ -67,7 +64,7 @@ export class SurveyContent extends Component{
     // });
 
 
-    {console.log("form submitted")}
+    // {console.log("form submitted")}
     alert(`Thank you! Your answer has been recorded`);
     //formSubmitEvent.preventDefault();
 
@@ -76,18 +73,10 @@ export class SurveyContent extends Component{
   render(){
     const redirectToHome = this.state.redirectToHome;
     if (redirectToHome === true) {
-        return <Redirect to="/home" />
+        return <Redirect to="/" />
         //window.location.reload();
     }
 
-    // <div id="survey-title-wrapper">
-
-    // <div id="survey-title">
-    //   Convention Safety
-    // </div>
-    // <div id="survey-information">
-    //   <p>The results of this survey will be shared in a future report and may be used by Uplift for future work to promote safe conventions and shared with the convention staff. By completing this survey, you acknowledge that that your responses will be used for these purposes.</p>
-    // </div>
 
     return (
 
@@ -199,7 +188,7 @@ export class SurveyContent extends Component{
 
           <div className = "buttonContainer" id="submit_div">
             <input id = "submitButton" type="submit" value="Submit Form"/>
-            <a href="/home"><input id="returnHomeButton" type="button" value="Return to Home Page"/></a>
+            <a href="/"><input id="returnHomeButton" type="button" value="Return to Home Page"/></a>
           </div>
 
 
