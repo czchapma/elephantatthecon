@@ -41,14 +41,22 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 **Note:(Current files that build the website are in folder elephantatthecon/public/eatc/src)**
 
 App.js -- builds the site’s home page
+
 Content.js -- builds the site’s home page
+
 Header.js -- builds the navigation bar for the site
+
 conventions folder -- contains JavaScript files for each individual convention
+
 survey.js -- builds the survey page, which can be accessed from the navigation bar from the homepage or though https://elephantatthecon.com/survey
+
 index.js -- builds url redirection for each convention’s own url
+
 Style folder -- contains css files for style design of the site
+
 Data folder -- contains json files for each convention, where each file contains data for the convention’s visualization page
-cssc_script_test.html inside “data” folder -- this is a helper html file that lets you c
+
+cssc_script_test.html inside “data” folder -- this is a helper html file that lets you create the json file for a convention’s visualization more easily 
 
 ## Learn More
 
