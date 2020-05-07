@@ -50,7 +50,7 @@ export class HomeContent extends Component{
   <div className="home-divider"></div>
 
   <div id="home-description">
-    <p><a className="accent">Elephant At The Con</a> is a campaign by <a className="accent" href="https://uplifttogether.org/">Uplift</a> dedicated to shining a light on convention safety issues by collecting attendee stories and quantitative data on abuse and harassement at conventions with the goal of creating action plans for organizers to improve in the future.</p>
+    <p><a className="accent">Elephant At The Con</a> is a campaign by <a className="accent" href="https://uplifttogether.org/">Uplift</a> dedicated to shining a light on convention safety issues by collecting attendee stories and quantitative data on abuse and harassment at conventions with the goal of creating action plans for organizers to improve in the future.</p>
   </div>
 
   <div className="home-divider"></div>
