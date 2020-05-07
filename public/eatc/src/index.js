@@ -18,7 +18,7 @@ const routing = (
     <Router>
       <div>
 
-        {/* Routing for each sub-url */}
+        {/* Routing for each sub-url of individual conventions */}
         <Route path="/" component={App} exact />
         <Route path="/magfest20" component={MAG20}/>
         <Route path="/magfest19" component={MAG19}/>
